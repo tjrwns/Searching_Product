@@ -1,0 +1,58 @@
+var d = <!=data=!>
+
+//-------------------------------------------------------;
+var db0 = db.getSiblingDB("_CATEGORY");
+var col0 = db0.getCollection("COUNTRY");
+
+//-------------------------------------------------------;
+var pad = function( str ){
+
+	var len = str.length;
+	if( len == 1 ) return "000" + str;
+	if( len == 2 ) return "00" + str;
+	if( len == 3 ) return "0" + str;
+	if( len == 4 ) return str;
+}
+
+//-------------------------------------------------------;
+
+/*
+{
+	"_id" : 0,
+	"cd" : "GH",
+	"cd_n" : 288,
+	"cd_us2" : "GH",
+	"cd_us3" : "GHA",
+	"nm" : "가나",
+	"nm_cn" : "",
+	"nm_kr" : "가나",
+	"nm_us" : ""
+}
+*/
+
+col0.drop();
+
+
+var i = 0,iLen = d.length,io;
+for(;i<iLen;++i){
+
+	printjson( i + "/" + iLen );
+	io = d[ i ];
+
+	io._id = NumberInt( io._id );
+	io.cd_n = NumberInt( io.cd_n );
+
+	io.c = [ io.Long, io.Lat ];
+
+	if( io.nm_cn == "" ) io.nm_cn = io.nm_us.toString();
+	if( io.nm_kr == "" ) io.nm_kr = io.nm_us.toString();
+	//if( data.nm_jp == "" ) data.nm_jp = io.nm_us.toString();
+	//data.nm_us = io.nm_us.toString();
+
+	delete io.Long;
+	delete io.Lat;
+
+	col0.insertOne( io );
+
+}
+//-------------------------------------------------------;

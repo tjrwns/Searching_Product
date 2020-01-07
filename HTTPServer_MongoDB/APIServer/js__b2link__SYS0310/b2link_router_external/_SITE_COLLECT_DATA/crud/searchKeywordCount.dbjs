@@ -1,0 +1,5 @@
+var _db$_SITE_COLLECT_DATA = db.getSiblingDB( "_SITE_COLLECT_DATA" );
+var _col$list = _db$_SITE_COLLECT_DATA.getCollection( "list" );
+var DATA = <!=DATA=!>;
+var count = _col$list.find( DATA ).count();
+return { r : 0, m : "OK", data : count, totalCount : count };

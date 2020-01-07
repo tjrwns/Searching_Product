@@ -1,0 +1,22 @@
+var rrr = [];
+
+var col = db.getSiblingDB( "member" ).getCollection('member_webhook');
+col.find({}).forEach( function( doc ){
+	var d = doc;
+	if( d.webhook )
+	{
+		var u = [];
+		var a = d.webhook;
+		var i=0, iLen=a.length;
+		for( ; i<iLen; ++i )
+		{
+			a[ i ].use_check = 1;
+			u.push( a[ i ] );
+		}
+		var rr = col.update({ _id : doc._id }, { $set : { webhook : u } }, { multi : true });
+
+		rrr.push( rr );
+	}
+} );
+
+return rrr;

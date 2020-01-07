@@ -1,0 +1,40 @@
+var db0 = db.getSiblingDB( "_SITE_COLLECT_DATA--SITE" );
+var db1 = db.getSiblingDB( "_CATEGORY" );
+
+var cols = db0.getCollectionNames();
+
+var col0 = db1.getCollection( "SITE" );
+
+var site_info = {};
+(function(){
+	col0.find({}).forEach(function(d){
+		site_info[ d.url ] = d.cd$COUNTRY;
+	})
+})();
+
+//var k = "<!=KEYWORD=!>";
+var k = "3ce";
+
+/*
+		legend : [ "直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎" ]
+		, data : [ 335, 310, 234, 135, 1548 ]
+*/
+
+var r = {
+	legend : []
+	, data : []
+};
+
+var _q00 = { k : "" };
+
+_q00.k = k;
+
+var i = 0,iLen = cols.length,io;
+for(;i<iLen;++i){
+	io = cols[ i ];
+
+	r.legend.push( site_info[ io ] );
+	r.data.push( db0.getCollection( io ).find( _q00 ).count() );
+}
+
+return r;

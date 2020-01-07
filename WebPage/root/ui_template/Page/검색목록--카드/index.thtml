@@ -1,0 +1,28 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+
+<!--
+<div id="ui/Page/검색목록--카드/index">
+	<div class="ui/Page/검색목록--카드/index--FILTER_BRAND" style="display: none;"></div>
+	<div class="ui/Page/검색목록--카드/index--FILTER_COUNTRY" style="display: none;"></div>
+	<div class="ui/Page/검색목록--카드/index--FILTER_SHOP" style="display: none;"></div>
+	<div class="ui/Page/검색목록--카드/index--PRODUCT_LIST ui link cards" style="position: absolute; left: 400px; top: 40px; bottom: 10px; right: 10px; overflow-y: auto;"></div>
+</div>
+-->
+<div id="ui/Page/검색목록--카드/index">
+	<div class="ui/Page/검색목록--카드/index--FILTER_BRAND" style="display: none;"></div>
+	<div class="ui/Page/검색목록--카드/index--FILTER_COUNTRY" style="display: none;"></div>
+	<div class="ui/Page/검색목록--카드/index--FILTER_SHOP" style="display: none;"></div>
+	<div class="ui/Page/검색목록--카드/index--PRODUCT_LIST ui link cards" style="position: absolute; left: 50px; top: 80px; bottom: 10px; right: 10px; overflow-y: auto;"></div>
+</div>
+
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/검색목록--카드/index.js" );
+	};
+</SCRIPT>
+
+<include-html>./ui_include--Semantic-UI/SYS0310/Page/000-----index-----Last.html</include-html>

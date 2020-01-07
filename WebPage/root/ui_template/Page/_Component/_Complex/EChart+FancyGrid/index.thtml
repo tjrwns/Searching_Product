@@ -1,0 +1,15 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+<div id="ui/Page/_Component/_Complex/EChart+FancyGrid/index">
+	<div class="ui/Page/_Component/_Complex/EChart+FancyGrid/index--EChart" style="height: 0%;"></div>
+	<div class="ui/Page/_Component/_Complex/EChart+FancyGrid/index--Fancygrid" style="height: 100%;"></div>
+</div>
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/_Component/_Complex/EChart+FancyGrid/index.js" );
+	};
+</SCRIPT>
+<include-html>./ui_include/SYS0310/Page/000-----index-----Last.html</include-html>

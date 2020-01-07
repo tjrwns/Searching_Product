@@ -1,0 +1,1 @@
+var _d=db.getSiblingDB("_SITE_COLLECT_URL");var _c0=_d.getCollection("collecting");var _c1=_d.getCollection("list");var d=_c1.findOne();var R={};if(d){R.r=0;R.m="OK";R.data=d;_c1.remove(d);_c0.insertOne(d);}else{R.r=1;R.m="No Data";R.data=null;}return R;

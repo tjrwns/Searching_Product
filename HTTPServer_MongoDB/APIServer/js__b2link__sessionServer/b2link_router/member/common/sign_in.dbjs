@@ -1,0 +1,309 @@
+TtwLog.log( "-- [ S ] - member.common.sign_in():{uint}----------" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE - FUNCTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session_log
+ * @param {String} mid
+ * @param {String} sid
+ * @param {Object} d_ex date expire
+ * @param {Object} d_l_si date list sign in
+ */
+var add__session_log = <require>global.mongodb.member.add__session_log</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ */
+var destroy__session = <require>global.mongodb.member.destroy__session</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_basic
+ * @param {Object} oFind { _id : 0 }
+ * @return {Object}
+ */
+var intialize__nSignalFail = <require>global.mongodb.member.intialize__nSignalFail</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_date
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} date
+ * @return {Object} d_l_si date_list_signin
+ */
+var update__date__lastSignIn = <require>global.mongodb.member.update__date__lastSignIn</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} d_ex date_expired
+ * @param {String} sid session id
+ */
+var update__session__signin = <require>global.mongodb.member.update__session__signin</require>;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DATABASE;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$member = db.getSiblingDB( "member" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	COLLECTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _col$member_basic = _db$member.member_basic;//회원 정보;
+var _col$member_date = _db$member.member_date;//회원 날짜 정보;
+var _col$member_session = _db$member.member_session;//세션;
+var _col$member_session_log = _db$member.member_session_log;//세션 로그;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DOCUMENT;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _doc$member_basic;
+var _doc$member_session;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	PARAMETER;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------;
+//Parameter Object - find or findOne에서 사용;
+var p0 = { _id : -1 };
+var p1 = { mid : null };
+var p2 = { sid : null };
+//----------;
+
+//--------------------------------------------------[ S ] - 치환 문자열;
+var d = <!=data=!>;
+	TtwLog.logjson( d );
+//--------------------------------------------------[ E ] - 치환 문자열;
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - VALIDATION;
+TtwLog.log( d.sid );
+//수정 - 20171010_1157 - 송선우;
+//if( "" == d.sid || null == d.sid || undefined == d.sid || 200 != d.sid.length )
+if( "" == d.sid || null == d.sid || undefined == d.sid )
+{
+	TtwLog.log( new Error( "[ Validation ] - Check.-100 - 클라이언트에서 보낸 sid가 문제 있는 값임" ) );
+	//return { r : 0, m : "sid가 문제 있는 값임" };
+	TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - VALIDATION;
+
+
+p1.mid = d.mid;
+var _doc$member_basic = _col$member_basic.findOne( p1 );
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.000 - member_basic.member id 존재 여부;
+if( !_doc$member_basic )
+{
+	TtwLog.log( new Error( "Check.000 - mid 검색 - mid 없음") );
+
+	TtwLog.log( new Error( "sign_in 실패" ) );
+	//return { r : 0, m : "mid가 존재하지 않음" };
+	TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+	//*/
+	return 0;
+	/*/
+	return { r : "B21001601", m : "mid가 존재하지 않음" };
+	//*/
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.000 - member_basic.member id 존재 여부;
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.100 - member_basic.nSignInFail;
+if( 5 <= _doc$member_basic.nSignInFail )
+{
+	TtwLog.log( new Error( "Check.100 - Sign In 실패 횟수 5회 이상" ) );
+	//수정하기 - 20170313 - 송선우 - 실 서비스 시 주석 해제 하기;
+	//개발하기 - 20170313 - 송선우 - 이부분 DB에 넣기;
+	TtwLog.log( "관리자에게 재인증 요청 하기" );
+
+	TtwLog.log( new Error( "sign_in 실패" ) );
+	//return { r : 0, m : "비밀번호 인증 5회 이상 틀림" };
+	TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+	//*/
+	return 0;
+	/*/
+	return { r : "B21001602", m : "비밀번호 인증 5회 이상 틀림" };
+	//*/
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.100 - member_basic.nSignInFail;
+
+
+//*///----------------------------------------------------------------------------------------------------[ S ] - Check.200 - member_basic.member password;
+if( d.mpw != _doc$member_basic.mpw )
+{
+	TtwLog.log( new Error( "Check.200 - mpw 비교 - Password가 맞지 않음" ) );
+
+	p0._id = _doc$member_basic._id;
+	_col$member_basic.update( p0, { $set : { nSignInFail : NumberInt( ++_doc$member_basic.nSignInFail ) } }, { upsert : false } );//비번 인증 오류 횟수 추가;
+	TtwLog.log( new Error( "sign in 실패 횟수 : " + _doc$member_basic.nSignInFail ) );
+
+	TtwLog.log( new Error( "sign_in 실패" ) );
+	//return { r : 0, m : "password가 맞지 않음" };
+	TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+	//*/
+	return 0;
+	/*/
+	return { r : "B21001603", m : "password가 맞지 않음" };
+	//*/
+}
+//*///----------------------------------------------------------------------------------------------------[ E ] - Check.200 - member_basic.member password;
+
+
+TtwLog.log( "클라이언트에서 보낸 sid로 member_session 검색" );
+p2.sid = d.sid;
+_doc$member_session = _col$member_session.findOne( p2 );
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.300 - member_basic.member session id;
+if( _doc$member_session )
+{
+	TtwLog.log( "Check.300 - sid 검색 - Session Document가 있음" );
+
+	if( _doc$member_session.mid != d.mid )//Session ID의 mid와 요청한 mid가 같은지 체크
+	{
+		//----------세션 파괴;
+		p0._id = _doc$member_session._id;
+		destroy__session( _col$member_session, p0 );
+
+		TtwLog.log( new Error( "sign_in 실패 - Session ID의 mid와 요청한 mid가 다름" ) );
+		//return { r : 0, m : "Session ID의 mid와 요청한 mid가 다름" };
+		TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+		return 0;
+	}
+
+	TtwLog.log( "session 의 expire date 확인" );
+	var date_now = new Date();
+	var date_expired = new Date( _doc$member_session.d_ex );
+		TtwLog.log( "date_now : " + date_now + " - Date Now" );
+		TtwLog.log( "date_expired : " + date_expired + " - Date - Expired" );
+
+	if( date_now < date_expired )//세션 기간 남아있음;
+	{
+		//----------Sign In 성공 - Last sign_in 시간 업데이트;
+		p0._id = _doc$member_session._id;
+		var d_l_si = update__date__lastSignIn( _col$member_date, p0, date_now );
+
+		//----------member_session_log 추가;
+		add__session_log( _col$member_session_log, _doc$member_session.mid, _doc$member_session.sid, _doc$member_session.d_ex, d_l_si );//var _id = _col$member_session_log.find({}).sort({ $natural : -1 })._id + 1;_col$member_session_log.insert({ _id : NumberInt( _id ), mid : d.mid, sid : d.sid, d_ex : d.d_ex, date : d_l_si });
+
+		//----------Sign In 성공;
+		TtwLog.log( "sign_in 성공" );
+		//return { r : 1, m : "sign_in 성공"};
+		TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 1;" );
+		return 1;
+	}
+	else//세션 기간 오버;
+	{
+		TtwLog.log( new Error( "Session 인증 시간 지남" ) );
+
+		//----------세션 파괴;
+		p0._id = _doc$member_session._id;
+		destroy__session( _col$member_session, p0 );
+
+		TtwLog.log( new Error( "sign_in 실패" ) );
+		//return { r : 0, m : "Session 인증 시간 지남" };
+		TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+		return 0;
+	}
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.300 - member_basic.member session id;
+
+
+p1.mid = d.mid;//위에 변수가 살아있으나 안정성을 위해 다시 대입 - 문제 없으면 제거 가능;
+_doc$member_session = _col$member_session.findOne( p1 );
+
+
+//*///----------------------------------------------------------------------------------------------------[ S ] - Check.315 - member_session.member id;
+if( _doc$member_session )//mid로 검색한 session document가 존재함;
+{
+	TtwLog.log( "Check.315 - sid 검색 - Session Document 없음 - Check.315 - mid 검색 - Session Document 있음" );
+
+//수정 - 20171010_1413 - 송선우;
+	//if( ( null == _doc$member_session.sid ) || ( 200 > _doc$member_session.sid.length ) )//기존 session id 없음;
+	if( ( null == _doc$member_session.sid ) )//기존 session id 없음;
+	{
+		//----------새로운 Session ID 생성;
+		p0._id = _doc$member_session._id;
+		update__session__signin( _col$member_session, p0, d.d_ex, d.sid )
+
+		//----------Sign In 성공 - Last sign_in 시간 업데이트;
+		p0._id = _doc$member_session._id;
+		var d_l_si = update__date__lastSignIn( _col$member_date, p0, null );
+
+		//----------member_session_log 추가;
+		_doc$member_session = _col$member_session.findOne({ _id : p0._id });
+		add__session_log( _col$member_session_log, _doc$member_session.mid, _doc$member_session.sid, _doc$member_session.d_ex, d_l_si );//var _id = _col$member_session_log.find({}).sort({ $natural : -1 })._id + 1;_col$member_session_log.insert({ _id : NumberInt( _id ), mid : d.mid, sid : d.sid, d_ex : d.d_ex, date : d_l_si });
+
+		//----------Sign In 성공 - 로그인 실패 횟수 초기화;
+		p0._id = _doc$member_session._id;
+		intialize__nSignalFail( _col$member_basic, p0 );
+
+		//----------Sign In 성공;
+		TtwLog.log( "sign_in 성공" );
+		TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 1;" );
+		return 1;
+	}
+	else//기존 session id 있음;
+	{
+		//*/
+		if( d.sid != _doc$member_session.sid )
+		{
+			TtwLog.log( "Check.320 - Session ID가 불일치함" );
+			//세션 시간이 존재 할 경우 안전을 위해 무조건 파괴( 관련없는 사용자가 피해 입음 );
+			if( _doc$member_session.d_ex )
+			{
+				//----------세션 파괴;
+				p0._id = _doc$member_session._id;
+				destroy__session( _col$member_session, p0 );
+			}
+
+			TtwLog.log( new Error( "sign_in 실패" ) );
+			//return{ r : 0, m : "sid가 불일치 함" };
+			TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+			return 0;
+		}
+		/*/
+		//동일 세션 중복 접속 허용;
+		return _doc$member_session.sid;
+		//*/
+	}
+}
+//*///----------------------------------------------------------------------------------------------------[ E ] - Check.315 - member_session.member id;
+
+
+//----------세션 파괴;
+p0._id = _doc$member_session._id;
+destroy__session( _col$member_session, p0 );
+
+TtwLog.log( "-- [ E ] - member.common.sign_in():{uint}----------return 0;" );
+//return { r : 0, m : "mid는 존재함 - 알수 없는 에러" };
+return 0;

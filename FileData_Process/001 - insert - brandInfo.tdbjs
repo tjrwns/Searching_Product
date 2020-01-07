@@ -1,0 +1,102 @@
+//-------------------------------------------------------;
+var db0 = db.getSiblingDB("_CATEGORY");
+var col0 = db0.getCollection("BRAND");
+var col1 = db0.getCollection("BRAND - <!=date=!>");
+//-------------------------------------------------------;
+var d = <!=data=!>
+//-------------------------------------------------------;
+var pad = function( str ){
+
+	var len = str.length;
+	if( len == 1 ) return "000" + str;
+	if( len == 2 ) return "00" + str;
+	if( len == 3 ) return "0" + str;
+	if( len == 4 ) return str;
+}
+
+//-------------------------------------------------------;
+/*
+{
+	"_id" : 0,
+	"_d" : 1
+	"cd" : "00000",
+	"cd$COUNTRY" : "US",
+	"nm$COUNTRY" : "United States",
+	"nm_cn" : "0.2",
+	"nm_kr" : "0.2",
+	"nm_jp" : "0.2",
+	"nm_us" : "0.2",
+	"address" : "",
+	"url" : "https://0point2.com/",
+	"u_youtube" : "",
+	"u_instagram" : "https://www.instagram.com/0point2/",
+	"u_facebook" : "https://www.facebook.com/0point2",
+	"c" : []
+}
+*/
+
+col0.drop({});
+col1.drop({});
+
+
+//var idx;
+//var lastDoc = col0.find({},{_id:1}).sort({_id:-1}).limit(1).toArray();
+//
+//if( lastDoc.length == 0 ) idx = 0;
+//else idx = lastDoc[0]._id;
+
+var _tCD = {}
+
+var i = 0,iLen = d.length,io;
+for(;i<iLen;++i){
+
+	printjson( i + "/" + iLen );
+
+	io = d[ i ];
+
+	var key;
+	if( Number( io.nm_us.toString()[0] ) ) key = "0"
+	else key = io.nm_us.toString()[0].toUpperCase();
+
+	if( !_tCD.hasOwnProperty( key ) ) _tCD[ key ] = 0;
+	else ++_tCD[ key ]
+
+	var cd = key + pad( _tCD[ key ].toString() );
+
+	var data = {
+		"_id" : NumberInt( i ),
+		"_d" : NumberInt( 1 ),
+		"cd" : cd,
+		"cd$COUNTRY" : io.cd$COUNTRY,
+		"nm$COUNTRY" : io.nm$COUNTRY,
+		"nm_cn" : io.nm_cn,
+		"nm_kr" : io.nm_kr,
+		"nm_jp" : io.nm_jp,
+		"nm_us" : io.nm_us,
+		"address" : io.address,
+		"url" : io.url,
+		"u_facebook" : io.u_facebook,
+		"u_instagram" : io.u_instagram,
+		"u_youtube" : io.u_youtube,
+		"c" : []
+	};
+
+	if( data.c.length == 0 ) data._d = NumberInt( 0 );
+	if( data.adress == "" ) data._d = NumberInt( 0 );
+
+	if( data.nm_cn == "" ) data.nm_cn = io.nm_us.toString();
+	if( data.nm_kr == "" ) data.nm_kr = io.nm_us.toString();
+	if( data.nm_jp == "" ) data.nm_jp = io.nm_us.toString();
+	data.nm_us = io.nm_us.toString();
+
+	data.c = JSON.parse( io.c );
+
+	delete io["비고"]
+	delete io["c.0"]
+	delete io["c.1"];
+
+	col0.insertOne( data );
+	col1.insertOne( data );
+
+}
+//-------------------------------------------------------;

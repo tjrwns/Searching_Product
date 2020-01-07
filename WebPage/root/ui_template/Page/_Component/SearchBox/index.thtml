@@ -1,0 +1,26 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+<div id="ui/Page/_Component/SearchBox/index" style="display: flex; position: absolute; right: 5px; top: 10px;">
+
+	<!--
+	<input class="input__searchbox ui input" type="text" placeholder="Search...">
+	<button class="btn__searchbox ui button">Search</button>
+	<select class="select__country ui select"><option value="_ALL">ALL</option><option value="KR">KR</option><option value="US">US</option><option value="JP">JP</option><option value="CN">CN</option></select>
+	-->
+	<div class="ui segment basic fluid" style="position: absolute; left: 10px; right: 10px;">
+		<div class="ui fluid action input">
+			<input class="input__searchbox" type="text" placeholder="Search...">
+			<select class="select__country ui compact selection dropdown" style="height: 45px;"></select>
+			<div class="btn__searchbox ui button">Search</div>
+		</div>
+	</div>
+</div>
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/_Component/SearchBox/index.js" );
+	};
+</SCRIPT>
+<include-html>./ui_include/SYS0310/Page/000-----index-----Last.html</include-html>

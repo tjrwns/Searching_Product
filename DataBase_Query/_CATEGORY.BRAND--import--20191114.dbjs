@@ -1,0 +1,4913 @@
+//-------------------------------------------------------;
+var db0 = db.getSiblingDB("_CATEGORY");
+var col0 = db0.getCollection("BRAND");
+var col1 = db0.getCollection("BRAND - 20191114");
+//-------------------------------------------------------;
+var d = [
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": 0.2,
+        "address": "",
+        "url": "https://0point2.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/0point2/",
+        "u_facebook": "https://www.facebook.com/0point2",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "100% Pure",
+        "address": "2221 Oakland Rd San Jose CA, 95131, United States",
+        "url": "https://100percentpure.com",
+        "u_youtube": "https://www.youtube.com/channel/UCuDO-8MnXXrUFX1VkRJPCuA",
+        "u_instagram": "https://www.instagram.com/100percentpure/",
+        "u_facebook": "https://www.facebook.com/100percentpure/",
+        "비고": "",
+        "c": [
+            37.4009405,
+            -121.90517419999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United Kingdom",
+        "cd$COUNTRY": "UK",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "111 Skin",
+        "address": "5/6 Bywell Place, Fitzrovia, London, W1T 3DN, United Kingdom ",
+        "url": "https://111skin.com",
+        "u_youtube": "https://www.youtube.com/user/111SkinChannel",
+        "u_instagram": "https://www.instagram.com/111skin/",
+        "u_facebook": "https://www.facebook.com/111SKIN/",
+        "비고": "",
+        "c": [
+            51.5182474,
+            -0.13999129999999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "12 Benefits",
+        "address": "1700 Market St 10th FloorPhiladelphia, PA 19103, United States",
+        "url": "https://12benefits.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/12benefits/",
+        "u_facebook": "https://www.facebook.com/12benefits/",
+        "비고": "",
+        "c": [
+            39.9535123,
+            -75.1686716
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "21 Drops",
+        "address": "290 SE 6th Ave, Delray Beach, Florida, United States",
+        "url": "http://21drops.com",
+        "u_youtube": "https://www.youtube.com/user/21dropsAromatherapy",
+        "u_instagram": "https://www.instagram.com/21drops/",
+        "u_facebook": "http://www.facebook.com/21drops",
+        "비고": "",
+        "c": [
+            26.456384,
+            -80.0672436
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "23 years old",
+        "nm_jp": "",
+        "nm_us": "23 years old",
+        "address": " 서울특별시 구로구 디지털로26길 123 (구로동) 지플러스코오롱디지털타워 409-410호",
+        "url": "http://23y.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/23yearsold_official/",
+        "u_facebook": "https://www.facebook.com/23pack/",
+        "비고": "",
+        "c": [
+            37.4833536,
+            126.8965156
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "3CE",
+        "nm_jp": "",
+        "nm_us": "3CE",
+        "address": "서울특별시 마포구 잔다리로 32 서문빌딩 2,3,4,6F",
+        "url": "https://stylenanda.com/",
+        "u_youtube": "https://www.youtube.com/user/stylenandacom",
+        "u_instagram": "http://instagram.com/stylenanda_korea",
+        "u_facebook": "https://www.facebook.com/stylenanda11",
+        "비고": "",
+        "c": [
+            37.5515438,
+            126.9197803
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "나인위시스",
+        "nm_jp": "",
+        "nm_us": "9wishes",
+        "address": "서울 서초구 서초대로356, 1401-1402호(서초동, 서초지웰타워)",
+        "url": "http://www.9wishes.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UC2lQYQdE-OupHRwFim9YFMg",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.495418799999996,
+            127.02019689999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "어퓨",
+        "nm_jp": "",
+        "nm_us": "A’pieu",
+        "address": "서울특별시 서초구 서초대로 38길 12 (서초동, 마제스타시티 타워 원 13층)",
+        "url": "http://apieu.beautynet.co.kr/main.do",
+        "u_youtube": "https://www.youtube.com/user/myapieu",
+        "u_instagram": "https://www.instagram.com/apieu_cosmetics/",
+        "u_facebook": "https://www.facebook.com/APIEU",
+        "비고": "",
+        "c": [
+            37.490534499999995,
+            127.0053318
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아바마트",
+        "nm_jp": "",
+        "nm_us": "abbamart",
+        "address": "서울특별시 마포구 토정로2길 18, #202",
+        "url": "http://abbamart.kr/",
+        "u_youtube": "https://www.instagram.com/abbamart_official/",
+        "u_instagram": "https://www.instagram.com/abbamart_official/",
+        "u_facebook": "https://www.facebook.com/abbamart.kr",
+        "비고": "",
+        "c": [
+            37.544866299999995,
+            126.91302929999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "어바웃미",
+        "nm_jp": "",
+        "nm_us": "ABOUT ME",
+        "address": "경기도 성남시 분당구 판교로 295",
+        "url": "https://www.aboutmeshop.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/aboutmeshop_official/",
+        "u_facebook": "https://www.facebook.com/aboutme.samyang",
+        "비고": "삼양",
+        "c": [
+            37.3985507,
+            127.10681459999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아크웰",
+        "nm_jp": "",
+        "nm_us": "Acwell",
+        "address": "서울특별시 강남구 논현로 731",
+        "url": "https://www.acwell.asia/",
+        "u_youtube": "https://www.youtube.com/channel/UCU2k1nKn2QFE4ST7Ep9-W-w",
+        "u_instagram": "https://instagram.com/acwell_official",
+        "u_facebook": "https://www.facebook.com/e.acwell/",
+        "비고": "BNH Cosmetics",
+        "c": [
+            37.517186699999996,
+            127.0288794
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "에스트라",
+        "nm_jp": "",
+        "nm_us": "AESTURA",
+        "address": "서울특별시 용산구 한강대로 100 (아모레퍼시픽) 16층",
+        "url": "https://www.aestura.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCVj6JWY6c9IYvI0MWZPp2Gg",
+        "u_instagram": "https://www.instagram.com/aestura.official/",
+        "u_facebook": "https://www.facebook.com/aestura/",
+        "비고": "Amorepacific",
+        "c": [
+            37.548884699999995,
+            126.9727028
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "에이에이치씨",
+        "nm_jp": "",
+        "nm_us": "AHC",
+        "address": "서울특별시 마포구 토정로 31길 81 (대흥동, 카버글로벌 1관)",
+        "url": "https://www.ahc.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCUKtw56xaBe7w6x3xOVN-Tw",
+        "u_instagram": "https://www.instagram.com/ahc.official",
+        "u_facebook": "https://www.facebook.com/beautyahc/",
+        "비고": "",
+        "c": [
+            37.544035199999996,
+            126.9445143
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "알파브로스",
+        "nm_jp": "",
+        "nm_us": "ALPHABROS",
+        "address": "서울시 중구 퇴계로 18길 33, 110-B호",
+        "url": "https://alphabros.com/",
+        "u_youtube": "",
+        "u_instagram": "http://instagram.com/alphabros.skincare",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5592647,
+            126.98519329999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아미니",
+        "nm_jp": "",
+        "nm_us": "Amini",
+        "address": "137879 서울특별시 서초구 서리풀3길 20",
+        "url": "http://aminigoods.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/amini_cosmetic/",
+        "u_facebook": "https://www.facebook.com/aminigoods/",
+        "비고": "",
+        "c": [
+            37.4878785,
+            127.0184123
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아모스 프로페셔널",
+        "nm_jp": "",
+        "nm_us": "amos PROFESSIONAL",
+        "address": "서울특별시 용산구 한강대로 100 (한강로2가) 16층",
+        "url": "http://www.amosprofessional.com/",
+        "u_youtube": "https://www.youtube.com/user/amosprofessional",
+        "u_instagram": "https://instagram.com/amosprofessional_official/",
+        "u_facebook": "https://www.facebook.com/amoshair.co.kr",
+        "비고": "Amorepacific",
+        "c": [
+            37.5314481,
+            126.97095239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Amway",
+        "address": "7575 Fulton St. Ada, MI 49335, United States",
+        "url": "https://www.amwayglobal.com/amway-products/beauty/",
+        "u_youtube": "https://www.youtube.com/user/AmwayVideos",
+        "u_instagram": "https://www.instagram.com/amway/",
+        "u_facebook": "https://www.facebook.com/amway/",
+        "비고": "Alticor",
+        "c": [
+            42.9579966,
+            -85.4882275
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "AMH",
+        "nm_jp": "",
+        "nm_us": "AndMoreHair",
+        "address": "서울특별시 강남구 영동대로138길 15, 2층",
+        "url": "http://www.amhshampoo.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/amh_official/",
+        "u_facebook": "https://www.facebook.com/AMH.CO.KR/",
+        "비고": "",
+        "c": [
+            37.523128899999996,
+            127.056422
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Anna Sui",
+        "address": "484 Broome St, New York, NY 10013, United States",
+        "url": "https://annasui.com/collections/beauty",
+        "u_youtube": "https://www.youtube.com/user/annasui2011",
+        "u_instagram": "https://instagram.com/annasui",
+        "u_facebook": "https://www.facebook.com/annasuipage/",
+        "비고": "",
+        "c": [
+            40.723219199999996,
+            -74.0022606
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아쿠아 플래닛",
+        "nm_jp": "",
+        "nm_us": "AQUA PLANET",
+        "address": "경기도 안양시 동안구 벌말로 126, 143호(관양동, 오비즈타워)",
+        "url": "http://herenn.com/aquaplanet/shop/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.398136,
+            126.97025479999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Archipelago Botanicals",
+        "address": "2021 N. San Fernando Rd. Los Angeles, CA 90065, United States",
+        "url": "shoparchipelago.com",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/archipelagobotanicals/",
+        "u_facebook": "https://www.facebook.com/ArchipelagoBotanicals/",
+        "비고": "",
+        "c": [
+            34.1021237,
+            -118.2364442
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아리따움",
+        "nm_jp": "",
+        "nm_us": "ARITAUM",
+        "address": "서울특별시 용산구 한강대로 100 (한강로 2가)",
+        "url": "https://www.aritaum.com/",
+        "u_youtube": "",
+        "u_instagram": "http://instagram.com/aritaum_official",
+        "u_facebook": "http://www.facebook.com/love.aritaum",
+        "비고": "Amorepacific",
+        "c": [
+            37.5314481,
+            126.97095239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아리얼",
+        "nm_jp": "",
+        "nm_us": "Ariul",
+        "address": "서울특별시 강남구 논현로131길 23 (홍제빌딩) 3층",
+        "url": "http://www.ariul.co.kr/global/",
+        "u_youtube": "https://www.youtube.com/channel/UC-62Vfc8vKNPZmzRN0pxMcw",
+        "u_instagram": "https://www.instagram.com/ariul_beauty/",
+        "u_facebook": "https://www.facebook.com/ariulkorea",
+        "비고": "",
+        "c": [
+            37.5139138,
+            127.02852139999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아로마티카",
+        "nm_jp": "",
+        "nm_us": "AROMATICA",
+        "address": "서울특별시 강남구 신사동 도산대로1길 62",
+        "url": "http://aromatica.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCqRPGc9Jxj9-E5SxaHrpKOQ",
+        "u_instagram": "https://www.instagram.com/aromatica.official/",
+        "u_facebook": "https://www.facebook.com/aromatica.official",
+        "비고": "",
+        "c": [
+            37.520742399999996,
+            127.0194099
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "아티스",
+        "nm_jp": "",
+        "nm_us": "Artis",
+        "address": "23 Washington Square NNew York, NY 10011, United States",
+        "url": "https://artisbrush.com/",
+        "u_youtube": "https://www.youtube.com/user/artisbrush",
+        "u_instagram": "https://instagram.com/artisbrush/",
+        "u_facebook": "https://www.facebook.com/artisbrush",
+        "비고": "",
+        "c": [
+            40.732184,
+            -73.9979081
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아토클래식",
+        "nm_jp": "",
+        "nm_us": "atoclassic",
+        "address": "06168 서울특별시 강남구 테헤란로 501 (삼성동) 브이플렉스 5층",
+        "url": "http://atoclassic.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/atoclassic/",
+        "u_facebook": "https://www.facebook.com/atoclassickorea",
+        "비고": "",
+        "c": [
+            37.507460099999996,
+            127.0567135
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Canada",
+        "cd$COUNTRY": "CA",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "ATTITUDE",
+        "address": "",
+        "url": "https://attitudeliving.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Aveeno",
+        "address": "890 Woodlawn Rd W, Guelph, ON N1K 1A5, Canada",
+        "url": "https://www.aveeno.com/",
+        "u_youtube": "https://www.youtube.com/user/aveeno",
+        "u_instagram": "https://www.instagram.com/aveenous/",
+        "u_facebook": "https://www.facebook.com/aveeno/",
+        "비고": "J&J",
+        "c": [
+            43.5351703,
+            -80.3140473
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Avon",
+        "address": "New Avon Company One Liberty Plaza 165 Broadway New York, NY 10006, United States",
+        "url": "https://www.avon.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCDl63H5v8gUFRM3Qtm4O4Gw",
+        "u_instagram": "https://www.instagram.com/avoninsider",
+        "u_facebook": "https://www.facebook.com/Avon/",
+        "비고": "",
+        "c": [
+            40.709807999999995,
+            -74.01079039999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "AXE",
+        "address": "",
+        "url": "https://www.axe.com/us/en/home.html",
+        "u_youtube": "https://www.youtube.com/user/AXE",
+        "u_instagram": "https://instagram.com/AXE/",
+        "u_facebook": "https://www.facebook.com/Axe/",
+        "비고": "Unilever",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "바닐라코",
+        "nm_jp": "",
+        "nm_us": "Banila Co.",
+        "address": "서울시 강남구 언주로 541 (역삼동) F&F 빌딩 10층 바닐라코",
+        "url": "http://www.banilaco.com/",
+        "u_youtube": "https://www.youtube.com/user/banilacobtube",
+        "u_instagram": "https://instagram.com/banilaco_official/",
+        "u_facebook": "http://www.facebook.com/pages/banillako/",
+        "비고": "에프앤코",
+        "c": [
+            37.4992392,
+            127.02739919999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "바노바기",
+        "nm_jp": "",
+        "nm_us": "BANOBAGI",
+        "address": "서울특별시 강남구 역삼동 논현로97길 19-1",
+        "url": "http://www.banobagicosmetic.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCZuRBwYBeKmy40kxKDikXGA",
+        "u_instagram": "https://www.instagram.com/banobagi.cosmetic/",
+        "u_facebook": "https://www.facebook.com/banobagicosmetic.en",
+        "비고": "",
+        "c": [
+            37.5028576,
+            127.0341862
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "바루랩",
+        "nm_jp": "",
+        "nm_us": "BARULAB",
+        "address": "06221 서울특별시 강남구 테헤란로38길 10 (역삼동) ",
+        "url": "http://barulab.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/barulab/",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5012189,
+            127.04141159999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Bath & Body Works",
+        "address": "7 Limited Parkway East Reynoldsburg, OH 43068, United States",
+        "url": "bathandbodyworks.com",
+        "u_youtube": "https://www.youtube.com/user/bathandbodyworks/",
+        "u_instagram": "https://www.instagram.com/bathandbodyworks",
+        "u_facebook": "https://www.facebook.com/bathandbodyworks",
+        "비고": "",
+        "c": [
+            39.9817283,
+            -82.7753855
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "삐아",
+        "nm_jp": "",
+        "nm_us": "Bbia",
+        "address": "인천 연수구 컨벤시아대로 165, 32층 (송도동, 포스코타워-송도)",
+        "url": "http://www.bbia.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UC91To9yoLO10dV65Md1omzw",
+        "u_instagram": "https://www.instagram.com/bbia.official/",
+        "u_facebook": "https://www.facebook.com/sky007com/",
+        "비고": "sky007",
+        "c": [
+            37.389167,
+            126.64388899999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "뷰티피플",
+        "nm_jp": "",
+        "nm_us": "BEAUTY PEOPLE",
+        "address": "서울특별시 영등포구 선유로49길 23 (IS비즈타워2차 701호)",
+        "url": "http://www.beautypeople.co/",
+        "u_youtube": "https://www.youtube.com/channel/UCQ3M_YbaYTa9TQZ1j8CJvyg",
+        "u_instagram": "https://www.instagram.com/beautypeople.cosmetics/",
+        "u_facebook": "https://www.facebook.com/beautypeople.co",
+        "비고": "",
+        "c": [
+            37.536116,
+            126.8954031
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "베이직",
+        "nm_jp": "",
+        "nm_us": "BEIGIC",
+        "address": "서울특별시 강남구 도산대로45길 10-4 4층",
+        "url": "https://beigic.com/main/index.php",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/beigic",
+        "비고": "",
+        "c": [
+            37.5231247,
+            127.03615359999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "빌리프",
+        "nm_jp": "",
+        "nm_us": "belif",
+        "address": "",
+        "url": "http://www.belifcosmetic.com/",
+        "u_youtube": "https://www.youtube.com/user/belifcosmetic",
+        "u_instagram": "https://www.instagram.com/belif.official/",
+        "u_facebook": "https://www.facebook.com/belif.cosmetic",
+        "비고": "(주)LG생활건강",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Benefit",
+        "address": "225 Bush Street 20th Floor San Francisco, CA 94104, United States",
+        "url": "https://www.benefitcosmetics.com/us/en",
+        "u_youtube": "https://www.youtube.com/user/benefitcosmetics",
+        "u_instagram": "https://www.instagram.com/benefitcosmetics/",
+        "u_facebook": "https://www.facebook.com/benefitcosmetics",
+        "비고": "",
+        "c": [
+            37.7908857,
+            -122.4012094
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "비레디",
+        "nm_jp": "",
+        "nm_us": "BeREADY",
+        "address": "서울특별시 용산구 한강대로 100",
+        "url": "https://beready.co.kr/%EC%8A%A4%ED%86%A0%EB%A6%AC/",
+        "u_youtube": "https://www.youtube.com/channel/UC0LBE-AMc1rRfdEEdQ3KP6g",
+        "u_instagram": "https://www.instagram.com/beready_project/",
+        "u_facebook": "https://www.facebook.com/%EB%B9%84%EB%A0%88%EB%94%94-326020584975435/",
+        "비고": "Amorepacific",
+        "c": [
+            37.548884699999995,
+            126.9727028
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Beyonce Parfums",
+        "address": "",
+        "url": "https://www.beyonceparfums.com/",
+        "u_youtube": "http://www.youtube.com/beyonceparfums",
+        "u_instagram": "http://www.instagram.com/beyonce_parfums",
+        "u_facebook": "http://www.facebook.com/beyonceparfums",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "비욘드",
+        "nm_jp": "",
+        "nm_us": "BEYOND",
+        "address": "서울시 종로구 새문안로 58 LG광화문빌딩 LG생활건강 ",
+        "url": "http://beyond.lgbeautymall.com/beyond.jsp",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/beyondcosmetics/",
+        "u_facebook": "https://www.facebook.com/ecobeyond",
+        "비고": "(주)LG생활건강",
+        "c": [
+            37.5692944,
+            126.9714733
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United Kingdom",
+        "cd$COUNTRY": "UK",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Bio-Oil",
+        "address": "32 Vauxhall Bridge Road, Westminster, London SW1V 2SA, United Kingdom",
+        "url": "https://www.bio-oil.com/",
+        "u_youtube": "https://www.youtube.com/user/BioOilUK",
+        "u_instagram": "https://www.instagram.com/biooiluk/",
+        "u_facebook": "https://www.facebook.com/biooiluk/",
+        "비고": "",
+        "c": [
+            51.4900368,
+            -0.1320054
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Biore",
+        "address": "Japan, 〒103-0025 Tōkyō-to, Chuo City, Nihonbashikayabachō, 1-chōme−13−16 澁澤シティプレイスＡ",
+        "url": "https://www.kao.co.jp/biore/",
+        "u_youtube": "https://www.youtube.com/channel/UC4_KRggmX_xuZv8HqCohnHQ",
+        "u_instagram": "https://www.instagram.com/bioreus/",
+        "u_facebook": "https://www.facebook.com/bioreskin",
+        "비고": "花王 (Kao )",
+        "c": [
+            35.680208799999996,
+            139.78058439999998
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Black Phoenix Alchemy Laboratory",
+        "address": "Black Phoenix Alchemy Lab 12120 Sherman Way North Hollywood, CA 91605, United States",
+        "url": "",
+        "u_youtube": "https://www.youtube.com/channel/UCN6BW9VPJ1h-2DYn1cxAA0A",
+        "u_instagram": "https://www.instagram.com/blackphoenixalchemylab/",
+        "u_facebook": "https://www.facebook.com/BlackPhoenixAlchemyLab",
+        "비고": "",
+        "c": [
+            34.2002284,
+            -118.3979169
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Blinc",
+        "address": "1141 S Rogers Cir Ste 7 Boca Raton, FL 33487, United States",
+        "url": "https://www.blincinc.com/",
+        "u_youtube": "https://www.youtube.com/user/blincinc",
+        "u_instagram": "https://instagram.com/blincinc",
+        "u_facebook": "https://www.facebook.com/blincinc/",
+        "비고": "",
+        "c": [
+            26.404038399999997,
+            -80.1102296
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "블링팝",
+        "nm_jp": "",
+        "nm_us": "BLINGPOP",
+        "address": "경기도 용인시 기흥구 흥덕2로 65번길 1-15,B1층",
+        "url": "http://blingpop.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/blingpop_official/",
+        "u_facebook": "https://www.facebook.com/%EB%B8%94%EB%A7%81%ED%8C%9D-255223638212271/",
+        "비고": "",
+        "c": [
+            37.2725831,
+            127.0739217
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "블리스텍스",
+        "nm_jp": "",
+        "nm_us": "Blistex",
+        "address": "1800 Swift Dr, Oak Brook, IL 60523 United States",
+        "url": "https://www.blistex.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/blistex/",
+        "u_facebook": "https://www.facebook.com/Blistex/",
+        "비고": "",
+        "c": [
+            41.8539318,
+            -87.92290849999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "블로섬제주",
+        "nm_jp": "",
+        "nm_us": "BLOSSOM JEJU",
+        "address": "",
+        "url": "https://www.blossomjeju.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/blossomjejubeauty/",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "비앤비",
+        "nm_jp": "",
+        "nm_us": "BNB KOREA",
+        "address": "서울특별시 영등포구 선유로13길 25 에이스하이테크시티 2차 1408~1415호 (우) 07282서울특별시 영등포구 선유로13길 25 에이스하이테크시티 2차 1408~1415호 (우) 07282",
+        "url": "http://www.bnbkorea.co.kr/ko/index.php",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/bnbkorea_official/",
+        "u_facebook": "https://www.facebook.com/pg/bnbkorea.co.kr/posts/",
+        "비고": "",
+        "c": [
+            37.5188943,
+            126.88592589999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "보나벨라",
+        "nm_jp": "",
+        "nm_us": "BONABELLA",
+        "address": "21984 인천광역시 연수구 송도과학로 32 (송도동) 송도테크노파크IT센터 M-2704",
+        "url": "http://bnbl.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/bonabella_official/",
+        "u_facebook": "https://www.facebook.com/BonaBellaSkinCare/",
+        "비고": "",
+        "c": [
+            37.3821681,
+            126.66201939999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United Kingdom",
+        "cd$COUNTRY": "UK",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Boots No7",
+        "address": "Nottingham NG2 3AA",
+        "url": "https://www.boots.com/",
+        "u_youtube": "https://www.youtube.com/user/Boots",
+        "u_instagram": "https://www.instagram.com/bootsuk",
+        "u_facebook": "https://www.facebook.com/BootsUK",
+        "비고": "",
+        "c": [
+            52.945107,
+            -1.1355863
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "어라운드뷰티 부케가르니",
+        "nm_jp": "",
+        "nm_us": "BOUQUET GARNI",
+        "address": "42914 대구광역시 달성군 다사읍 매곡리 1546-12 4층 401호",
+        "url": "http://bouquetgarni.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/bouquetgarni.kr",
+        "비고": "",
+        "c": [
+            35.858267999999995,
+            128.46536
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "China",
+        "cd$COUNTRY": "CN",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "CHANDO",
+        "address": "49 F The Exchange SOHO, Tongren Road 299, Jingan District, Shanghai, China",
+        "url": "http://chando.com/en/index",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/chando.official/",
+        "u_facebook": "https://www.facebook.com/chando.shanghai/",
+        "비고": "",
+        "c": [
+            31.226914999999998,
+            121.448264
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Chanel",
+        "address": "Aéroport roissy charles de gaulle, terminal 2E, 95700 Roissy-en-France, France",
+        "url": "https://www.chanel.com/fr_FR/parfums-beaute/home.html",
+        "u_youtube": "https://www.youtube.com/user/CHANEL",
+        "u_instagram": "https://www.instagram.com/chanelofficial/?hl=en",
+        "u_facebook": "https://www.facebook.com/chanel/",
+        "비고": "",
+        "c": [
+            49.003834499999996,
+            2.577784
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "참존",
+        "nm_jp": "",
+        "nm_us": "Charmzone",
+        "address": "서울특별시 강남구 영동대로 318",
+        "url": "http://www.charmzone.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/CHARMZONE.cosmetics",
+        "비고": "경영권 분쟁중(2019.10.14)",
+        "c": [
+            37.5029824,
+            127.0669767
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "촉촉",
+        "nm_jp": "",
+        "nm_us": "CHOKCHOK",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "https://instagram.com/chokchokcosmetics",
+        "u_facebook": "https://www.facebook.com/ChokChok.KoreanCosmetic/",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Clarins",
+        "address": "9 Rue du Commandant Pilot, 92200 Neuilly-sur-Seine, France",
+        "url": "https://www.clarins.fr/",
+        "u_youtube": "https://www.youtube.com/user/clarins/",
+        "u_instagram": "https://www.instagram.com/clarinsofficial",
+        "u_facebook": "https://www.facebook.com/clarinskorea",
+        "비고": "Groupe Clarins SA",
+        "c": [
+            48.8811513,
+            2.2776213
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Clean & Clear",
+        "address": "Johnson & Johnson Consumer Inc. One Johnson & Johnson Plaza New Brunswick, New Jersey 08933 United States",
+        "url": "https://www.cleanandclear.com/",
+        "u_youtube": "https://www.youtube.com/user/CleanandClearUS",
+        "u_instagram": "https://instagram.com/cleanandclear/",
+        "u_facebook": "https://www.facebook.com/cleanandclear",
+        "비고": "J&J",
+        "c": [
+            40.497951799999996,
+            -74.44305589999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Clinique",
+        "address": "Clinique Laboratories, LLC. Corporate Headquarters 767 Fifth Avenue New York, N.Y. 10153, United States",
+        "url": "https://www.clinique.com/",
+        "u_youtube": "https://www.youtube.com/user/clinique",
+        "u_instagram": "https://www.instagram.com/clinique",
+        "u_facebook": "https://www.facebook.com/clinique/",
+        "비고": "Estee Lauder",
+        "c": [
+            40.7635843,
+            -73.97239669999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "코메이토",
+        "nm_jp": "",
+        "nm_us": "comeitto",
+        "address": "〒106-0032 東京都港区六本木6-1-20電気ビル7F, Japan",
+        "url": "https://comeitto.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/comeitto_japan/",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            35.6624121,
+            139.731288
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "커먼랩스",
+        "nm_jp": "",
+        "nm_us": "COMMONLABS",
+        "address": "서울특별시 강남구 테헤란로4길 6 (역삼동) 강남역센트럴푸르지오시티 310-38호",
+        "url": "http://commonlabs.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/commonlabs_official/",
+        "u_facebook": "https://www.facebook.com/commonlabss/",
+        "비고": "",
+        "c": [
+            37.4976251,
+            127.02925259999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "코스알엑스",
+        "nm_jp": "",
+        "nm_us": "COSRX",
+        "address": "경기도 성남시 분당구 구미로 8 분당엠타워 2층",
+        "url": "http://www.cosrx.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UC8_qETGWRNIH01-QEjWYBKw",
+        "u_instagram": "https://www.instagram.com/cosrx_paper/",
+        "u_facebook": "https://www.facebook.com/COSRXcosmetics/",
+        "비고": "",
+        "c": [
+            37.3376233,
+            127.10973279999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Coty",
+        "address": "599 Broadway New York, New York 10012 United States",
+        "url": "https://www.coty.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/cotyinc/",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            40.725337499999995,
+            -73.9971632
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "CoverGirl",
+        "address": "Coty Inc. E-business Consumer Contact 350 Fifth Avenue, 17th Floor New York, New York 10118 United States",
+        "url": "https://www.covergirl.com/",
+        "u_youtube": "https://www.youtube.com/user/CoverGirl",
+        "u_instagram": "https://www.instagram.com/covergirl/",
+        "u_facebook": "https://www.facebook.com/covergirl",
+        "비고": "Coty",
+        "c": [
+            40.748487399999995,
+            -73.9853882
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "데이멜로우",
+        "nm_jp": "",
+        "nm_us": "daymellow'",
+        "address": "07806 서울특별시 강서구 공항대로 222 (마곡동) 발산W타워 511호",
+        "url": "http://daymellow.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/daymellow_official/",
+        "u_facebook": "https://www.facebook.com/daymellowofficial/",
+        "비고": "",
+        "c": [
+            37.5589698,
+            126.831019
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "클레어스",
+        "nm_jp": "",
+        "nm_us": "DEAR, KLAIRS",
+        "address": "서울특별시 강남구 테헤란로 211(역삼동) 14층, WISHCOMPANY",
+        "url": "https://www.klairscosmetics.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/dear_klairs/",
+        "u_facebook": "https://www.facebook.com/klairs",
+        "비고": "",
+        "c": [
+            37.501839499999996,
+            127.03922779999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "디어패커",
+        "nm_jp": "",
+        "nm_us": "DEARPACKER",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "LG생활건강",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "데메테르",
+        "nm_jp": "",
+        "nm_us": "Demeter Fragrance Library",
+        "address": "12 NORTH GATE ROAD GREAT NECK, NEW YORK 11023, United States",
+        "url": "https://demeterfragrance.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/demeterceo/",
+        "u_facebook": "https://www.facebook.com/DemeterFragranceLibrary",
+        "비고": "",
+        "c": [
+            40.8058294,
+            -73.7221108
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "듀이트리",
+        "nm_jp": "",
+        "nm_us": "DEWYTREE",
+        "address": "서울 송파구 중대로23길 9 (가락동, 서암빌딩) 4층",
+        "url": "https://www.dewytree.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5082666,
+            127.1163466
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "DHC",
+        "address": "2 Chome-7-1 Minamiazabu, Minato City, Tokyo 106-0047, Japan",
+        "url": "https://www.dhc.co.jp/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/dhc_official_jp/",
+        "u_facebook": "https://www.facebook.com/DHCinc/",
+        "비고": "",
+        "c": [
+            35.648453599999996,
+            139.7370635
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "딜리딜라잇",
+        "nm_jp": "",
+        "nm_us": "Dillydelight",
+        "address": "경기도 성남시 중원구 순환로 210 (상대원동, 지식센터빌딩 7층)",
+        "url": "http://dillydelight.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCnSvp7iHxfMT751_9wi9PcQ",
+        "u_instagram": "https://www.instagram.com/lycheemask/",
+        "u_facebook": "https://www.facebook.com/Dillydelight.Official/",
+        "비고": "",
+        "c": [
+            37.442296299999995,
+            127.1796006
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Dior",
+        "address": "49A Pavilion Rd Knightsbridge, London SW1X 0HD, United Kingdom",
+        "url": "https://www.dior.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/dior/",
+        "u_facebook": "https://www.facebook.com/Dior",
+        "비고": "",
+        "c": [
+            51.499411599999995,
+            -0.1602991
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Italy",
+        "cd$COUNTRY": "IT",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Dolce & Gabbana",
+        "address": "Via Goldoni, 10 20129 Milan, Italy",
+        "url": "https://www.dolcegabbana.com/beauty/makeup/",
+        "u_youtube": "https://www.youtube.com/channel/UCnsNsFAFPvFwpbaHJf2JtCQ",
+        "u_instagram": "https://www.instagram.com/dolcegabbana/",
+        "u_facebook": "https://www.facebook.com/DolceGabbana/",
+        "비고": "",
+        "c": [
+            45.4690413,
+            9.209431799999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United Kingdom",
+        "cd$COUNTRY": "UK",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Dove",
+        "address": "Unilever UK Freepost Admail 1000 London SW1A 2XX",
+        "url": "https://www.dove.com/",
+        "u_youtube": "https://www.youtube.com/user/DoveUKI",
+        "u_instagram": "https://www.instagram.com/dove/?hl=en",
+        "u_facebook": "https://www.facebook.com/dove",
+        "비고": "Unilever",
+        "c": [
+            51.5031092,
+            -0.1306184
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "닥터엘시아",
+        "nm_jp": "",
+        "nm_us": "Dr. Althea",
+        "address": "04053 서울특별시 마포구 와우산로29다길 16 (서교동) 닥터엘시아 플래그십 스토어",
+        "url": "http://doctoralthea.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5548748,
+            126.92738639999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "닥터자르트",
+        "nm_jp": "",
+        "nm_us": "Dr. Jart+",
+        "address": "서울특별시 강남구 신사동 도산대로11길 46",
+        "url": "https://www.drjart.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCY71mYlPic8cC0_L7gtx2ng",
+        "u_instagram": "https://www.instagram.com/drjart_kr/",
+        "u_facebook": "https://www.facebook.com/DrJartPage",
+        "비고": "",
+        "c": [
+            37.5204413,
+            127.0224434
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "닥터 마인드",
+        "nm_jp": "",
+        "nm_us": "Dr. Mind",
+        "address": "서울 구로구 디지털로 273 에이스트윈타워 2차 2층",
+        "url": "http://www.drmind.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.484484699999996,
+            126.89454789999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "닥터오라클",
+        "nm_jp": "",
+        "nm_us": "Dr. Oracle",
+        "address": "06093 서울특별시 강남구 봉은사로55길 38 (삼성동) 2층",
+        "url": "http://droracle.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCtmkAcGHzudrJ6uJqqrV2Rg/videos?disable_polymer=1",
+        "u_instagram": "https://www.instagram.com/droracle_official/",
+        "u_facebook": "https://www.facebook.com/droracle.kr/",
+        "비고": "",
+        "c": [
+            37.5131014,
+            127.0439042
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "닥터펩티",
+        "nm_jp": "",
+        "nm_us": "Dr. Pepti+",
+        "address": "경북 경산시 삼풍로 27,2205호",
+        "url": "http://drpepti.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            35.8271462,
+            128.7556474
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "닥터포유",
+        "nm_jp": "",
+        "nm_us": "DR4U",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더프트앤도프트",
+        "nm_jp": "",
+        "nm_us": "DUFT&DOFT",
+        "address": "서울특별시 강남구 테헤란로 414 (대치동) 엘앤비타워 6층",
+        "url": "https://duftndoft.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5048901,
+            127.05161849999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "얼스레시피",
+        "nm_jp": "",
+        "nm_us": "Earth’s Recipe",
+        "address": "서울특별시 강남구 도산대로83길 35 대우리츠카운티 302호",
+        "url": "https://smartstore.naver.com/earthsrecipe?NaPm=ct%3Dk2wuyiod%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3Dd0b1a565f78a744b361dee33287092bbfc254fed",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/earthsrecipe/",
+        "u_facebook": "https://www.facebook.com/earthsrecipe",
+        "비고": "",
+        "c": [
+            37.5266181,
+            127.0484982
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "이글립스",
+        "nm_jp": "",
+        "nm_us": "EGLIPS",
+        "address": "인천 연수구 컨벤시아대로 165, 32층 (송도동, 포스코타워-송도)",
+        "url": "http://www.eglips.com/",
+        "u_youtube": "https://www.youtube.com/channel/UC91To9yoLO10dV65Md1omzw",
+        "u_instagram": "https://www.instagram.com/eglips_official/",
+        "u_facebook": "https://www.facebook.com/sky007com/",
+        "비고": "sky007",
+        "c": [
+            37.389167,
+            126.64388899999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Elizabeth Arden",
+        "address": "880 S.W. 145th Avenue Suite 200 Pembroke Pines, FL 33027, United States",
+        "url": "elizabetharden.com",
+        "u_youtube": "https://www.youtube.com/channel/UCV7Jy3dqDQZns9M16Y4Gs8w",
+        "u_instagram": "https://www.instagram.com/elizabetharden",
+        "u_facebook": "https://www.facebook.com/elizabetharden.korea",
+        "비고": "MacAndrews & Forbes",
+        "c": [
+            26.0012722,
+            -80.3379343
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "ELSEVE/ELVIVE/ELVITAL",
+        "address": "L’Oréal International 41, Rue Martre 92117 Clichy Cedex France",
+        "url": "https://www.loreal.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCoC8wK7Hbj1saQUBlFVaJkA",
+        "u_instagram": "https://www.instagram.com/lorealmakeup",
+        "u_facebook": "https://www.facebook.com/lorealpariskorea",
+        "비고": "L’Oréal",
+        "c": [
+            48.900324399999995,
+            2.3082247
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "에스쁘아",
+        "nm_jp": "",
+        "nm_us": "espoir",
+        "address": "서울특별시 용산구 한강대로 100 (한강로2가) 6층",
+        "url": "https://www.espoir.com/",
+        "u_youtube": "",
+        "u_instagram": "http://instagram.com/espoir_makeup",
+        "u_facebook": "http://www.facebook.com/eSpoirstory",
+        "비고": "Amorepacific",
+        "c": [
+            37.5314481,
+            126.97095239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Estee Lauder",
+        "address": "Estée Lauder Inc. Corporate Headquarters 767 Fifth Avenue New York, NY 10153, United States",
+        "url": "https://www.esteelauder.com/",
+        "u_youtube": "https://www.youtube.com/user/EsteeLauder",
+        "u_instagram": "https://www.instagram.com/esteelauder",
+        "u_facebook": "https://www.facebook.com/EsteeLauder",
+        "비고": "",
+        "c": [
+            40.763557299999995,
+            -73.9723018
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "에뛰드하우스",
+        "nm_jp": "",
+        "nm_us": "Etude House",
+        "address": "서울특별시 용산구 한강대로 100(한강로2가)",
+        "url": "https://www.etudehouse.com/",
+        "u_youtube": "https://www.youtube.com/user/etudeblog",
+        "u_instagram": "https://www.instagram.com/etudehouseofficial/",
+        "u_facebook": "https://www.facebook.com/etudehouseofficial/",
+        "비고": "Amorepacific",
+        "c": [
+            37.5314481,
+            126.97095239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "핑거스푼",
+        "nm_jp": "",
+        "nm_us": "FINGER SPOON",
+        "address": "서울특별시 강남구 테헤란로 116, 10층 k1059호(역삼동, 동경빌딩)",
+        "url": "http://fingerspoon.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/fingerspoon/",
+        "비고": "",
+        "c": [
+            37.498443,
+            127.0305178
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Gabriel Cosmetics",
+        "address": "7430 164th AVE NE Suite B-233. Redmond, WA 98052",
+        "url": "",
+        "u_youtube": "https://www.youtube.com/user/GabrielCosmeticsInc",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/gabrielcosmetic",
+        "비고": "Gabriel Cosmetics",
+        "c": [
+            47.6706201,
+            -122.12036599999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Garnier",
+        "address": "41 Rue Martre, 92117 Clichy, France",
+        "url": "https://www.garnier.fr/",
+        "u_youtube": "https://www.youtube.com/user/garnierFR",
+        "u_instagram": "https://www.instagram.com/garnierfr/",
+        "u_facebook": "https://www.facebook.com/GarnierFR/",
+        "비고": "L’Oréal",
+        "c": [
+            48.9004712,
+            2.3082523999999998
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Gillette",
+        "address": "800 Boylston Street Boston, MA 02199, United States",
+        "url": "https://gillette.com/",
+        "u_youtube": "https://www.youtube.com/user/gillette",
+        "u_instagram": "https://www.instagram.com/gillette/",
+        "u_facebook": "https://www.facebook.com/gillette",
+        "비고": "P&G",
+        "c": [
+            42.3473912,
+            -71.0820284
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "글로우라우디",
+        "nm_jp": "",
+        "nm_us": "GLOW LOUDEY",
+        "address": "경기도 남양주시 진관로363번길 76-31",
+        "url": "https://glowloudeycos.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UC3LkWnNXeKnI-o88LOLkhYQ/",
+        "u_instagram": "https://www.instagram.com/glowloudey.beauty.official",
+        "u_facebook": "https://www.facebook.com/glowloudey.cos.official/",
+        "비고": "",
+        "c": [
+            37.643513,
+            127.15620759999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "구달",
+        "nm_jp": "",
+        "nm_us": "Goodal",
+        "address": "서울특별시 성동구 왕십리로 66",
+        "url": "http://www.goodalcosmetic.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "CLIO",
+        "c": [
+            37.5434183,
+            127.04505619999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Goody",
+        "address": "3 Glenlake Parkway Atlanta, GA 30328, United States",
+        "url": "",
+        "u_youtube": "https://www.youtube.com/user/GoodyProducts",
+        "u_instagram": "https://www.instagram.com/goodyhair",
+        "u_facebook": "https://www.facebook.com/GOODY/",
+        "비고": "",
+        "c": [
+            33.935549099999996,
+            -84.3599966
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "궁중비책",
+        "nm_jp": "",
+        "nm_us": "Goongbe",
+        "address": "서울시 마포구 상암산로 76 17~18F (상암동, YTN 뉴스퀘어)",
+        "url": "http://www.goongbe.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/zerotoseven_official",
+        "u_facebook": "https://www.facebook.com/zerotoseven07",
+        "비고": "",
+        "c": [
+            37.579488,
+            126.892456
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "그린핑거",
+        "nm_jp": "",
+        "nm_us": "Green Finger",
+        "address": "서울시 강남구 테헤란로 504 (우)135-725",
+        "url": "https://www.momq.co.kr/brand/initMain.action?brand_id=201807050000009",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/greenfinger.official/",
+        "u_facebook": "https://www.facebook.com/greenfingeryk/",
+        "비고": "유한킴벌리",
+        "c": [
+            37.5086154,
+            127.0597808
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Italy",
+        "cd$COUNTRY": "IT",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Gucci",
+        "address": "Via de' Tornabuoni, 7350123 Firenze FI, Italy",
+        "url": "https://www.gucci.com/int/en/ca/beauty-c-beauty",
+        "u_youtube": "http://www.youtube.com/gucciofficial",
+        "u_instagram": "http://instagram.com/guccibeauty/",
+        "u_facebook": "http://www.facebook.com/gucci",
+        "비고": "Kering",
+        "c": [
+            43.7709249,
+            11.2513741
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "게리쏭",
+        "nm_jp": "",
+        "nm_us": "GUERISSON",
+        "address": "서울특별시 중구 퇴계로 10 메트로타워 7층",
+        "url": "http://www.9complex.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/guerisson_official/",
+        "u_facebook": "https://www.facebook.com/guerisson.kr/",
+        "비고": "",
+        "c": [
+            37.556247,
+            126.974319
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Guerlain",
+        "address": "Guerlain SAS 68, Avenue des Champs-Elysees, 75008 Paris, France",
+        "url": "https://www.guerlain.com/",
+        "u_youtube": "https://www.youtube.com/user/guerlain",
+        "u_instagram": "https://www.instagram.com/guerlain/",
+        "u_facebook": "https://www.facebook.com/Guerlain/",
+        "비고": "LVMH",
+        "c": [
+            48.8709759,
+            2.3051452
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "귀애랑",
+        "nm_jp": "",
+        "nm_us": "Guierang",
+        "address": "서울특별시 영등포구 의사당대로 97 교보증권빌딩 3층",
+        "url": "https://sofybodyfit.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.522483699999995,
+            126.9245871
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Head & Shoulders",
+        "address": "1 P&G Plaza Cincinnati OH 45202, United States",
+        "url": "https://www.headandshoulders.com/",
+        "u_youtube": "https://www.youtube.com/user/headandshoulders/",
+        "u_instagram": "https://www.instagram.com/headshouldersusa/",
+        "u_facebook": "https://www.facebook.com/headandshouldersusa",
+        "비고": "P&G",
+        "c": [
+            39.1030857,
+            -84.5063438
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "헤이미쉬",
+        "nm_jp": "",
+        "nm_us": "HEIMISH",
+        "address": "경기도 성남시 분당구 판교로 331 ABN타워 3층",
+        "url": "http://www.eheimish.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCQRnbAuo3PrwcaKx8PoaulA",
+        "u_instagram": "https://www.instagram.com/heimish_cosmetic",
+        "u_facebook": "https://www.facebook.com/heimish.korea",
+        "비고": "",
+        "c": [
+            37.403661,
+            127.11052199999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "홀리카홀리카",
+        "nm_jp": "",
+        "nm_us": "HOLIKA HOLIKA",
+        "address": "경기도 일산동구 문봉동 195-24(문봉길 62번길 32-77)",
+        "url": "https://www.holikaholika.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/holikaholika_official/",
+        "u_facebook": "https://www.facebook.com/EnpraniHolika/",
+        "비고": "엔프라니",
+        "c": [
+            37.7097025,
+            126.81858229999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "홈스타",
+        "nm_jp": "",
+        "nm_us": "Homestar",
+        "address": "서울특별시 종로구 새문안로 58 LG광화문빌딩",
+        "url": "http://www.lghnh.com/brand/detail.jsp?gbn=2&bid1=H054",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "홈즈",
+        "nm_jp": "",
+        "nm_us": "HomeZ",
+        "address": "서울시 마포구 양화로 188",
+        "url": "http://www.aekyungst.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/%ED%99%88%EC%A6%88-%EC%97%90%EC%96%B4%ED%9B%84%EB%A0%88%EC%89%AC-224815114345645/",
+        "비고": "애경",
+        "c": [
+            37.552785,
+            126.9186125
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "호피걸",
+        "nm_jp": "",
+        "nm_us": "Hope girl",
+        "address": "서울특별시 서초구 남부순환로 333길 13, 효봉B/D 4F",
+        "url": "https://hopegirl.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/hopegirlkorea",
+        "u_facebook": "https://www.facebook.com/hopegirl.kor",
+        "비고": "",
+        "c": [
+            37.4833419,
+            127.01998259999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "IWLT",
+        "nm_jp": "",
+        "nm_us": "I Woke Up Like This",
+        "address": "",
+        "url": "https://iwltbeauty.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/iwlt_beauty/",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아이디올로지",
+        "nm_jp": "",
+        "nm_us": "id ology",
+        "address": "06039 서울특별시 강남구 도산대로12길 13 (논현동) 아이디피부과 B/D 4층",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/idplacosmetics/",
+        "u_facebook": "https://www.facebook.com/idplacosmetics/",
+        "비고": "",
+        "c": [
+            37.516930599999995,
+            127.02416
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "일리윤",
+        "nm_jp": "",
+        "nm_us": "ILLIYOON",
+        "address": "서울특별시 용산구 한강대로 100 (한강로 2가)",
+        "url": "https://www.apgroup.com/int/ko/brands/illiyoon.html",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/illiyoon.official/",
+        "비고": "Amorepacific",
+        "c": [
+            37.5314481,
+            126.97095239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "잉가",
+        "nm_jp": "",
+        "nm_us": "INGA",
+        "address": "서울특별시 강남구 역삼동 언주로 537",
+        "url": "http://ingacos.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/inga_official/",
+        "u_facebook": "https://www.facebook.com/INGA-1494858514143119",
+        "비고": "",
+        "c": [
+            37.505879199999995,
+            127.04065299999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "이니스프리",
+        "nm_jp": "",
+        "nm_us": "Innisfree",
+        "address": "서울특별시 용산구 한강대로 100(한강로2가) 7층",
+        "url": "https://www.innisfree.com",
+        "u_youtube": "https://www.youtube.com/user/ecoinnisfree11",
+        "u_instagram": "https://www.instagram.com/innisfreeofficial/",
+        "u_facebook": "https://www.facebook.com/innisfreeHQ",
+        "비고": "Amorepacific",
+        "c": [
+            37.5314481,
+            126.97095239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아이오페",
+        "nm_jp": "",
+        "nm_us": "IOPE",
+        "address": "서울특별시 용산구 한강대로 100(한강로2가)",
+        "url": "https://www.iope.com/",
+        "u_youtube": "https://www.youtube.com/user/IOPEkr",
+        "u_instagram": "https://www.instagram.com/iope_official/",
+        "u_facebook": "https://www.iope.com/kr/ko/#",
+        "비고": "Amorepacific",
+        "c": [
+            37.5314481,
+            126.97095239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "It Cosmetics",
+        "address": "111 Town Square Pl #317Jersey City, NJ 07310, United States",
+        "url": "https://www.itcosmetics.com/",
+        "u_youtube": "http://www.youtube.com/user/itcosmetics",
+        "u_instagram": "http://instagram.com/itcosmetics",
+        "u_facebook": "https://www.facebook.com/itcosmetics",
+        "비고": "L’Oréal",
+        "c": [
+            40.7262771,
+            -74.0337316
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "잇츠스킨",
+        "nm_jp": "",
+        "nm_us": "It's Skin",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "아이유닉",
+        "nm_jp": "",
+        "nm_us": "IUNIK",
+        "address": "서울특별시 서대문구 연희동 성산로7길 89-8",
+        "url": "https://www.iunik.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/iunik_official/",
+        "u_facebook": "https://www.facebook.com/iunikcos/",
+        "비고": "",
+        "c": [
+            37.567503699999996,
+            126.9233318
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Johnson's",
+        "address": "410 George St, New Brunswick, NJ 08901, United States",
+        "url": "https://www.johnsonsbaby.com/",
+        "u_youtube": "https://www.youtube.com/baby",
+        "u_instagram": "https://www.instagram.com/johnsonsbaby/",
+        "u_facebook": "https://www.facebook.com/johnsonsbabyUS",
+        "비고": "J&J",
+        "c": [
+            40.497022099999995,
+            -74.4450062
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Kai",
+        "address": "〒101-8586 東京都千代田区岩本町3-9-5, Japan",
+        "url": "https://www.kai-group.com/products/beauty/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/kai_corporation/",
+        "u_facebook": "https://www.facebook.com/kai.corporation",
+        "비고": "KAI Group",
+        "c": [
+            35.696273999999995,
+            139.7765758
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Kanebo",
+        "address": "14-10, Nihonbashi Kayabacho 1-chome, Chuo-ku, Tokyo 103-8210, Japan",
+        "url": "https://www.kanebo.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/kaneboofficial/",
+        "u_facebook": "https://www.facebook.com/kanebo.global",
+        "비고": "Kao",
+        "c": [
+            35.6795608,
+            139.78021339999998
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Kiss Me",
+        "address": "〒102-8370東京都千代田区四番町6番11号, Japan",
+        "url": "https://www.isehan.co.jp/",
+        "u_youtube": "https://www.youtube.com/user/kissmebyisehanch",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/kissme.isehan",
+        "비고": "",
+        "c": [
+            35.6895181,
+            139.73659659999998
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Kose",
+        "address": "東京都中央区日本橋3-6-2, Japan",
+        "url": "https://www.kose.co.jp",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/MaisonKOSE.official",
+        "비고": "",
+        "c": [
+            35.679626999999996,
+            139.7725353
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "라끄베르",
+        "nm_jp": "",
+        "nm_us": "LACVERT",
+        "address": "서울특별시 종로구 새문안로 58 LG광화문빌딩",
+        "url": "http://www.lacvert.co.kr/index.jsp",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "라곰",
+        "nm_jp": "",
+        "nm_us": "LAGOM",
+        "address": "서울특별시 중구 명동길 65 보림빌딩 9층",
+        "url": "http://www.lagomkorea.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/lagomkorea/",
+        "u_facebook": "https://www.facebook.com/lagomkorea",
+        "비고": "",
+        "c": [
+            37.564146,
+            126.985886
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Lancome",
+        "address": "L’Oréal USA, Inc., 10 Hudson Yards, 347 10th Ave, New York, NY 10001, United States",
+        "url": "https://www.lancome.com/",
+        "u_youtube": "https://www.youtube.com/channel/UC8wxRqbjdqDHgECGj9mSVAA",
+        "u_instagram": "https://www.instagram.com/lancomeofficial",
+        "u_facebook": "https://www.facebook.com/lancome/",
+        "비고": "L’Oréal",
+        "c": [
+            40.7526906,
+            -74.00144379999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "라네즈",
+        "nm_jp": "",
+        "nm_us": "Laneige",
+        "address": "서울특별시 용산구 한강대로 100",
+        "url": "http://www.laneige.com/kr/ko/main.html",
+        "u_youtube": "https://www.youtube.com/user/laneigestory",
+        "u_instagram": "https://www.instagram.com/laneige_kr/",
+        "u_facebook": "https://www.facebook.com/laneige.kr",
+        "비고": "Amorepacific",
+        "c": [
+            37.548884699999995,
+            126.9727028
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "랩코스",
+        "nm_jp": "",
+        "nm_us": "Lapcos",
+        "address": "서울특별시 성동구 연무장11길 10(성수동2가) 우리큐브",
+        "url": "http://www.lapcos.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/lapcos_official/",
+        "u_facebook": "https://www.facebook.com/LAPCOS/",
+        "비고": "",
+        "c": [
+            37.542730999999996,
+            127.0573043
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Le Petit Marseillais",
+        "address": "Johnson & Johnson Consumer Inc. One Johnson & Johnson Plaza New Brunswick, New Jersey 08933 United States",
+        "url": "https://www.lepetitmarseillais.com/",
+        "u_youtube": "https://www.youtube.com/user/lepetitmarseillais",
+        "u_instagram": "https://www.instagram.com/lepetitmarseillais/",
+        "u_facebook": "https://www.facebook.com/LePetitMarseillais/",
+        "비고": "J&J",
+        "c": [
+            40.497951799999996,
+            -74.44305589999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "리더스",
+        "nm_jp": "",
+        "nm_us": "Leaders Cosmetics",
+        "address": "05065 서울특별시 광진구 능동로 90 (자양동) 더클래식500 C404호",
+        "url": "https://leaderscosmetics.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCIKp3hEje7MbCETcis5UXCg",
+        "u_instagram": "https://www.instagram.com/leaders_cos/",
+        "u_facebook": "https://www.facebook.com/leaderscosmetic",
+        "비고": "",
+        "c": [
+            37.5382118,
+            127.0709107
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "르베라쥬",
+        "nm_jp": "",
+        "nm_us": "LEBELAGE",
+        "address": "인천광역시 서구 북항로206번길 30 392-17",
+        "url": "http://lebelage.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5069115,
+            126.63642209999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "레센셜",
+        "nm_jp": "",
+        "nm_us": "Lessential",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "렛츠슬림",
+        "nm_jp": "",
+        "nm_us": "Lets Slim",
+        "address": "서울시 양천구 목동중앙남로7길 20",
+        "url": "http://lets-slim.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/letsslim_co/",
+        "u_facebook": "https://www.facebook.com/letsslim2015",
+        "비고": "",
+        "c": [
+            37.5375333,
+            126.8656635
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "랑",
+        "nm_jp": "",
+        "nm_us": "LLang",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "L'Occitane",
+        "address": "49, Boulevard Prince Henri, L-1724, Luxembourg",
+        "url": "https://www.loccitane.com/",
+        "u_youtube": "https://www.youtube.com/user/loccitaneenprovence",
+        "u_instagram": "https://www.instagram.com/loccitane/",
+        "u_facebook": "https://www.facebook.com/loccitane.korea",
+        "비고": "",
+        "c": [
+            49.6092647,
+            6.125146399999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "L'Oréal Paris",
+        "address": "L’Oréal International 41, Rue Martre 92117 Clichy Cedex France",
+        "url": "https://www.loreal.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCoC8wK7Hbj1saQUBlFVaJkA",
+        "u_instagram": "https://www.instagram.com/lorealmakeup",
+        "u_facebook": "https://www.facebook.com/lorealpariskorea",
+        "비고": "L’Oréal",
+        "c": [
+            48.900324399999995,
+            2.3082247
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "루나",
+        "nm_jp": "",
+        "nm_us": "Luna",
+        "address": "서울시 마포구 양화로 188 ",
+        "url": "http://www.aekyung.co.kr/KR/brand/view.do?seq=89&type=view",
+        "u_youtube": "https://www.youtube.com/channel/UCHf-1mEV4ZMke3bjRMw5fpQ",
+        "u_instagram": "https://www.instagram.com/akbeauty_official/",
+        "u_facebook": "https://www.facebook.com/akbeauty.kr",
+        "비고": "애경",
+        "c": [
+            37.552785,
+            126.9186125
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "India",
+        "cd$COUNTRY": "IN",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "LUX",
+        "address": "Hindustan Unilever Limited, Unilever House, B. D. Sawant Marg, Chakala, Andheri (E), Mumbai – 400 099, India",
+        "url": "https://www.lux.com/in/home.html",
+        "u_youtube": "https://www.youtube.com/user/justalittlelux",
+        "u_instagram": "https://www.instagram.com/lux_india/",
+        "u_facebook": "https://www.facebook.com/LuxIndia/",
+        "비고": "Unilever",
+        "c": [
+            19.1132249,
+            72.8561999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Lynx",
+        "address": "Level 17, 2 Park Street, Sydney, NSW 2000, Australia",
+        "url": "https://www.lynxexpression.com/",
+        "u_youtube": "https://www.youtube.com/user/LynxEffectAustralia",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/lynx/",
+        "비고": "Unilever",
+        "c": [
+            -33.8726651,
+            151.2076409
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "M.A.C.",
+        "address": "130 Prince St, 2nd Floor New York, NY 10012, United States",
+        "url": "https://www.maccosmetics.com/",
+        "u_youtube": "https://www.youtube.com/MACcosmetics",
+        "u_instagram": "https://www.instagram.com/maccosmetics",
+        "u_facebook": "https://www.facebook.com/MACCosmeticsKorea",
+        "비고": "Estee Lauder",
+        "c": [
+            40.7253651,
+            -74.0005917
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메이크프렘",
+        "nm_jp": "",
+        "nm_us": "Make P:rem",
+        "address": "서울특별시 강남구 봉은사로 226, 6층",
+        "url": "http://www.makeprem.com/",
+        "u_youtube": "",
+        "u_instagram": "http://www.instagram.com/makeprem/",
+        "u_facebook": "http://www.facebook.com/makeprem.official",
+        "비고": "",
+        "c": [
+            37.5079729,
+            127.03706899999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "마케리마케",
+        "nm_jp": "",
+        "nm_us": "MAKEREMAKE",
+        "address": "서울특별시 종로구 새문안로 58 LG광화문빌딩",
+        "url": "http://www.lghnh.com/brand/detail.jsp?gbn=1&bid1=C086",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "마몽드",
+        "nm_jp": "",
+        "nm_us": "Mamonde",
+        "address": "서울특별시 용산구 한강대로 100",
+        "url": "https://www.mamonde.com/",
+        "u_youtube": "https://www.youtube.com/user/mamonderepair",
+        "u_instagram": "https://www.instagram.com/mamondekorea/",
+        "u_facebook": "https://www.facebook.com/mamonde.kr/",
+        "비고": "Amorepacific",
+        "c": [
+            37.548884699999995,
+            126.9727028
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "마리앤유",
+        "nm_jp": "",
+        "nm_us": "Mari&U",
+        "address": "",
+        "url": "https://mariandu.modoo.at/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Spain",
+        "cd$COUNTRY": "ES",
+        "nm_cn": "",
+        "nm_kr": "마티덤",
+        "nm_jp": "",
+        "nm_us": "MartiDerm",
+        "address": "Carrer Garnatxa, 20-2208758 Cervelló, Barcelona, 스페인",
+        "url": "https://www.martiderm.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCd1AfBF0wBt37Eq0PzDLBaA",
+        "u_instagram": "https://www.instagram.com/martiderm_global/",
+        "u_facebook": "https://www.facebook.com/MartiDermGlobal/",
+        "비고": "",
+        "c": [
+            41.404251599999995,
+            1.9905313
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "맥스클리닉",
+        "nm_jp": "",
+        "nm_us": "MaxClinic",
+        "address": "서울특별시 서초구 남부순환로 2423, 8층(서초동, 한원빌딩)",
+        "url": "http://www.maxclinic.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.4817853,
+            127.01549299999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Maybelline New York",
+        "address": "575 Fifth Avenue, 19th Floor New York, New York 10017 United States",
+        "url": "https://www.maybelline.com/",
+        "u_youtube": "https://www.youtube.com/user/maybellinenewyork",
+        "u_instagram": "https://www.instagram.com/maybelline/",
+        "u_facebook": "https://www.facebook.com/maybelline",
+        "비고": "L’Oréal",
+        "c": [
+            40.7563205,
+            -73.9782735
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메이시크",
+        "nm_jp": "",
+        "nm_us": "MAYCHIC",
+        "address": "서울특별시 강남구 언주로 551 (역삼동) 7층",
+        "url": "https://maychic.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/p/Bs7niGIhvw-/",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5069632,
+            127.03965509999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메이쿱",
+        "nm_jp": "",
+        "nm_us": "MayCoop",
+        "address": "경기도 성남시 중원구 순환로198번길 7, 준래빌딩 5층 (상대원동 67-3)",
+        "url": "https://www.maycoop.com/",
+        "u_youtube": "https://www.youtube.com/channel/UC7QiP7IdfeVPbHuOWH8Pf2Q?",
+        "u_instagram": "https://www.instagram.com/maycoop_korea/",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.4416795,
+            127.1800447
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메디힐리",
+        "nm_jp": "",
+        "nm_us": "Medi Heally",
+        "address": "서울특별시 서초구 논현로 79 윈드스톤빌딩 15층",
+        "url": "https://mediheally.com/",
+        "u_youtube": "",
+        "u_instagram": "http://www.instagram.com/mediheally_official/",
+        "u_facebook": "http://www.facebook.com/mediheally/",
+        "비고": "",
+        "c": [
+            37.4768525,
+            127.0447433
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메디안",
+        "nm_jp": "",
+        "nm_us": "Median",
+        "address": "서울특별시 용산구 한강대로 100",
+        "url": "https://www.apgroup.com/int/ko/brands/median.html",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "Amorepacific",
+        "c": [
+            37.548884699999995,
+            126.9727028
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메디엔탈",
+        "nm_jp": "",
+        "nm_us": "mediental",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메디힐",
+        "nm_jp": "",
+        "nm_us": "Mediheal",
+        "address": "서울 강서구 공항대로 516 메디힐빌딩",
+        "url": "http://www.medihealshop.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/mediheal_official/",
+        "u_facebook": "https://www.facebook.com/MEDIHEAL.Korea/",
+        "비고": "",
+        "c": [
+            37.5512894,
+            126.86342359999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "메디필",
+        "nm_jp": "",
+        "nm_us": "MEDI-PEEL",
+        "address": "05855 서울특별시 송파구 송파대로 167(문정동) 문정역 테라타워1차 B동 1112호(주)스킨이데아",
+        "url": "https://medipeel.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCaBOBPiQO6koZ40Rbc9hRLg",
+        "u_instagram": "https://www.instagram.com/medipeel.official/",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.4853459,
+            127.1222177
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "미팩토리",
+        "nm_jp": "",
+        "nm_us": "MEFACTORY",
+        "address": "04797 서울특별시 성동구 아차산로9길 20 (성수동2가) 미팩토리",
+        "url": "http://mefactory.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/mefactory_official/",
+        "u_facebook": "https://www.facebook.com/mefactory3step/",
+        "비고": "",
+        "c": [
+            37.5458587,
+            127.0586874
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "멀블리스",
+        "nm_jp": "",
+        "nm_us": "MERBLISS",
+        "address": "서울특별시 구로구 디지털로 288 대륭포스트타워 1차 1206호",
+        "url": "https://merbliss.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.4835267,
+            126.8954883
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "모공도둑",
+        "nm_jp": "",
+        "nm_us": "MGDD",
+        "address": "서울특별시 금천구 가산디지털1로 145, 1703-10호",
+        "url": "http://www.mgdd.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/mogongdodook/",
+        "u_facebook": "https://www.facebook.com/mgddkorea",
+        "비고": "",
+        "c": [
+            37.478115599999995,
+            126.88156769999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "미바",
+        "nm_jp": "",
+        "nm_us": "MIBA",
+        "address": "인천시 연수구 먼우금로 189 소망빌딩 301호",
+        "url": "http://www.mineralbio.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.414547999999996,
+            126.67589219999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "미라떼",
+        "nm_jp": "",
+        "nm_us": "MILATTE",
+        "address": "14543 경기도 부천시 길주로77번길 19-45 (상동) 디아뜨갤러리4차",
+        "url": "http://www.sunhyang.biz/",
+        "u_youtube": "https://www.youtube.com/channel/UCy603Xh6vO3hZfw6l2P761w",
+        "u_instagram": "https://www.instagram.com/sunhyang_cos/",
+        "u_facebook": "https://www.facebook.com//MILATTE/",
+        "비고": "",
+        "c": [
+            37.5076213,
+            126.74938239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "밀키드레스",
+        "nm_jp": "",
+        "nm_us": "Milky Dress",
+        "address": "서울특별시 강남구 논현2동 선릉로129길 16 5층",
+        "url": "http://www.milkydress.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/milkydress_official/",
+        "u_facebook": "https://www.facebook.com/milkydressofficial",
+        "비고": "",
+        "c": [
+            37.5162566,
+            127.0402136
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "미장센",
+        "nm_jp": "",
+        "nm_us": "mise en scène",
+        "address": "서울특별시 용산구 한강대로 100",
+        "url": "http://www.miseenscene.com/",
+        "u_youtube": "https://www.youtube.com/user/mjsenmugshot",
+        "u_instagram": "https://instagram.com/likeithair/",
+        "u_facebook": "https://www.facebook.com/likeithair",
+        "비고": "Amorepacific",
+        "c": [
+            37.548884699999995,
+            126.9727028
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "미스킨",
+        "nm_jp": "",
+        "nm_us": "miskin",
+        "address": "11426 경기도 양주시 은현면 화합로691번길 30 (주)미스킨",
+        "url": "http://miskin22.cafe24.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.8720633,
+            127.00724629999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "미샤",
+        "nm_jp": "",
+        "nm_us": "Missha",
+        "address": "서울특별시 서초구 서초대로 38길 12 (서초동, 마제스타시티 타워 원 13층)",
+        "url": "http://missha.beautynet.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://instagram.com/MISSHA.official",
+        "u_facebook": "https://www.facebook.com/myMISSHA",
+        "비고": "ABLE C&C",
+        "c": [
+            37.490534499999995,
+            127.0053318
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "미즈라인",
+        "nm_jp": "",
+        "nm_us": "MIZLINE",
+        "address": "10909 경기도 파주시 송학1길 171 (야당동) 1층~2층",
+        "url": "https://mizline.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCnr7IuCfWisBvEqZaD22ncg/featured?disable_polymer=1",
+        "u_instagram": "https://www.instagram.com/mizline_official/",
+        "u_facebook": "https://www.facebook.com/profile.php?id=100009185035399",
+        "비고": "",
+        "c": [
+            37.7162457,
+            126.7642758
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "모아트",
+        "nm_jp": "",
+        "nm_us": "MOART",
+        "address": "서울특별시 강서구 마곡동 718번지 5층",
+        "url": "http://moart-beauty.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/moart_official",
+        "u_facebook": "https://www.facebook.com/moart.placecompany/",
+        "비고": "",
+        "c": [
+            37.5764888,
+            126.8307466
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "문샷",
+        "nm_jp": "",
+        "nm_us": "moonshot",
+        "address": "서울시 강남구 신사동 도산대로 145 인우빌딩 15층",
+        "url": "http://www.moonshot-cosmetics.com/",
+        "u_youtube": "https://www.youtube.com/user/moonshotkorea",
+        "u_instagram": "https://www.instagram.com/moonshot_korea/",
+        "u_facebook": "https://www.facebook.com/moonshotkorea/",
+        "비고": "",
+        "c": [
+            37.518485999999996,
+            127.0244386
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "모레모",
+        "nm_jp": "",
+        "nm_us": "moremo",
+        "address": "충청북도 진천군 초평면 은암길 36",
+        "url": "http://moremo.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCIs5fm8s5eXHtR9qdx0Parw",
+        "u_instagram": "https://www.instagram.com/moremo_official/",
+        "u_facebook": "https://www.facebook.com/moremoofficial",
+        "비고": "",
+        "c": [
+            36.7905552,
+            127.51114109999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "네시픽",
+        "nm_jp": "",
+        "nm_us": "NACIFIC",
+        "address": "서울특별시 금천구 벚꽃로 298, 1106호, 1107호 (가산동, 대륭포스트타워6차)",
+        "url": "https://naturalpacific.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/nacific_official/",
+        "u_facebook": "https://www.facebook.com/nacific.kr/",
+        "비고": "",
+        "c": [
+            37.4813244,
+            126.8837789
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Brazil",
+        "cd$COUNTRY": "BR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Natura",
+        "address": "10 Rue Chevreul 92150 Suresnes, France",
+        "url": "https://www.natura.com.br/",
+        "u_youtube": "https://www.youtube.com/user/naturabemestarbem",
+        "u_instagram": "https://www.instagram.com/naturabroficial/",
+        "u_facebook": "https://www.facebook.com/naturabroficial",
+        "비고": "",
+        "c": [
+            48.867024699999995,
+            2.2230103
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "네이처리퍼블릭",
+        "nm_jp": "",
+        "nm_us": "Nature Republic",
+        "address": "서울 강남구 테헤란로 534 (대치동, 글라스타워빌딩) 22,23,24층",
+        "url": "https://www.naturerepublic.com/",
+        "u_youtube": "https://www.youtube.com/user/naturerepublicon",
+        "u_instagram": "https://www.instagram.com/naturerepublic_kr/",
+        "u_facebook": "https://www.facebook.com/naturerepublic.kr",
+        "비고": "",
+        "c": [
+            37.5080019,
+            127.0627646
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "네오젠",
+        "nm_jp": "",
+        "nm_us": "Neogen Dermalogy",
+        "address": "서울특별시 강남구 테헤란로 508 (대치동, 해성2빌딩 15층)",
+        "url": "https://www.neogenderma.com/FrontStore/iStartPage.phtml",
+        "u_youtube": "https://www.youtube.com/channel/UCKOA3N1u6E4wSLIh1m5mN8A",
+        "u_instagram": "https://www.instagram.com/neogen_official/",
+        "u_facebook": "https://www.facebook.com/NEOGENDERMALOGY",
+        "비고": "",
+        "c": [
+            37.508472,
+            127.063976
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Neutrogena",
+        "address": "Johnson & Johnson Consumer Inc. One Johnson & Johnson Plaza New Brunswick, New Jersey 08933 United States",
+        "url": "https://www.neutrogena.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCNGr_3LSXp3KL55jZW7Pvhg",
+        "u_instagram": "https://www.instagram.com/neutrogena",
+        "u_facebook": "https://www.facebook.com/neutrogenakorea",
+        "비고": "J&J",
+        "c": [
+            40.497951799999996,
+            -74.44305589999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "나이팅게일",
+        "nm_jp": "",
+        "nm_us": "Nightingale",
+        "address": "서울특별시 영등포구 도림로 180 (대림동) 2층",
+        "url": "https://nightingale.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCH8JwokSx2qWoTevpVerCZg",
+        "u_instagram": "https://www.instagram.com/nightingale.official/",
+        "u_facebook": "https://www.facebook.com/nightingale1853/",
+        "비고": "",
+        "c": [
+            37.495433999999996,
+            126.9012851
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Germany",
+        "cd$COUNTRY": "DE",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Nivea",
+        "address": "Hopfenbruchweg 619059 Schwerin, Germany",
+        "url": "https://www.nivea.com/",
+        "u_youtube": "https://www.youtube.com/user/niveausa",
+        "u_instagram": "https://www.instagram.com/niveausa/",
+        "u_facebook": "https://www.facebook.com/NIVEA/",
+        "비고": "Beiersdorf",
+        "c": [
+            53.642665699999995,
+            11.398496699999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "노멀노모어",
+        "nm_jp": "",
+        "nm_us": "NORMAL NOMORE",
+        "address": "서울특별시 중구 퇴계로 10 메트로타워 7층",
+        "url": "http://www.9complex.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/normalnomore_official/",
+        "u_facebook": "https://www.facebook.com/normalnomore.official",
+        "비고": "",
+        "c": [
+            37.556247,
+            126.974319
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "노우즈시크릿",
+        "nm_jp": "",
+        "nm_us": "NOSE SECRET",
+        "address": "P.O . Box 188 Fort Lee, NJ 07024, United States",
+        "url": "https://nosesecret.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCGKNGMkdYvEJxIR-YM08CPQ",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/NoseSecret",
+        "비고": "",
+        "c": [
+            40.8562383,
+            -73.9653715
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Olay",
+        "address": "1 P&G Plaza Cincinnati OH 45202, United States",
+        "url": "https://www.olay.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCZ1CQE5_gNdcuvxwcZOahzA",
+        "u_instagram": "https://www.instagram.com/olay/",
+        "u_facebook": "https://www.facebook.com/OlayUS/",
+        "비고": "P&G",
+        "c": [
+            39.1030857,
+            -84.5063438
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Old Spice",
+        "address": "",
+        "url": "https://www.oldspice.ca/en-ca",
+        "u_youtube": "https://www.youtube.com/user/OldSpice",
+        "u_instagram": "https://www.instagram.com/oldspice/",
+        "u_facebook": "https://www.facebook.com/OldSpice/",
+        "비고": "P&G",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Switzerland",
+        "cd$COUNTRY": "CH",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Oriflame",
+        "address": "Luxembourg, Schaffhausen Branch Bleicheplatz 3 CH-8200, Switzerland",
+        "url": "https://oriflame.com/",
+        "u_youtube": "https://www.youtube.com/oriflamecosmetics",
+        "u_instagram": "https://www.instagram.com/oriflame/",
+        "u_facebook": "https://www.facebook.com/oriflame",
+        "비고": "",
+        "c": [
+            47.6990347,
+            8.631713699999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Palmolive",
+        "address": "Colgate-Palmolive Company, 300 Park Avenue, New York, NY 10022-7499, United States",
+        "url": "https://www.palmolive.com/en-us",
+        "u_youtube": "https://www.youtube.com/user/colgatepalmolive",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "Colgate-Palmolive",
+        "c": [
+            40.756914699999996,
+            -73.9744887
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Pantene",
+        "address": "1 P&G Plaza Cincinnati OH 45202, United States",
+        "url": "https://pantene.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/pantene/",
+        "u_facebook": "https://www.facebook.com/PanteneNA/",
+        "비고": "P&G",
+        "c": [
+            39.1030857,
+            -84.5063438
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "China",
+        "cd$COUNTRY": "CN",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "PECHOIN",
+        "address": "上海市静安区昌平路710号3楼A区052室, China",
+        "url": "http://www.pechoin.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            31.234792,
+            121.442329
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "페리페라",
+        "nm_jp": "",
+        "nm_us": "Peripera",
+        "address": "서울특별시 성동구 왕십리로 66 ",
+        "url": "http://www.periperacosmetic.com/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/peripera_official/",
+        "u_facebook": "https://www.facebook.com/periperakr/",
+        "비고": "CLIO",
+        "c": [
+            37.5434183,
+            127.04505619999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "피엔와이세븐에스",
+        "nm_jp": "",
+        "nm_us": "PNY7'S",
+        "address": "경기도 시흥시 경기과기대로 246 (정왕동) 4호",
+        "url": "http://pny7s.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.3356432,
+            126.7353059
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Pola",
+        "address": "〒141-8523　東京都品川区西五反田2-2-3, Japan",
+        "url": "https://www.pola.co.jp/",
+        "u_youtube": "https://www.youtube.com/channel/UCSmF04wJyi5tVLsLD4TPNCQ",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/pola.inc",
+        "비고": "",
+        "c": [
+            35.6276854,
+            139.7212152
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Procter & Gamble",
+        "address": "1 P&G Plaza Cincinnati OH 45202, United States",
+        "url": "https://us.pg.com/",
+        "u_youtube": "http://youtube.com/channel/UCDzq6J0KoGCbps96JQuXWRg",
+        "u_instagram": "https://www.instagram.com/proctergamble/",
+        "u_facebook": "https://www.facebook.com/proctergamble/",
+        "비고": "P&G",
+        "c": [
+            39.1030857,
+            -84.5063438
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "피알피엘",
+        "nm_jp": "",
+        "nm_us": "PRPL",
+        "address": "06052 서울특별시 강남구 학동로 201 (논현동) 구연빌딩",
+        "url": "https://prpl.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCG5No7sbzh6HRFftiLa9avQ",
+        "u_instagram": "https://www.instagram.com/prpl_official/",
+        "u_facebook": "https://www.facebook.com/PRPLKOREA/",
+        "비고": "",
+        "c": [
+            37.5153642,
+            127.03208199999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "라엘",
+        "nm_jp": "",
+        "nm_us": "Rael",
+        "address": "서울특별시 강남구 봉은사로 446",
+        "url": "https://www.getrael.com",
+        "u_youtube": "https://www.youtube.com/channel/UCUR2fJf1PxU6j8AUGESZkuQ",
+        "u_instagram": "https://www.instagram.com/get_rael_korea/",
+        "u_facebook": "https://www.facebook.com/GetRael.kr/",
+        "비고": "",
+        "c": [
+            37.511277299999996,
+            127.048547
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "레인보우",
+        "nm_jp": "",
+        "nm_us": "RAINBOW",
+        "address": "인천광역시 남동구 함박뫼로 347번길 60 (남촌동 624-11)",
+        "url": "http://rainbowkorea.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.4298815,
+            126.72015809999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "리엔케이",
+        "nm_jp": "",
+        "nm_us": "Re:NK",
+        "address": "서울시 중구 서소문로 88 중앙일보빌딩 11층-17층",
+        "url": "http://www.re-nk.co.kr/mall/index.aspx",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/renk_beauty/",
+        "u_facebook": "https://www.facebook.com/ReNKbeauty/?fref=ts",
+        "비고": "웅진코웨이",
+        "c": [
+            37.562248,
+            126.9725821
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "레아라 다이아포스",
+        "nm_jp": "",
+        "nm_us": "Rearar DIAFORCE",
+        "address": "전라북도 전주시 완산구 서곡7길 20-10",
+        "url": "http://diaforcemall.cafe24.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            35.832467699999995,
+            127.1014762
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "레시피",
+        "nm_jp": "",
+        "nm_us": "RECIPE",
+        "address": "서울특별시 서초구 방배로 125 (영신빌딩)7층",
+        "url": "https://www.recipecosmetics.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.4850497,
+            126.9949182
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "리엔",
+        "nm_jp": "",
+        "nm_us": "ReEn",
+        "address": "서울특별시 종로구 새문안로 58 LG광화문빌딩",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "China",
+        "cd$COUNTRY": "CN",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Rejoice",
+        "address": "No. 3 of New Industrial Area of No.11 Community , Xiamao Village , Baiyun District , Guangzhou ,Guangdong , China",
+        "url": "http://www.rejoicecosmetic.com/",
+        "u_youtube": "https://www.youtube.com/channel/UC6LA0O7otaoDOwLZ5NnCw-Q",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/rejoicecosmetic/",
+        "비고": "",
+        "c": [
+            23.225812599999998,
+            113.25825239999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Revlon",
+        "address": "Revlon, Inc., 237 Park Ave., New York, NY 10017, United States",
+        "url": "https://www.revlon.com/",
+        "u_youtube": "https://www.youtube.com/user/revlon",
+        "u_instagram": "https://www.instagram.com/revlon",
+        "u_facebook": "https://www.facebook.com/revlon/",
+        "비고": "MacAndrews & Forbes",
+        "c": [
+            40.753904,
+            -73.9749325
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Australia",
+        "cd$COUNTRY": "AU",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Rexona",
+        "address": "Unilever House 100 Victoria Embankment London EC4Y 0DY United Kingdom",
+        "url": "https://www.rexona.com/au/home.html",
+        "u_youtube": "https://www.youtube.com/user/rexonamenaustralia",
+        "u_instagram": "https://www.instagram.com/rexonaau/",
+        "u_facebook": "http://www.facebook.com/RexonaAU",
+        "비고": "Unilever",
+        "c": [
+            51.5117623,
+            -0.1052089
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "리르",
+        "nm_jp": "",
+        "nm_us": "Rire",
+        "address": "경기도 성남시 중원구 상대원동 440번지 선일테크노피아 901호",
+        "url": "http://rire.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCy97-6oG_gZakd0W7FUUeEg",
+        "u_instagram": "https://www.instagram.com/rire_cosmetic/",
+        "u_facebook": "https://www.facebook.com/iwrire/",
+        "비고": "",
+        "c": [
+            37.4321104,
+            127.1784538
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "롬앤",
+        "nm_jp": "",
+        "nm_us": "ROM&ND",
+        "address": "서울시 강남구 논현동 59-9",
+        "url": "http://romand.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UC2uKY1XseEBI5Gorsy2DRZg",
+        "u_instagram": "https://www.instagram.com/romandyou/",
+        "u_facebook": "https://www.facebook.com/romandyou",
+        "비고": "",
+        "c": [
+            37.519210699999995,
+            127.02902399999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "로사퍼시픽",
+        "nm_jp": "",
+        "nm_us": "Rosapacific",
+        "address": "서울특별시 강남구 학동로 23길 13 로사퍼시픽빌딩",
+        "url": "http://rosapacific.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.514181,
+            127.028083
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "라운드어라운드",
+        "nm_jp": "",
+        "nm_us": "ROUNDAROUND",
+        "address": "04323 서울특별시 용산구 한강대로 366 (동자동) 6층",
+        "url": "http://roundaround.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/roundaround_official/",
+        "u_facebook": "",
+        "비고": "CJ올리브영",
+        "c": [
+            37.5494341,
+            126.9733782
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "로벡틴",
+        "nm_jp": "",
+        "nm_us": "ROVECTIN",
+        "address": "06032 서울특별시 강남구 논현로159길 13 (신사동) 4층",
+        "url": "http://rovectin.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/rovectinkorea/?hl=ko",
+        "u_facebook": "https://www.facebook.com/rovectin",
+        "비고": "",
+        "c": [
+            37.522824199999995,
+            127.0269793
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "려",
+        "nm_jp": "",
+        "nm_us": "Ryo",
+        "address": "",
+        "url": "https://www.ryo.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "Amorepacific",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Sally Hansen",
+        "address": "350 Fifth Avenue New York, New York 10118, United States",
+        "url": "",
+        "u_youtube": "https://www.youtube.com/user/SallyHansenTV",
+        "u_instagram": "https://www.instagram.com/sally_hansen/",
+        "u_facebook": "https://www.facebook.com/SallyHansen",
+        "비고": "",
+        "c": [
+            40.748243599999995,
+            -73.9851073
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Germany",
+        "cd$COUNTRY": "DE",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Schwarzkopf",
+        "address": "Schwarzkopf & Henkel GmbH, Henkelstraße 207, 40599 Düsseldorf, Germany",
+        "url": "https://www.schwarzkopf.com/en/home.html",
+        "u_youtube": "https://www.youtube.com/user/Schwarzkopf",
+        "u_instagram": "https://www.facebook.com/SchwarzkopfUS/",
+        "u_facebook": "https://www.instagram.com/schwarzkopf/",
+        "비고": "Henkel",
+        "c": [
+            51.1764638,
+            6.8521801
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "시크릿키",
+        "nm_jp": "",
+        "nm_us": "secret key",
+        "address": "서울시 강남구 학동로 107 더 퍼스트빌딩 4층",
+        "url": "http://www.secretkey.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCkrYOxb5jLLyIDMW9iDzz-Q",
+        "u_instagram": "https://www.instagram.com/secretkey_official/",
+        "u_facebook": "https://www.facebook.com/ilovesecretkey",
+        "비고": "",
+        "c": [
+            37.5116167,
+            127.022455
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "France",
+        "cd$COUNTRY": "FR",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Sephora Collection",
+        "address": "70-72 Av. des Champs-Élysées, 75008 Paris, France",
+        "url": "",
+        "u_youtube": "https://www.youtube.com/user/sephora/tutorials",
+        "u_instagram": "https://www.instagram.com/sephoracollection",
+        "u_facebook": "https://www.facebook.com/SephoraCollection",
+        "비고": "",
+        "c": [
+            48.8714507,
+            2.3052729
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Shiseido",
+        "address": "7-5-5, Ginza, Chuo-ku, Tokyo 104-0061, Japan",
+        "url": "https://www.shiseido.com/",
+        "u_youtube": "https://www.youtube.com/user/SHISEIDOofficial",
+        "u_instagram": "https://www.instagram.com/shiseido_corp/",
+        "u_facebook": "https://www.facebook.com/shiseido.corporate",
+        "비고": "",
+        "c": [
+            35.6698595,
+            139.76134
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Shu Uemura",
+        "address": "15th Floor, Park Tower Building, 3-7-1, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Japan",
+        "url": "shuuemura.com.my",
+        "u_youtube": "https://www.youtube.com/channel/UCD-S7mss0N7Lho-gf7o1w9Q",
+        "u_instagram": "https://www.instagram.com/shuuemura",
+        "u_facebook": "https://www.facebook.com/shuuemurakr",
+        "비고": "",
+        "c": [
+            35.685565,
+            139.690904
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "심플리스틱 스킨케어",
+        "nm_jp": "",
+        "nm_us": "SIMPLISTIC SKIN CARE",
+        "address": "서울특별시 강북구 미아동 도봉로 196 2층",
+        "url": "http://simplistic.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/simplistic_skin",
+        "u_facebook": "https://www.facebook.com/simplisticskin",
+        "비고": "",
+        "c": [
+            37.6260494,
+            127.0266005
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Japan",
+        "cd$COUNTRY": "JP",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "SK-II",
+        "address": "One Procter & Gamble Plaza Cincinnati, Ohio 45202, United States",
+        "url": "https://www.sk-ii.com/",
+        "u_youtube": "https://www.youtube.com/skiiofficial",
+        "u_instagram": "https://instagram.com/skii",
+        "u_facebook": "https://www.facebook.com/SKIIUS",
+        "비고": "P&G",
+        "c": [
+            39.1030857,
+            -84.5063438
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "스킨천사",
+        "nm_jp": "",
+        "nm_us": "skin1004",
+        "address": "서울특별시 강남구 테헤란로2길 8 (역삼동) 4층",
+        "url": "https://skin1004korea.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCarHbqn0iKBryzTOKYWmptg",
+        "u_instagram": "https://www.instagram.com/skin1004_korea/",
+        "u_facebook": "https://www.facebook.com/skin1004korea/",
+        "비고": "",
+        "c": [
+            37.4976053,
+            127.0286852
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "스킨푸드",
+        "nm_jp": "",
+        "nm_us": "SKINFOOD",
+        "address": "경기도 안성시 미양면 계륵리 267-4 스킨푸드",
+        "url": "http://www.theskinfood.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCKyIfDxlcdTBhUzv_RsuR-g",
+        "u_instagram": "https://instagram.com/skinfood_official",
+        "u_facebook": "https://www.facebook.com/theskinfood.kr",
+        "비고": "",
+        "c": [
+            36.71298,
+            127.42819979999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "에스엔피",
+        "nm_jp": "",
+        "nm_us": "SNP",
+        "address": "서울특별시 강서구 마곡중앙8로1길 66 에스디생명공학마곡사옥",
+        "url": "https://www.snpmall.net/",
+        "u_youtube": "https://www.youtube.com/channel/UCbiik4zbzYBFjNUb3tYEWtw",
+        "u_instagram": "https://instagram.com/snp.korea",
+        "u_facebook": "https://www.facebook.com/snp.korea/",
+        "비고": "",
+        "c": [
+            37.552675099999995,
+            126.86519349999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "썸바이미",
+        "nm_jp": "",
+        "nm_us": "SOME BY MI",
+        "address": "04584 서울특별시 중구 퇴계로86가길 25 (신당동) 우석빌딩",
+        "url": "https://somebymi.com/",
+        "u_youtube": "https://www.youtube.com/channel/UC9-6DQYMk8xcEDdnIBkxEJw",
+        "u_instagram": "https://instagram.com/somebymi",
+        "u_facebook": "https://facebook.com/Somebymi.official",
+        "비고": "",
+        "c": [
+            37.562174999999996,
+            127.0197989
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "수려한",
+        "nm_jp": "",
+        "nm_us": "Sooryehan",
+        "address": "서울특별시 종로구 새문안로 58 (신문로 2가 92번지) LG광화문빌딩",
+        "url": "http://www.sooryehan.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/sooryehanofficial/",
+        "u_facebook": "https://www.facebook.com/sooryehan.official/",
+        "비고": "LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "스팀베이스",
+        "nm_jp": "",
+        "nm_us": "STEAMBASE",
+        "address": "충청남도 아산시 영인면 토정로 507-21",
+        "url": "https://steambase.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/steambase_official",
+        "u_facebook": "https://www.facebook.com/steambase.official",
+        "비고": "",
+        "c": [
+            36.8831339,
+            126.96446359999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "스트라이덱스",
+        "nm_jp": "",
+        "nm_us": "Stridex",
+        "address": "1800 Swift Dr., Oak Brook, Illinois, 60523, United States",
+        "url": "https://www.stridex.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "https://www.facebook.com/Stridex/",
+        "비고": "Bayer Corporation",
+        "c": [
+            41.8539318,
+            -87.92290849999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "숨:37",
+        "nm_jp": "",
+        "nm_us": "su:m 37˚",
+        "address": "서울특별시 종로구 세문안로 58 LG광화문빌딩 110-783",
+        "url": "http://www.sum37.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/sum37_official",
+        "u_facebook": "https://www.facebook.com/sum37.beauty",
+        "비고": "LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "설화수",
+        "nm_jp": "",
+        "nm_us": "Sulwhasoo",
+        "address": "",
+        "url": "https://www.sulwhasoo.com/",
+        "u_youtube": "https://www.youtube.com/user/sulwhasookorea",
+        "u_instagram": "https://www.instagram.com/sulwhasoo.official/",
+        "u_facebook": "https://www.facebook.com/sulwhasoo.official",
+        "비고": "Amorepacific",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United Kingdom",
+        "cd$COUNTRY": "UK",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Sunsilk",
+        "address": "Unilever US, Inc 800 Sylvan Avenue Englewood Cliffs NJ 07632, United States",
+        "url": "https://www.sunsilk.com.my/home.html",
+        "u_youtube": "https://www.youtube.com/user/SunSilkThailand",
+        "u_instagram": "https://www.instagram.com/sunsilkmy/",
+        "u_facebook": "https://www.facebook.com/Sunsilk/",
+        "비고": "Unilever",
+        "c": [
+            40.8922743,
+            -73.9448244
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "TS샴푸",
+        "nm_jp": "",
+        "nm_us": "TALMOSTOP",
+        "address": "07206 서울특별시 영등포구 양평로 96 TS빌딩 1층, 6층, 8층 (양평동4가 153-1)",
+        "url": "https://www.tstrillion.com/",
+        "u_youtube": "https://www.youtube.com/tstrillion",
+        "u_instagram": "https://www.instagram.com/ts_trillion/",
+        "u_facebook": "https://www.facebook.com/tstrillion/",
+        "비고": "",
+        "c": [
+            37.536682899999995,
+            126.8967833
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "United Kingdom",
+        "cd$COUNTRY": "UK",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "The Body Shop",
+        "address": "The Body Shop International Limited 155 Tooley Street, London, England, SE1 2JP",
+        "url": "thebodyshop.com",
+        "u_youtube": "https://www.youtube.com/user/thebodyshop",
+        "u_instagram": "https://www.instagram.com/thebodyshop",
+        "u_facebook": "https://www.facebook.com/TheBodyShopKR",
+        "비고": "Natura",
+        "c": [
+            51.5037108,
+            -0.08034809999999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더슈뜨",
+        "nm_jp": "",
+        "nm_us": "The Choute",
+        "address": "",
+        "url": "",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "i-charming",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더페이스샵",
+        "nm_jp": "",
+        "nm_us": "The Face Shop",
+        "address": "서울특별시 종로구 새문안로 58, 1층(신문로2가)",
+        "url": "http://www.thefaceshop.com/",
+        "u_youtube": "https://www.youtube.com/user/ethefaceshop",
+        "u_instagram": "https://www.instagram.com/thefaceshop.official/",
+        "u_facebook": "https://www.facebook.com/thefaceshop.official",
+        "비고": "LG생활건강",
+        "c": [
+            37.5692944,
+            126.9714733
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더 우주",
+        "nm_jp": "",
+        "nm_us": "The Oozoo",
+        "address": "",
+        "url": "http://oozoo.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더레미디",
+        "nm_jp": "",
+        "nm_us": "The Remedy",
+        "address": "",
+        "url": "http://www.naturecollection.co.kr/naturecollection/brand/detail.jsp?cate_seq=14",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "LG생활건강",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더샘",
+        "nm_jp": "",
+        "nm_us": "The Saem",
+        "address": "서울시 종로구 청계천로 35 관정빌딩 10층",
+        "url": "http://www.thesaemcosmetic.com/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.5693468,
+            126.98127579999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더연",
+        "nm_jp": "",
+        "nm_us": "The YEON",
+        "address": "서울특별시 금천구 가산디지털1로 171  6층 '더연'",
+        "url": "https://theyeon.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/theyeon_official/",
+        "u_facebook": "https://www.facebook.com/theyeon",
+        "비고": "",
+        "c": [
+            37.4806318,
+            126.8805702
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "티암",
+        "nm_jp": "",
+        "nm_us": "TIA'M",
+        "address": "경기 성남시 분당구 성남대로 69 612호",
+        "url": "http://www.tiam.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCMQUE7ZlhwiFUI4w2mYx5Rg",
+        "u_instagram": "https://instagram.com/tiam_korea",
+        "u_facebook": "https://www.facebook.com/tiam.kr/",
+        "비고": "",
+        "c": [
+            37.342000999999996,
+            127.1083302
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "얼트루",
+        "nm_jp": "",
+        "nm_us": "Ultru:",
+        "address": "서울특별시 강남구 논현2동 82-21번지 마진빌 201호202호",
+        "url": "http://imineskin.cafe24.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCuuTQvbxXdJhPug5XBx7D4Q",
+        "u_instagram": "https://www.instagram.com/imsorryformyskin_official/",
+        "u_facebook": "https://www.facebook.com/pg/UltruSkin/about/?ref=page_internal",
+        "비고": "",
+        "c": [
+            37.515824599999995,
+            127.03187319999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "반트 36.5",
+        "nm_jp": "",
+        "nm_us": "VANT 36.5",
+        "address": "인천광역시 중구 영종대로 124,7층",
+        "url": "http://www.vant365.net/",
+        "u_youtube": "https://www.youtube.com/channel/UCA1yjEkYEA-B5Grn9zJGVLA",
+        "u_instagram": "https://www.instagram.com/vant36.5_official",
+        "u_facebook": "https://www.facebook.com/vant365official",
+        "비고": "",
+        "c": [
+            37.4946967,
+            126.49311379999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "브이디엘",
+        "nm_jp": "",
+        "nm_us": "VDL Cosmetics",
+        "address": "서울특별시 종로구 새문안로 58 LG광화문빌딩 사업자 등록번호 : 107-81-98143",
+        "url": "http://www.vdlcosmetics.com/m/product/list.jsp?cid1=A&cid2=A&cid3=&order_type=PRICE_LOW",
+        "u_youtube": "https://www.youtube.com/user/vdlcosmetics?target=web",
+        "u_instagram": "https://www.instagram.com/vdl_cosmetics/?target=web",
+        "u_facebook": "https://www.facebook.com/vdl.cosmetics?target=web",
+        "비고": "(주)LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "비카",
+        "nm_jp": "",
+        "nm_us": "VIKA",
+        "address": "서울특별시 강남구 도산대로81길 43 (청담동) 사라빌딩 3층",
+        "url": "https://smartstore.naver.com/vika",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/vika_headoffice/",
+        "u_facebook": "https://www.facebook.com/Dailyvika/",
+        "비고": "",
+        "c": [
+            37.5269298,
+            127.04635289999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "빌라쥬11팩토리",
+        "nm_jp": "",
+        "nm_us": "VILLAGE11FACTORY",
+        "address": "서울시 광진구 아차산로 627 (광장동) 인성하이텍빌딩2층",
+        "url": "http://www.village11factory.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UCBK-q_J1_RfCII42YWsbJZw",
+        "u_instagram": "https://www.instagram.com/village11factory/",
+        "u_facebook": "https://www.facebook.com/village11factory",
+        "비고": "",
+        "c": [
+            37.548789299999996,
+            127.1072074
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "비브라스",
+        "nm_jp": "",
+        "nm_us": "VIVLAS",
+        "address": "서울특별시 영등포구 선유로13길 25 (문래동6가) 에이스하이테크시티2차 1105호 ( POST : 07282 )",
+        "url": "http://vivlas.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCYfA8NlUZ7G8WK9ma0wZYMw",
+        "u_instagram": "https://www.instagram.com/vivlas_facialcare/",
+        "u_facebook": "https://www.facebook.com/vivlas/",
+        "비고": "",
+        "c": [
+            37.5191533,
+            126.88593279999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "더블유랩",
+        "nm_jp": "",
+        "nm_us": "W.Lab",
+        "address": " 서울시 구로구 디지털로 273 에이스트윈타워 2차 2층",
+        "url": "http://www.wlab.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.484484699999996,
+            126.89454789999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "웰라쥬",
+        "nm_jp": "",
+        "nm_us": "WELLAGE",
+        "address": "24206 강원도 춘천시 신북읍 신북로 61-20 휴젤",
+        "url": "http://wellage.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UC_NLskFe8I9BNCUYGR3MVSw",
+        "u_instagram": "https://instagram.com/wellagekorea",
+        "u_facebook": "https://www.facebook.com/wellagekorea",
+        "비고": "",
+        "c": [
+            37.9300583,
+            127.7497125
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "화이트",
+        "nm_jp": "",
+        "nm_us": "White",
+        "address": "06178 서울시 강남구 테헤란로 504",
+        "url": "http://www.ykbrand.co.kr/white",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/ykwhitestyle/",
+        "u_facebook": "http://www.facebook.com/kotexwhite",
+        "비고": "유한킴벌리",
+        "c": [
+            37.5065983,
+            127.05732909999999
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "화이트래빗",
+        "nm_jp": "",
+        "nm_us": "White rabbit",
+        "address": "경기도 화성시 안녕길 98-12",
+        "url": "http://www.white-rabbit.kr/",
+        "u_youtube": "",
+        "u_instagram": "",
+        "u_facebook": "",
+        "비고": "",
+        "c": [
+            37.2011421,
+            126.9902498
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "후",
+        "nm_jp": "",
+        "nm_us": "Whoo",
+        "address": "서울특별시 종로구 새문안로 58 LG광화문빌딩",
+        "url": "http://www.whoo.co.kr/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/thehistoryofwhoo_official/",
+        "u_facebook": "",
+        "비고": "LG생활건강",
+        "c": [
+            37.5695343,
+            126.9714145
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "위치스파우치",
+        "nm_jp": "",
+        "nm_us": "WitchsPouch",
+        "address": "",
+        "url": "http://www.witchspouch.jp/",
+        "u_youtube": "",
+        "u_instagram": "https://www.instagram.com/witchspouch_official/",
+        "u_facebook": "https://www.facebook.com/witchspouch/?ref=hl",
+        "비고": "i-charming",
+        "c": []
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "수수루스",
+        "nm_jp": "",
+        "nm_us": "Xusurrus",
+        "address": "04168 서울특별시 마포구 새창로 11 (도화동) 1116-12호",
+        "url": "http://xusurrus.com/",
+        "u_youtube": "https://www.youtube.com/channel/UCxE7024_-CRyTNGaKXtQIYQ",
+        "u_instagram": "https://www.instagram.com/xusurrus/?hl=ko",
+        "u_facebook": "https://www.instagram.com/xusurrus/?hl=ko",
+        "비고": "",
+        "c": [
+            37.541610399999996,
+            126.9521961
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "South Korea",
+        "cd$COUNTRY": "KR",
+        "nm_cn": "",
+        "nm_kr": "야다",
+        "nm_jp": "",
+        "nm_us": "YADAH",
+        "address": "04780 서울특별시 성동구 성수이로7길 27 (성수동2가) 서울숲코오롱디지탈타워 606호",
+        "url": "http://www.yadah.co.kr/",
+        "u_youtube": "https://www.youtube.com/channel/UC5TmIaXueUSIeErUI5vCv4w",
+        "u_instagram": "https://instagram.com/yadah_korea",
+        "u_facebook": "https://www.facebook.com/yadahcosmetics/",
+        "비고": "",
+        "c": [
+            37.541567,
+            127.0534629
+        ]
+    },
+    {
+        "_id": "",
+        "_d": "",
+        "nm$COUNTRY": "Unites States",
+        "cd$COUNTRY": "US",
+        "nm_cn": "",
+        "nm_kr": "",
+        "nm_jp": "",
+        "nm_us": "Zuzu Luxe",
+        "address": "7430 164th AVE NE Suite B-233. Redmond, WA 98052",
+        "url": "https://gabrielcosmeticsinc.com/brand/zuzu-luxe/",
+        "u_youtube": "https://www.youtube.com/channel/UCI-vzhetR_lj9nFaCY8AUaw",
+        "u_instagram": "https://www.instagram.com/zuzuluxe/",
+        "u_facebook": "https://www.facebook.com/ZuzuLuxe/",
+        "비고": "Gabriel Cosmetics",
+        "c": [
+            47.6706201,
+            -122.12036599999999
+        ]
+    }
+]
+//-------------------------------------------------------;
+var pad = function( str ){
+
+	var len = str.length;
+	if( len == 1 ) return "000" + str;
+	if( len == 2 ) return "00" + str;
+	if( len == 3 ) return "0" + str;
+	if( len == 4 ) return str;
+}
+
+//-------------------------------------------------------;
+/*
+{
+	"_id" : 0,
+	"_d" : 1
+	"cd" : "00000",
+	"cd$COUNTRY" : "US",
+	"nm$COUNTRY" : "United States",
+	"nm_cn" : "0.2",
+	"nm_kr" : "0.2",
+	"nm_jp" : "0.2",
+	"nm_us" : "0.2",
+	"address" : "",
+	"url" : "https://0point2.com/",
+	"u_youtube" : "",
+	"u_instagram" : "https://www.instagram.com/0point2/",
+	"u_facebook" : "https://www.facebook.com/0point2",
+	"c" : []
+}
+*/
+
+col0.drop({});
+col1.drop({});
+
+
+//var idx;
+//var lastDoc = col0.find({},{_id:1}).sort({_id:-1}).limit(1).toArray();
+//
+//if( lastDoc.length == 0 ) idx = 0;
+//else idx = lastDoc[0]._id;
+
+var _tCD = {}
+
+var i = 0,iLen = d.length,io;
+for(;i<iLen;++i){
+
+	printjson( i + "/" + iLen );
+
+	io = d[ i ];
+
+	var key;
+	if( Number( io.nm_us.toString()[0] ) ) key = "0"
+	else key = io.nm_us.toString()[0].toUpperCase();
+
+	if( !_tCD.hasOwnProperty( key ) ) _tCD[ key ] = 0;
+	else ++_tCD[ key ]
+
+	var cd = key + pad( _tCD[ key ].toString() );
+
+	var data = {
+		"_id" : NumberInt( i ),
+		"_d" : NumberInt( 1 ),
+		"cd" : cd,
+		"cd$COUNTRY" : io.cd$COUNTRY,
+		"nm$COUNTRY" : io.nm$COUNTRY,
+		"nm_cn" : io.nm_cn,
+		"nm_kr" : io.nm_kr,
+		"nm_jp" : io.nm_jp,
+		"nm_us" : io.nm_us,
+		"address" : io.address,
+		"url" : io.url,
+		"u_facebook" : io.u_facebook,
+		"u_instagram" : io.u_instagram,
+		"u_youtube" : io.u_youtube,
+		"c" : io.c
+	};
+
+	if( data.c.length == 0 ) data._d = NumberInt( 0 );
+	if( data.adress == "" ) data._d = NumberInt( 0 );
+
+	if( data.nm_cn == "" ) data.nm_cn = io.nm_us.toString();
+	if( data.nm_kr == "" ) data.nm_kr = io.nm_us.toString();
+	if( data.nm_jp == "" ) data.nm_jp = io.nm_us.toString();
+	data.nm_us = io.nm_us.toString();
+
+	delete io["비고"];
+
+	col0.insertOne( data );
+	col1.insertOne( data );
+
+}
+//-------------------------------------------------------;

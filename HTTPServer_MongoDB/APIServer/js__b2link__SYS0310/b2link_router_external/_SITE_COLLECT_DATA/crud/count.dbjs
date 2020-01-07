@@ -1,0 +1,13 @@
+var _db$_SITE_COLLECT_DATA = db.getSiblingDB( "_SITE_COLLECT_DATA" );
+
+var _cols = _db$_SITE_COLLECT_DATA.getCollectionNames();
+
+var R = {};
+	R.data = {};
+
+_cols.forEach(function( nm_col ){ R.data[ nm_col ] = _db$_SITE_COLLECT_DATA.getCollection( nm_col ).count(); });
+
+R.r = 0;
+R.m = "OK";
+
+return R;

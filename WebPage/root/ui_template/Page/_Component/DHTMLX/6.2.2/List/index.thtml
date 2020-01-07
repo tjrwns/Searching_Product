@@ -1,0 +1,50 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+
+<div id="ui/Page/_Component/DHTMLX/6.2.2/List/index">
+
+	<!--
+	index.js에 var _INSTALL_UI = function(){} 관련 패턴 사용시의 약속된 DOM 구성 형태;
+	-->
+	<div class="ui/Page/_Component/DHTMLX/6.2.2/List/index--INSTALL_UI" style="display: none;">
+		<!-- SEMANTIC UI -->
+		<!--
+		<div class="div__filter ui basic segment" style="display: none;">
+			<select class="select__filter ui dropdown"></select>
+			<input type="text" class="input__filter ui input" style="padding: 10px;" />
+			<input type="button" class="btn__filter ui button" />
+		</div>
+		<div class="div__sort ui basic segment" style="display: none;">
+			<select class="select__sort ui dropdown"></select>
+			<input type="button" class="btn__sort_asc" />
+			<input type="button" class="btn__sort_desc" />
+		</div>
+		-->
+
+		<div class="div__filter" style="display: none;">
+			<select class="select__filter"></select>
+			<input type="text" class="input__filter" style="padding: 10px;" />
+			<input type="button" class="btn__filter" />
+		</div>
+		<div class="div__sort" style="display: none;">
+			<select class="select__sort"></select>
+			<input type="button" class="btn__sort_asc" />
+			<input type="button" class="btn__sort_desc" />
+		</div>
+	</div>
+
+	<div class="ui/Page/_Component/DHTMLX/6.2.2/List/index--list" style="height: calc( 100% - 80px );"></div>
+	<div class="ui/Page/_Component/DHTMLX/6.2.2/List/index--pagger"></div>
+
+</div>
+
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/_Component/DHTMLX/6.2.2/List/index.js" );
+	};
+</SCRIPT>
+
+<include-html>./ui_include/SYS0310/Page/000-----index-----Last.html</include-html>

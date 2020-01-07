@@ -1,0 +1,143 @@
+//var fileNm = "js__b2link__SYS0310/b2link_router_external/reqKeyword/crud/addKeyword__allow.dbjs";
+//RayLog.log( "---- [ S ] - " + fileNm );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	REQUIRE;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+
+//	FUNCTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DATABASE;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$_CATEGORY = db.getSiblingDB( "_CATEGORY" );
+var _db$collected_list = db.getSiblingDB( "_사이트_검색어--수집목록" );
+var _db$_instance = db.getSiblingDB( "_instance" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	COLLECTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _col$COUNTRY = _db$_CATEGORY.getCollection( "COUNTRY" );
+var _col$SITE = _db$_CATEGORY.getCollection( "SITE" );
+var _col$_ALL = _db$collected_list.getCollection( "_ALL" );
+var _col$reqKeyword = _db$_instance.getCollection( "reqKeyword" );
+
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DOCUMENT;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _doc$COUNTRY;
+var _doc$_ALL;
+var _doc$SITE;
+var _doc$reqKeyword = _col$reqKeyword.findOne( { _id : "addKeyword"} );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	PARAMETER;
+
+//----------------------------------------------------------------------------------------------------;
+
+var DATA = <!=DATA=!>;
+
+var _MAP =  _doc$reqKeyword.data;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	LOGIC;
+
+//----------------------------------------------------------------------------------------------------;
+
+//해당 검색어와 동일한 문자셋(국가코드)를 갖는 SITE만 검색가져온다.
+/*/
+var model = {
+	_id : NumberLong( DATA.t )
+	, bt : DATA.bt
+	, c : []
+
+	//키워드의 브랜드 - 사용자가 선택시;
+	, cd$BRAND : DATA.cd$BRAND
+
+	//사용자 국가코드 - 영문 2자;
+	, cd$COUNTRY : DATA.cd$COUNTRY
+
+	//키워드 언어의 국가코드 - 영문 2자;
+	, cd$COUNTRY_k : DATA.cd$COUNTRY_k
+
+	, d_d : NumberInt( DATA.d_d )
+	, d_m : NumberInt( DATA.d_m )
+	, d_ymd : NumberInt( DATA.d_ymd )
+	, d_ym : NumberInt( DATA.d_ym )
+	, d_y : NumberInt( DATA.d_y )
+
+	, k : DATA.k
+	, k0 : DATA.k0
+
+	, ip : DATA.ip
+
+	//k의 length;
+	, l : NumberInt( DATA.l )
+
+	, t : NumberLong( Date.now() )
+
+	, wh : NumberInt( DATA.wh )
+};
+//*/
+
+DATA._id = NumberLong( Date.now() );
+DATA.t = DATA._id;
+
+DATA.d_d = NumberInt( DATA.d_d );
+DATA.d_m = NumberInt( DATA.d_m );
+DATA.d_ymd = NumberInt( DATA.d_ymd );
+DATA.d_ym = NumberInt( DATA.d_ym );
+DATA.d_y = NumberInt( DATA.d_y );
+
+DATA.l = NumberInt( DATA.l );
+DATA.wh = NumberInt( DATA.wh );
+
+_col$_ALL.insert( DATA );
+
+//검색키워드 재등록 시간 제한 로직;
+var docK = _col$_ALL.find({ k : DATA.k }).sort({ t : -1 }).limit( 1 );
+if( docK ){ if( 3600000 < ( DATA.t - docK._id ) ){ return { r : 0, m : "OK", data : null, totalCount : 0 }; } }
+
+var _collectionList = _MAP[ DATA.cd$COUNTRY_k ];
+var io, _col;
+var i = 0, iLen= _collectionList.length;
+var insertCount = 0;
+for( ; i < iLen; ++i )
+{
+	io = _collectionList[ i ];
+	_col = _db$collected_list.getCollection( io )
+	if( _col )
+	{
+		_col.insert( DATA );
+		++insertCount;
+	}
+}
+
+//----------------------------------------------------------------------------------------------------;
+
+var R = {};
+	R.r = 0;
+	R.m = "OK";
+	R.data = null;
+	R.totalCount = insertCount;
+
+return R;

@@ -1,0 +1,15 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+
+<div id="ui/Page/검색화면--키워드-List/index" style="background-color: #ffffff;"></div>
+
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/검색화면--키워드-List/index.js" );
+	};
+</SCRIPT>
+
+<include-html>./ui_include--Semantic-UI/SYS0310/Page/000-----index-----Last.html</include-html>

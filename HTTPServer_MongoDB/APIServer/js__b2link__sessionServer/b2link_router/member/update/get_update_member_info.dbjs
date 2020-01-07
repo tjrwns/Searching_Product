@@ -1,0 +1,231 @@
+AlexLog.log( "-- [ S ] - member.update.get_update_member_info():{uint}----------" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE - FUNCTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session_log
+ * @param {String} mid
+ * @param {String} sid
+ * @param {Object} d_ex date expire
+ * @param {Object} d_l_si date list sign in
+ */
+var add__session_log = <require>global.mongodb.member.add__session_log</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ */
+var destroy__session = <require>global.mongodb.member.destroy__session</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_date
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} date
+ * @return {Object} d_l_si date_list_signin
+ */
+var update__date__lastSignIn = <require>global.mongodb.member.update__date__lastSignIn</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} d_ex date_expired
+ * @param {String} sid session id
+ */
+var update__session__signin = <require>global.mongodb.member.update__session__signin</require>;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DATABASE;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$member = db.getSiblingDB( "member" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	COLLECTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _col$member_basic = _db$member.member_basic;//회원 정보;
+var _col$member_company = _db$member.member_company;//회원 회사 정보;
+var _col$member_date = _db$member.member_date;//회원 날짜 정보;
+var _col$member_public = _db$member.member_public;//회원 공개 정보;
+var _col$member_session = _db$member.member_session;//세션;
+var _col$member_session_log = _db$member.member_session_log;//세션 로그;
+var _col$member_webhook = _db$member.member_webhook;//웹훅;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DOCUMENT;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _doc$member_basic;
+var _doc$member_session;
+var _doc$member_webhook;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	PARAMETER;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------;
+//Parameter Object - find or findOne에서 사용;
+var p0 = { _id : -1 };
+var p1 = { mid : null };
+var p2 = { sid : null };
+//----------;
+
+
+//--------------------------------------------------[ S ] - 치환 문자열;
+
+var d = <!=data=!>;
+
+var sid = "<!=sid=!>";
+
+//--------------------------------------------------[ E ] - 치환 문자열;
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - VALIDATION;
+//수정 - 20171010_1549 - 송선우;
+//if( "" == sid || null == sid || undefined == sid || 200 != sid.length )
+if( "" == sid || null == sid || undefined == sid )
+{
+	AlexLog.log( new Error( "[ Validation ] - Check.-100 - 클라이언트에서 보낸 sid가 문제 있는 값임" ) );
+	//return { r : 0, m : "sid가 문제 있는 값임" };
+	AlexLog.log( "-- [ E ] - member.update.get_update_member_info():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - VALIDATION;
+
+
+p1.mid = d.mid;
+var _doc$member_basic = _col$member_basic.findOne( p1 );
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.000 - member_basic.member id 존재 여부;
+if( !_doc$member_basic )
+{
+	AlexLog.log( new Error( "Check.000 - mid 검색 - mid 없음") );
+
+	AlexLog.log( new Error( "sign_in 실패" ) );
+	//return { r : 0, m : "mid가 존재하지 않음" };
+	AlexLog.log( "-- [ E ] - member.update.get_update_member_info():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.000 - member_basic.member id 존재 여부;
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.100 - member_basic.nSignInFail;
+if( 5 <= _doc$member_basic.nSignInFail )
+{
+	AlexLog.log( new Error( "Check.100 - Sign In 실패 횟수 5회 이상" ) );
+	//수정하기 - 20170313 - 송선우 - 실 서비스 시 주석 해제 하기;
+	//개발하기 - 20170313 - 송선우 - 이부분 DB에 넣기;
+	AlexLog.log( "관리자에게 재인증 요청 하기" );
+
+	AlexLog.log( new Error( "sign_in 실패" ) );
+	//return { r : 0, m : "비밀번호 인증 5회 이상 틀림" };
+	AlexLog.log( "-- [ E ] - member.update.get_update_member_info():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.100 - member_basic.nSignInFail;
+
+
+//*///----------------------------------------------------------------------------------------------------[ S ] - Check.200 - member_basic.member password;
+// if( d.mpw != _doc$member_basic.mpw )
+// {
+// 	AlexLog.log( new Error( "Check.200 - mpw 비교 - Password가 맞지 않음" ) );
+
+// 	p0._id = _doc$member_basic._id;
+// 	_col$member_basic.update( p0, { $set : { nSignInFail : NumberInt( ++r.nSignInFail ) } }, { upsert : false } );//비번 인증 오류 횟수 추가;
+// 	AlexLog.log( new Error( "sign in 실패 횟수 : " + r.nSignInFail ) );
+
+// 	AlexLog.log( new Error( "sign_in 실패" ) );
+// 	//return{ r : 0, m : "password가 맞지 않음" };
+// 	AlexLog.log( "-- [ E ] - member.update.get_update_member_info():{uint}----------return 0;" );
+// 	return 0;
+// }
+//*///----------------------------------------------------------------------------------------------------[ E ] - Check.200 - member_basic.member password;
+
+
+AlexLog.log( "클라이언트에서 보낸 sid로 member_session 검색" );
+p2.sid = sid;
+_doc$member_session = _col$member_session.findOne( p2 );
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.300 - member_basic.member session id;
+if( _doc$member_session )
+{
+	AlexLog.log( "Check.300 - sid 검색 - Session Document가 있음" );
+
+	if( _doc$member_session.mid != d.mid )//Session ID의 mid와 요청한 mid가 같은지 체크
+	{
+		//----------세션 파괴;
+		p0._id = _doc$member_session._id;
+		destroy__session( _col$member_session, p0 );
+
+		AlexLog.log( new Error( "sign_in 실패 - Session ID의 mid와 요청한 mid가 다름" ) );
+		//return { r : 0, m : "Session ID의 mid와 요청한 mid가 다름" };
+		AlexLog.log( "-- [ E ] - member.update.get_update_member_info():{uint}----------return 0;" );
+		return 0;
+	}
+
+	AlexLog.log( "session 의 expire date 확인" );
+	var date_now = new Date();
+	var date_expired = new Date( _doc$member_session.d_ex );
+		AlexLog.log( "date_now : " + date_now + " - Date Now" );
+		AlexLog.log( "date_expired : " + date_expired + " - Date - Expired" );
+
+	//if( date_now < date_expired )//세션 기간 남아있음 - SignIn;
+	if( date_now >= date_expired )//세션 기간 만료;
+	{
+		AlexLog.log( new Error( "Session 인증 시간 지남" ) );
+
+		//----------세션 파괴;
+		p0._id = _doc$member_session._id;
+		destroy__session( _col$member_session, p0 );
+
+		AlexLog.log( new Error( "sign_in 실패" ) );
+		//return { r : 0, m : "Session 인증 시간 지남" };
+		AlexLog.log( "-- [ E ] - member.update.get_update_member_info():{uint}----------return 0;" );
+		return 0;
+	}
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.300 - member_basic.member session id;
+
+
+p1.mid = d.mid;//위에 변수가 살아있으나 안정성을 위해 다시 대입 - 문제 없으면 제거 가능;
+_doc$member_basic = _col$member_basic.findOne( p1 );
+_doc$member_webhook = _col$member_webhook.findOne( p1 );
+
+_doc$member_basic.webhooks = _doc$member_webhook.webhook;
+
+delete _doc$member_basic.mpw;
+delete _doc$member_basic.nSignInFail;
+delete _doc$member_basic.bConn;
+
+
+//*///----------------------------------------------------------------------------------------------------[ S ] - Check.315 - member 정보 업데이트;
+
+//*///----------------------------------------------------------------------------------------------------[ E ] - Check.315 - member 정보 업데이트;
+
+AlexLog.log( "-- [ E ] - member.update.get_update_member_info():{uint}----------return 0;" );
+//return { r : 0, m : "mid는 존재함 - 알수 없는 에러" };
+return _doc$member_basic;

@@ -1,0 +1,135 @@
+//-------------------------------------------------------;
+var db0 = db.getSiblingDB("_CATEGORY--통계");
+var col0 = db0.getCollection("COUNTRY-BRAND");
+
+var db1 = db.getSiblingDB("_CATEGORY");
+var col1 = db1.getCollection("BRAND");
+var col4 = db1.getCollection("COUNTRY");
+
+//-------------------------------------------------------;
+
+//-------------------------------------------------------;
+var pad = function( str ){
+
+	var len = str.length;
+	if( len == 1 ) return "000" + str;
+	if( len == 2 ) return "00" + str;
+	if( len == 3 ) return "0" + str;
+	if( len == 4 ) return str;
+}
+
+//-------------------------------------------------------;
+/*
+{
+	"_id" : 0,
+	"_d" : 1
+	"cd" : "00000",
+	"cd$COUNTRY" : "US",
+	"nm$COUNTRY" : "United States",
+	"nm_cn" : "0.2",
+	"nm_kr" : "0.2",
+	"nm_jp" : "0.2",
+	"nm_us" : "0.2",
+	"address" : "",
+	"url" : "https://0point2.com/",
+	"u_youtube" : "",
+	"u_instagram" : "https://www.instagram.com/0point2/",
+	"u_facebook" : "https://www.facebook.com/0point2",
+	"c" : []
+}
+*/
+
+var _q00 = {};
+var _q01 = { cd : null };
+
+var _p00 = {_id : 0, c : 1 };
+var FN00 = function( date ){
+
+	print( date );
+
+	var r = {};
+
+	var col2 = db0.getCollection("COUNTRY-BRAND - " + date );
+	var col3 = db1.getCollection("BRAND - " + date );
+	var _to;
+	col1.find( _q00 ).forEach(function(d){
+
+		_to = { nm : d.nm_us, cd : d.cd, url : d.url };
+
+		if( !r[ d.cd$COUNTRY ] )
+		{
+			_q01.cd = d.cd$COUNTRY;
+			var c = col4.findOne( _q01 ,_p00 ).c;
+			r[ d.cd$COUNTRY ] = {
+				cnt : 1,
+				c : c,
+				a : [],
+				o : {}
+			};
+		}
+		else
+		{
+			++r[ d.cd$COUNTRY ].cnt;
+		}
+
+		r[ d.cd$COUNTRY ].a.push( _to );
+		r[ d.cd$COUNTRY ].o[ _to.cd ] = {};
+		r[ d.cd$COUNTRY ].o[ _to.cd ].nm = _to.nm;
+		r[ d.cd$COUNTRY ].o[ _to.cd ].url = _to.url;
+	})
+
+	col0.drop();
+
+	var s,so
+	for( s in r ){
+		so = r[ s ];
+		so._id = s;
+		so.cnt = NumberInt( so.cnt );
+		col0.insertOne( so );
+	}
+
+	var r = {};
+
+	col3.find( _q00 ).forEach(function(d){
+
+		_to = { nm : d.nm_us, cd : d.cd };
+
+		if( !r[ d.cd$COUNTRY ] )
+		{
+			_q01.cd = _q01.cd = d.cd$COUNTRY;
+			var c = col4.findOne( _q01 ,_p00 ).c;
+			r[ d.cd$COUNTRY ] = {
+				cnt : 1,
+				c : c,
+				a : [],
+				o : {}
+			};
+		}
+		else
+		{
+			++r[ d.cd$COUNTRY ].cnt;
+		}
+
+		r[ d.cd$COUNTRY ].a.push( _to );
+		r[ d.cd$COUNTRY ].o[ _to.cd ] = {};
+		r[ d.cd$COUNTRY ].o[ _to.cd ].nm = _to.nm;
+		r[ d.cd$COUNTRY ].o[ _to.cd ].url = _to.url;
+	})
+
+	col2.drop();
+
+	var s,so
+	for( s in r ){
+		so = r[ s ];
+		so._id = s;
+		so.cnt = NumberInt( so.cnt );
+		col2.insertOne( so );
+	}
+
+	return;
+};
+
+
+//-------------------------------------------------------;
+
+FN00( "20191114" );

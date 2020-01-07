@@ -1,0 +1,490 @@
+TtwLog.log( "-- [ S ] - member.public.sign_up():{uint}----------" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	FUNCTION - REQUIRE;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * 필수 키 값 목록을 가지고 대상 오브젝트의 hasOwnProperty를 통해 존재 여부를 체크한다.
+ * @function
+ * @param {Object} t 필수 키 값 목록을 가지고 체크할 대상 오브젝트
+ * @param {Array} a hasOwnProperty의 대상이될 필수 키값 목록
+ * @return {Boolean}
+ */
+var check_RequiredValueHasOwnProperty = <require>global.mongodb.obj.check_RequiredValueHasOwnProperty</require>;
+
+/**
+ * member.member_basic에 추가 할 데이터를 검증하고 기본 값을 설정한다.
+ * @function
+ * @param {Object}
+ * <code>
+	{
+		phone_cell : {}
+		, phone_tel : {}
+
+		, messenger : {}
+
+		, nm : {}
+		, nm_cn : {}
+		, nm_kr : {}
+		, nm_us : {}
+	}
+ * </code>
+ */
+var validate__add__member_basic = <require>global.mongodb.member.validate__add__member_basic</require>;
+
+/**
+ * member.member_public에 추가 할 데이터를 검증하고 기본 값을 설정한다.
+ * @function
+ * @param {Object}
+ * <code>
+	{
+		phone_cell : {}
+		, phone_tel : {}
+
+		, messenger : {}
+
+		, nm : {}
+		, nm_cn : {}
+		, nm_kr : {}
+		, nm_us : {}
+	}
+ * </code>
+ */
+var validate__add__member_public = <require>global.mongodb.member.validate__add__member_public</require>;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	FUNCTION - DEFINE;
+
+//----------------------------------------------------------------------------------------------------;
+
+//--------------------------------------------------;
+
+/**
+ * @function
+ * @param {Object} d
+ * @return {Object}
+ */
+function add__member_basic( d )
+{
+	TtwLog.log( "add__member_basic( d )" );
+
+	//----------;
+	_doc$member = _col$member.findOne({ _id : "member_basic" });
+	if( !_doc$member )
+	{
+		TtwLog.log( "[ ERROR ] - function add__member_basic( d ) - BadValue - _doc$member is undefined" );
+		return { r : 2, m : "BadValue - _doc$member is undefined" };
+	}
+
+	//수정하기 - 20170522 - 송선우 - 이걸 _instance나 기타 Collection에 생성해놓을수 있는 bin_query or 배치 쿼리를 만들어서 작동 시키는게 좋을듯 함;
+	var a = [];
+	for( var s in _doc$member.properties ) a.push( s );
+
+	//필수 키 값 목록을 가지고 대상 오브젝트의 hasOwnProperty를 통해 존재 여부를 체크한다.;
+	check_RequiredValueHasOwnProperty( d, a );
+
+	//member.member_basic에 추가 할 데이터를 검증하고 기본 값을 설정한다.;
+	validate__add__member_basic( d );
+	//----------;
+
+	return _col$member_basic.insert({ _id : NumberInt( getLast_id_from_collection( _col$member_basic ) )
+		, mid : d.mid, mpw : d.mpw, bConn : NumberInt( 0 ), nSignInFail : NumberInt( 0 )
+
+		, cd$authority_code: NumberInt( d.cd$authority_code )
+
+		//*///B2LiNK-B2Ker - 제거 예정;
+		, cd$country : d.cd$country
+		, cd$category_division : d.cd$category_division
+		, cd$category_division_team : d.cd$category_division_team
+		, cd$category_division_part : d.cd$category_division_part
+		//, cd$category_member_rank : NumberInt( -1000 )
+		//*/
+
+		//, email : d.email;
+		, email : d.mid
+
+		, phone_cell : { f : d.phone_cell.f, c : d.phone_cell.c, a : d.phone_cell.a, n0 : d.phone_cell.n0, n1 : d.phone_cell.n1 }
+		, phone_tel : { f : d.phone_tel.f, c : d.phone_tel.c, a : d.phone_tel.a, n0 : d.phone_tel.n0, n1 : d.phone_tel.n1 }
+
+		//B2LiNK-B2Ker;
+		, messenger : { cd$messenger : d.messenger.cd$messenger, id : d.messenger.id }
+
+		, nm : { a : d.nm.a , f : d.nm.f , l : d.nm.l	}
+		, nm_cn : { a : d.nm_cn.a, f : d.nm_cn.f, l : d.nm_cn.l }
+		, nm_kr : { a : d.nm_kr.a, f : d.nm_kr.f, l : d.nm_kr.l }
+		, nm_us : { a : d.nm_us.a, f : d.nm_us.f, l : d.nm_us.l }
+	});
+}
+
+/**
+ * @function
+ * @param {Object} d
+ * @return {Object}
+ */
+function add__member_company( d )
+{
+	TtwLog.log( "add__member_company( d )" );
+
+	//----------;
+	_doc$member = _col$member.findOne({ _id : "member_basic" });
+	if( !_doc$member )
+	{
+		TtwLog.log( "[ ERROR ] - function add__member_company( d ) - BadValue - _doc$member is undefined" );
+		return { r : 2, m : "BadValue - _doc$member is undefined" };
+	}
+
+	//수정하기 - 20170522 - 송선우 - 이걸 _instance나 기타 Collection에 생성해놓을수 있는 bin_query or 배치 쿼리를 만들어서 작동 시키는게 좋을듯 함;
+	var a = [];
+	for( var s in _doc$member.properties ) a.push( s );
+
+	//필수 키 값 목록을 가지고 대상 오브젝트의 hasOwnProperty를 통해 존재 여부를 체크한다.;
+	check_RequiredValueHasOwnProperty( d, a );
+	//----------;
+
+	return _col$member_company.insert({ _id : NumberInt( getLast_id_from_collection( _col$member_company ) )
+		, mid : d.mid
+
+		//*///B2LiNK-B2Ker;
+		, cd$category_company : d.cd$category_company || ""
+		, cd$category_division : d.cd$category_division
+		, cd$category_division_team : d.cd$category_division_team
+		, cd$category_division_part : d.cd$category_division_part
+		//*/
+	});
+}
+
+/**
+ * @function
+ * @param {Object} d
+ * @return {Object}
+ */
+function add__member_date( d )
+{
+	TtwLog.log( "add__member_date( d )" );
+
+	var d_m1 = { y : NumberInt( -1 ), m : NumberInt( -1 ), d : NumberInt( -1 ), ho : NumberInt( -1 ), mi : NumberInt( -1 ), se : NumberInt( -1 ) };
+
+	var date = new Date();
+
+	return _col$member_date.insert({ _id : NumberInt( getLast_id_from_collection( _col$member_date ) )
+
+		, mid : d.mid, d_l_si : d_m1, d_su : d_m1
+
+		, d_sec : {
+			y : NumberInt( date.getFullYear() )
+			, m : NumberInt( date.getMonth() + 1 )
+			, d : NumberInt( date.getDate() )
+			, ho : NumberInt( date.getHours() )
+			, mi : NumberInt( date.getMinutes() )
+			, se : NumberInt( date.getSeconds() )
+		}
+	});
+}
+
+/**
+ * @function
+ * @param {Object} d
+ * @return {Object}
+ */
+function add__member_public( d )
+{
+	TtwLog.log( "add__member_public( d )" );
+
+	//----------;
+	_doc$member = _col$member.findOne({ _id : "member_public" });
+	if( !_doc$member )
+	{
+		TtwLog.log( "[ ERROR ] - function add__member_public( d ) - BadValue - _doc$member is undefined" );
+		return { r : 2, m : "BadValue - _doc$member is undefined" };
+	}
+
+	//수정하기 - 20170522 - 송선우 - 이걸 _instance나 기타 Collection에 생성해놓을수 있는 bin_query or 배치 쿼리를 만들어서 작동 시키는게 좋을듯 함;
+	var a = [];
+	for( var s in _doc$member.properties ) a.push( s );
+
+	//필수 키 값 목록을 가지고 대상 오브젝트의 hasOwnProperty를 통해 존재 여부를 체크한다.;
+	check_RequiredValueHasOwnProperty( d, a );
+
+	//member.member_basic에 추가 할 데이터를 검증하고 기본 값을 설정한다.;
+	validate__add__member_public( d );
+	//----------;
+
+	return _col$member_public.insert({ _id : NumberInt( getLast_id_from_collection( _col$member_public ) )
+		//, mid : d.mid, mpw : d.mpw, bConn : NumberInt( 0 ), nSignInFail : NumberInt( 0 );
+
+		//*///B2LiNK-B2Ker - 제거 예정;
+		, cd$country : d.cd$country
+		, cd$category_division : d.cd$category_division
+		, cd$category_division_team : d.cd$category_division_team
+		, cd$category_division_part : d.cd$category_division_part
+		//, cd$category_member_rank : NumberInt( -1000 )
+		//*/
+
+		//, email : d.email
+		, email : d.mid
+
+		, phone_cell : { f : d.phone_cell.f, c : d.phone_cell.c, a : d.phone_cell.a, n0 : d.phone_cell.n0, n1 : d.phone_cell.n1 }
+		, phone_tel : { f : d.phone_tel.f, c : d.phone_tel.c, a : d.phone_tel.a, n0 : d.phone_tel.n0, n1 : d.phone_tel.n1 }
+
+		//B2LiNK-B2Ker;
+		, messenger : { cd$messenger : d.messenger.cd$messenger, id : d.messenger.id }
+
+		, nm : { a : d.nm.a , f : d.nm.f , l : d.nm.l	}
+		, nm_cn : { a : d.nm_cn.a, f : d.nm_cn.f, l : d.nm_cn.l }
+		, nm_kr : { a : d.nm_kr.a, f : d.nm_kr.f, l : d.nm_kr.l }
+		, nm_us : { a : d.nm_us.a, f : d.nm_us.f, l : d.nm_us.l }
+	});
+}
+
+/**
+ * @function
+ * @param {Object} d
+ * @return {Object}
+ */
+function add__member_session( d )
+{
+	TtwLog.log( "add__member_session( d )" );
+	return _col$member_session.insert({
+		_id : NumberInt( getLast_id_from_collection( _col$member_session ) )
+		, mid : d.mid, sid : null, d_ex : null
+	});
+}
+
+/**
+ * @function
+ * @param {Object} d
+ * @return {Object}
+ */
+function add__member_webhook( d )
+{
+	CSJLog.log( "add__member_webhook( d )" );
+
+	var webhooks = d.webhooks || [];
+	var i=0, iLen=webhooks.length;
+	for( ; i<iLen; i++ )
+	{
+		var webhook = webhooks[ i ];
+		webhook.use_check = NumberInt( webhook.use_check );
+	}
+
+	return _col$member_webhook.insert({
+		_id : NumberInt( getLast_id_from_collection( _col$member_webhook ) )
+		, mid : d.mid
+		, webhook : webhooks
+	});
+}
+
+/**
+ * @function
+ * @param {Object} d
+ * @return {Object}
+ */
+function add__member_option( d )
+{
+	JamesLog.log( "add__member_option( d )" );
+
+	if( d.hasOwnProperty( "_id$brand_basic" ) )
+	{
+		var SYS0030 = d.SYS0030 || {};
+
+			//스키마에 존재 하지 않는 프로퍼티 - 스키마에 추가하기;
+			SYS0030.nm$brand_basic = d.nm$brand_basic;
+
+			SYS0030.toc_agreed = NumberInt( -1 );
+			SYS0030.first_login_status = NumberInt( -1 );
+
+			return _col$member_option.insert({
+				_id : NumberInt( getLast_id_from_collection( _col$member_basic ) -1 )
+				, mid : d.mid
+				, _id$brand_basic : NumberInt( d._id$brand_basic )
+				, SYS0030 : SYS0030
+			});
+	}
+
+	return { nInserted: 1 };
+}
+//--------------------------------------------------;
+
+/**
+ * @function
+ * @param {Collection} col
+ * @return {uint}
+ */
+function getLast_id_from_collection( col )
+{
+	var cursor = col.find({}, { _id : 1 }).sort({ _id : -1 }).limit( 1 );
+
+	return !cursor.hasNext() ? 1 : cursor.next()._id + 1;
+}
+
+//--------------------------------------------------;
+
+/**
+ * @function
+ * @param {Number} _id
+ * @return {Object}
+ */
+function remove__member_basic( _id ){ TtwLog.log( "remove__member_basic" ); return _col$member_basic.remove({ _id : _id }); }
+function remove__member_company( _id ){ TtwLog.log( "remove__member_company" ); return _col$member_company.remove({ _id : _id }); }
+function remove__member_date( _id ){ TtwLog.log( "remove__member_date" ); return _col$member_date.remove({ _id : _id }); }
+function remove__member_option( _id ){ TtwLog.log( "remove__member_option" ); return _col$member_option.remove({ _id : _id }); }
+function remove__member_public( _id ){ TtwLog.log( "remove__member_public" ); return _col$member_public.remove({ _id : _id }); }
+function remove__member_session( _id ){ TtwLog.log( "remove__member_session" ); return _col$member_session.remove({ _id : _id }); }
+function remove__member_webhook( _id ){ TtwLog.log( "remove__member_webhook" ); return _col$member_webhook.remove({ _id : _id }); }
+
+/**
+ * B2LiNK-BrandPortal
+ * @function
+ * @param {Object} mid_info
+ * <code>
+	{
+	}
+ * </code>
+ * @return {Object}
+ */
+//function remove__member_option( mid_info ){ JamesLog.log( "remove__member_option" ); return _col$member_option.remove({ mid_info }); }
+
+//--------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DATABASE;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$_schema = db.getSiblingDB( "_schema" );
+var _db$member = db.getSiblingDB( "member" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	COLLECTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _col$member = _db$_schema.member;
+var _col$member_basic = _db$member.member_basic;//회원 정보;
+var _col$member_company = _db$member.member_company;//회원 회사 정보;
+var _col$member_date = _db$member.member_date;//회원 날짜 정보;
+var _col$member_option = _db$member.member_option;//회원 부가 정보 - 시스템별로 별도 프로퍼티를 사용한다;
+var _col$member_public = _db$member.member_public;//회원 public 정보;
+var _col$member_session = _db$member.member_session;//회원 session 정보;
+var _col$member_webhook = _db$member.member_webhook;//회원 webhook 정보;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DOCUMENT;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _doc$member;
+var _doc$member_basic;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	PARAMETER;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------;
+//Parameter Object - find or findOne에서 사용;
+var p0 = { _id : -1 };
+var p1 = { mid : null };
+//----------;
+
+
+//--------------------------------------------------[ S ] - 치환 문자열;
+var d = <!=data=!>;
+	TtwLog.logjson( d );
+//--------------------------------------------------[ E ] - 치환 문자열;
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.000 - member_basic.member id 존재 여부;
+p1.mid = d.mid;
+_doc$member_basic = _col$member_basic.findOne( p1 );
+if( _doc$member_basic )
+{
+	TtwLog.log( new Error( "Check.000 - mid 검색 - mid 중복") );
+
+	TtwLog.log( new Error( "sign_up 실패 - " ) );
+	TtwLog.log( "-- [ E ] - member.public.sign_up():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.000 - member_basic.member id 존재 여부;
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - VALIDATION;
+
+//...;
+
+//----------------------------------------------------------------------------------------------------[ E ] - VALIDATION;
+
+var r0 = add__member_basic( d );
+var r1 = add__member_date( d );
+var r2 = add__member_public( d );
+var r3 = add__member_session( d );
+var r4 = add__member_webhook( d );
+
+var r5 = add__member_company( d );
+var r99 = add__member_option( d );
+if( 1 != r0.nInserted || 1 != r1.nInserted || 1 != r2.nInserted || 1 != r3.nInserted || 1 != r4.nInserted
+	|| 1 != r5.nInserted
+	|| 1 != r99.nInserted
+)
+{
+	p1.mid = d.mid;
+	_doc$member_basic = _col$member_basic.findOne( p1 );
+
+	p0._id = _doc$member_basic._id;
+
+	r0 = remove__member_basic( p0 );
+	r1 = remove__member_date( p0 );
+	r2 = remove__member_public( p0 );
+	r3 = remove__member_session( p0 );
+	r4 = remove__member_webhook( p0 );
+
+	r5 = remove__member_company( p0 );
+	r99 = remove__member_option( p0 );//B2LiNK-B2Ker;
+	//r99 = remove__member_option( p1 );//B2LiNK-BrandPortal;
+
+	if( 1 != r0.nRemoved || 1 != r1.nRemoved || 1 != r2.nRemoved || 1 != r3.nRemoved || 1 != r4.nRemoved
+		|| 1 != r5.nRemoved
+		|| 1 != r99.nRemoved
+	)
+	{
+		r0 = remove__member_basic( p0 );
+		r1 = remove__member_date( p0 );
+		r2 = remove__member_public( p0 );
+		r3 = remove__member_session( p0 );
+		r4 = remove__member_webhook( p0 );
+
+		r5 = remove__member_company( p0 );
+		r99 = remove__member_option( p0 );//B2LiNK-B2Ker;
+		//r99 = remove__member_option( p1 );//B2LiNK-BrandPortal;
+	}
+
+	TtwLog.log( new Error( "sign_up 실패" ) );
+	TtwLog.log( "-- [ E ] - member.public.sign_up():{uint}----------return 0;" );
+	return 0;
+}
+else
+{
+	TtwLog.log( "sign_up 성공" );
+	TtwLog.log( "-- [ E ] - member.public.sign_up():{uint}----------return 1;" );
+	return 1;
+}
+
+//----------------------------------------------------------------------------------------------------;
+
+TtwLog.log( new Error( "sign_up 실패" ) );
+TtwLog.log( "-- [ E ] - member.public.sign_up():{uint}----------return 0;" );
+return 0;

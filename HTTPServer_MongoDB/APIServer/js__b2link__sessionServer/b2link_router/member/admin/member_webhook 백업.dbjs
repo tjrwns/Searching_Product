@@ -1,0 +1,568 @@
+var a = [
+	{
+		"_id" : 0,
+		"mid" : "thdtjsdn@gmail.com",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a9e7cace9fe309afe9fc5759ea212e29",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 1,
+		"mid" : "raybirdy@gmail.com",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a9e7cace9fe309afe9fc5759ea212e29",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 2,
+		"mid" : "ciruin@gmail.com",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a9e7cace9fe309afe9fc5759ea212e29",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 3,
+		"mid" : "ciruin@gmail.com",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a9e7cace9fe309afe9fc5759ea212e29",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 4,
+		"mid" : "__DELETE__"
+	},
+	{
+		"_id" : 5,
+		"mid" : "hykim@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a9e7cace9fe309afe9fc5759ea212e29",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 6,
+		"mid" : "jun@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a9e7cace9fe309afe9fc5759ea212e29",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 7,
+		"mid" : "moon@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/deaec07821660f7f5ac9fa85958153e2",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 8,
+		"mid" : "yjkim@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/b58eb7ada3bd28d4f4b978cdabdd93db",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 9,
+		"mid" : "guolongji@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/55d8a3a4d625a81baf5dc99a932ab4ec",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 10,
+		"mid" : "clbaek@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/9cd4264855104fdafd9050dbb53b6864",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 11,
+		"mid" : "ytkim@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/9cd4264855104fdafd9050dbb53b6864",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 12,
+		"mid" : "moon8@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/9cd4264855104fdafd9050dbb53b6864",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 13,
+		"mid" : "leeyj@b2link.co.kr",
+		"webhook" : []
+	},
+	{
+		"_id" : 14,
+		"mid" : "juun@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/c5f620b28f5d3ecaee99720b52e4b14b",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 15,
+		"mid" : "ysg829@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/9cd4264855104fdafd9050dbb53b6864",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 16,
+		"mid" : "sbcho@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/9cd4264855104fdafd9050dbb53b6864",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 17,
+		"mid" : "bae@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/5b292597087aa43a8d11ecec245b2a65",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 18,
+		"mid" : "jinxue@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/c7e21b87d0e344442a696680485ec666",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 19,
+		"mid" : "stpyo@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/e568c05768ae8ed2e81ee4e5e7aca123",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 20,
+		"mid" : "jywoo@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/e568c05768ae8ed2e81ee4e5e7aca123",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 21,
+		"mid" : "hwkang@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/c4d098bd87c29fd9d1a5f2643ec64f52",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 22,
+		"mid" : "hschoi@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/65db5758a8699ee366b9af2e34c05879",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 23,
+		"mid" : "yjpark@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/e568c05768ae8ed2e81ee4e5e7aca123",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 24,
+		"mid" : "jalim@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/44c49d89be7f3f406bcc89dd2f26d4b5",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 25,
+		"mid" : "alex@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a9e7cace9fe309afe9fc5759ea212e29",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 26,
+		"mid" : "kcm@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/634e2fef1845a3550b8ba4d781935360",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 27,
+		"mid" : "ybleem@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/9f6d818a18502c7d5dc2b6a681196ea5",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 28,
+		"mid" : "jhkim@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/24aa8dfea3e5c3e4a40bc9e23617ab71",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 29,
+		"mid" : "dykim@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/6e9b11e1a99dc8619463e7e40aeaaee9",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 30,
+		"mid" : "chlee@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/0f5494beaf95b28278b7b2a69b2dc98b",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 31,
+		"mid" : "jmjoo@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/bf0c38e110af4160130fb9344d1960ed",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 32,
+		"mid" : "fangcr@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/2632556eff9d43e7777f5966aafc2b64",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 33,
+		"mid" : "sjlee@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/73ac5341831e30f160284051296e0baf",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 34,
+		"mid" : "sjkang@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/77bab22b7612151f982c32d7b573b1fb",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 35,
+		"mid" : "jayson.yang@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/0e28e4b45ce34239667f212aba4bdd76",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 36,
+		"mid" : "yytong@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/2ee3ec98481294ec5ffcb6bf18a7470c",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 37,
+		"mid" : "wangxt@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/2c0b4134e125bf17d9b98925e324b064",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 38,
+		"mid" : "askljfhajklsfha@b2link.co.kr",
+		"webhook" : []
+	},
+	{
+		"_id" : 39,
+		"mid" : "brkim@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/44c49d89be7f3f406bcc89dd2f26d4b5",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 40,
+		"mid" : "juyoung39@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/a1b32ef968ca54f21768ef00e3ad73a5",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 41,
+		"mid" : "stlee@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/e482192e0ee5849fe37cd05bdb333a9c",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 42,
+		"mid" : "ms.park@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/65db5758a8699ee366b9af2e34c05879",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 43,
+		"mid" : "diana@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/ad0ac3738d19cd3cd1301ad271a4173d",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 44,
+		"mid" : "ywan@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/c7e21b87d0e344442a696680485ec666",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 45,
+		"mid" : "sally@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/65db5758a8699ee366b9af2e34c05879",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 46,
+		"mid" : "yrhong@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "개인 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/49386299c7a0c7a93224d5b06a2ceae2",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 47,
+		"mid" : "jmlee@b2link.co.kr",
+		"webhook" : [
+			{
+				"cd$messenger" : "MSG014",
+				"title" : "팀 잔디 알람",
+				"webhook_url" : "https://wh.jandi.com/connect-api/webhook/11320800/c7e21b87d0e344442a696680485ec666",
+				"use_check" : 1
+			}
+		]
+	},
+	{
+		"_id" : 48,
+		"mid" : "kykim@b2link.co.kr",
+		"webhook" : []
+	}
+];
+
+
+var col = db.getSiblingDB( "member" ).getCollection('member_webhook');
+	col.remove({});
+
+var i=0, iLen=a.length;
+for( ; i<iLen; ++i ) col.insert(a[ i ]);

@@ -1,0 +1,40 @@
+//var fileNm = "js__b2link__SYS0310/b2link_router_external/_SITE_COLLECT_URL/crud/getURL.dbjs";
+//TtwLog.log( "---- [ S ] - " + fileNm );
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$_SITE_COLLECT_URL = db.getSiblingDB( "_SITE_COLLECT_URL" );
+
+var _col$collecting = _db$_SITE_COLLECT_URL.getCollection( "collecting" );
+var _col$list = _db$_SITE_COLLECT_URL.getCollection( "list" );
+
+//----------------------------------------------------------------------------------------------------;
+
+var doc = _col$list.findOne({});
+
+var R = {};
+
+if( doc )
+{
+	R.r = 0;
+	R.m = "OK";
+	R.data = doc;
+
+	_col$list.remove( doc );
+	_col$collecting.insertOne( doc );
+}
+else
+{
+	R.r = 1;
+	R.m = "No Data";
+	R.data = null;
+}
+
+//----------------------------------------------------------------------------------------------------;
+
+//R.totalCount = insertCount;
+//R.executionTime = Date.now() - _ST;
+
+//TtwLog.log( "---- [ E ] - " + fileNm );
+
+return R;

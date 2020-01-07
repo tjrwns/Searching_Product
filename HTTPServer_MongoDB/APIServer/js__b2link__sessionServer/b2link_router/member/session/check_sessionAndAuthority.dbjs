@@ -1,0 +1,282 @@
+HykLog.log( "-- [ S ] - member.session.check_sessionAndAuthority():{uint}----------" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE - FUNCTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session_log
+ * @param {String} mid
+ * @param {String} sid
+ * @param {Object} d_ex date expire
+ * @param {Object} d_l_si date list sign in
+ */
+var add__session_log = <require>global.mongodb.member.add__session_log</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ */
+var destroy__session = <require>global.mongodb.member.destroy__session</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_date
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} date
+ * @return {Object} d_l_si date_list_signin
+ */
+var update__date__lastSignIn = <require>global.mongodb.member.update__date__lastSignIn</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} d_ex date_expired
+ * @param {String} sid session id
+ */
+var update__session__signin = <require>global.mongodb.member.update__session__signin</require>;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DATABASE;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$authority = db.getSiblingDB( "authority" );
+
+var _db$member = db.getSiblingDB( "member" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	COLLECTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _col$nm_col;//권한 컬랙션;
+var _col$authority_logical_code = _db$authority.authority_logical_code;//권한 논리 코드;
+
+var _col$member_basic = _db$member.member_basic;//회원 정보;
+var _col$member_date = _db$member.member_date;//회원 날짜 정보;
+var _col$member_session = _db$member.member_session;//세션;
+var _col$member_session_log = _db$member.member_session_log;//세션 로그;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DOCUMENT;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _doc$auth_collections_name;
+var _doc$authority_logical_code;
+
+var _doc$member_basic;
+var _doc$member_session;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	PARAMETER;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------;
+//Parameter Object - find or findOne에서 사용;
+var p0 = { _id : -1 };
+var p1 = { mid : null };
+var p2 = { sid : null };
+var p3 = { cd : -1 };
+var p01 = { _id : -1 };
+//----------;
+
+
+//--------------------------------------------------[ S ] - 치환 문자열;
+//var d = <!=data=!>;
+//	HykLog.logjson( d );
+
+//Session ID;
+var sid = "<!=sid=!>";
+
+//System Code;
+var SCODE = "<!=SCODE=!>";
+
+//Query의 타입이 C, R, U, D중 어떤 타입인지 상태 값;
+var queryCRUDStatus = "<!=queryCRUDStatus=!>";
+
+//권한 체크를 할 대상 DataBase Name;
+var nm_db = "<!=nm_db=!>";
+
+//권한 체크를 할 대상 Collection Name;
+var nm_col = "<!=nm_col=!>";
+
+//*/
+HykLog.log( "Session ID : " + sid );
+HykLog.log( "System Code : " + SCODE );
+HykLog.log( "Query CRUD Status : " + queryCRUDStatus );
+HykLog.log( "Target DB Name : " + nm_db );
+HykLog.log( "Target Col Name : " + nm_col );
+//*/
+//--------------------------------------------------[ E ] - 치환 문자열;
+
+/**
+ * 논리 코드의 시작 값
+ * @property {Number}
+ */
+var CODE_LOGIC_MIN = 5000000000;
+
+//----------------------------------------------------------------------------------------------------[ S ] - VALIDATION;
+HykLog.log( sid );
+//수정 - 20171010_1551 - 송선우;
+//if( "" === sid || null === sid || undefined === sid || "undefined" == sid || 200 != sid.length )
+if( "" === sid || null === sid || undefined === sid || "undefined" == sid )
+{
+	HykLog.log( new Error( "[ Validation ] - Check.-100 - 클라이언트에서 보낸 sid가 문제 있는 값임" ) );
+	//return { r : 0, m : "sid가 문제 있는 값임" };
+	HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - VALIDATION;
+
+
+HykLog.log( "클라이언트에서 보낸 sid로 member_session 검색" );
+p2.sid = sid;
+_doc$member_session = _col$member_session.findOne( p2 );
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.300 - member_basic.member session id;
+if( _doc$member_session )
+{
+	HykLog.log( "Check.300 - sid 검색 - Session Document가 있음" );
+	HykLog.log( "session 의 expire date 확인" );
+	var date_now = new Date();
+	var date_expired = new Date( _doc$member_session.d_ex );
+		HykLog.log( "date_now : " + date_now + " - Date Now" );
+		HykLog.log( "date_expired : " + date_expired + " - Date - Expired" );
+
+	if( date_now < date_expired )//세션 기간 남아있음;
+	{
+		//----------Sign In 성공 - Last sign_in 시간 업데이트;
+		//p0._id = _doc$member_session._id;
+		//var d_l_si = update__date__lastSignIn( _col$member_date, p0, date_now );
+
+		//----------member_session_log 추가;
+		//add__session_log( _col$member_session_log, _doc$member_session.mid, _doc$member_session.sid, _doc$member_session.d_ex, d_l_si );//var _id = _col$member_session_log.find({}).sort({ $natural : -1 })._id + 1;_col$member_session_log.insert({ _id : NumberInt( _id ), mid : d.mid, sid : d.sid, d_ex : d.d_ex, date : d_l_si });
+
+		//----------Sign In 성공;
+		//HykLog.log( "sign_in 성공" );
+		//return { r : 1, m : "sign_in 성공"};
+		//HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 1;" );
+		//return 1;
+
+		HykLog.log( "_id로 member_basic 검색" );
+		p0._id = _doc$member_session._id;
+		_doc$member_basic = _col$member_basic.findOne( p0 );
+
+		//queryCRUDStatus 감지를 못하는 Query 존재시 해당 쿼리를 수정 하여야 할듯 함;
+		if( "undefined" == queryCRUDStatus )
+		{
+			TtwLog.log( "[ ERROR ] - Query의 구문이 CRUD Status를 확인 할 수 없는 상태" );
+			TtwLog.log( "[ ERROR ] - " + nm_db + "." + nm_col + " 에 접근하려는 Query의 구문을 다시 확인" );
+			TtwLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 96;" );
+			return 96;//OperationFailed;
+		}
+
+		//queryCRUDStatus가 "O"이면 권한 체크의 대상이 아닌 Query;
+		if( "O" != queryCRUDStatus )
+		{
+			//--------------------[ S ] - Query의 권한 체크;
+			var auth_collections_name = "auth_" + SCODE + queryCRUDStatus;
+			var auth_code = _doc$member_basic.cd$authority_code;
+
+			//----------논리 코드 체크;
+			if( auth_code > CODE_LOGIC_MIN )
+			{
+				//논리 코드이면..;
+				p3.cd = auth_code;
+				_doc$authority_logical_code = _col$authority_logical_code.findOne( p3 );
+
+				var io;
+				var i=0, iLen=_doc$authority_logical_code.auths.length;
+				for( ; i<iLen; ++i )
+				{
+					io = _doc$authority_logical_code.auths[ i ];
+					if( io.cd$category_system == SCODE )
+					{
+						auth_code = io.cd$authority_code;
+						break;
+					}
+				}
+			}
+
+			//----------물리 코드 체크;
+			_col$auth_collections_name = _db$authority[ auth_collections_name ];
+
+			p01._id = nm_db + "." + nm_col;
+			_doc$auth_collections_name = _col$auth_collections_name.findOne( p01 );
+
+			if( !_doc$auth_collections_name )
+			{
+				HykLog.log("p01._id : "+ p01._id );
+				HykLog.log( new Error( "권한 없음" ) );
+				HykLog.log( new Error( "check_sessionAndAuthority 실패" ) );
+				HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 18;" );
+				return 18;//AuthenticationFailed;
+			}
+
+			var isAuth = _doc$auth_collections_name[ auth_code ];
+
+			HykLog.log( "isAuth : " + isAuth );
+			HykLog.log( "auth_collections_name : " + auth_collections_name );
+			HykLog.log( "p01._id : " + p01._id );
+			HykLog.log( "auth_code : " + auth_code );
+
+			if( isAuth != 1 )
+			{
+				HykLog.log( new Error( "권한 없음" ) );
+				HykLog.log( new Error( "check_sessionAndAuthority 실패" ) );
+				//return { r : 0, m : "Session 인증 시간 지남" };
+				HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 18;" );
+				return 18;//AuthenticationFailed;
+			}
+			//--------------------[ E ] - Query의 권한 체크;
+		}
+
+		//----------check_sessionAndAuthority 성공;
+		HykLog.log( "check_sessionAndAuthority 성공" );
+		//return { r : 1, m : "check_sessionAndAuthority 성공"};
+		HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 1;" );
+		return 1;
+	}
+	else//세션 기간 오버;
+	{
+		HykLog.log( new Error( "Session 인증 시간 지남" ) );
+
+		//----------세션 파괴;
+		p0._id = _doc$member_session._id;
+		destroy__session( _col$member_session, p0 );
+
+		HykLog.log( new Error( "check_sessionAndAuthority 실패" ) );
+		//return { r : 0, m : "Session 인증 시간 지남" };
+		HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 0;" );
+		return 0;
+	}
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.300 - member_basic.member session id;
+else
+{
+	HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 0;" );
+	return 0;
+}
+
+
+HykLog.log( "-- [ E ] - member.session.check_sessionAndAuthority():{uint}----------return 0;" );
+return 0;

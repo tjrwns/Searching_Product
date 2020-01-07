@@ -1,0 +1,159 @@
+TtwLog.log( "-- [ S ] - member.session.destroy_session():{uint}----------" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE - FUNCTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session_log
+ * @param {String} mid
+ * @param {String} sid
+ * @param {Object} d_ex date expire
+ * @param {Object} d_l_si date list sign in
+ */
+var add__session_log = <require>global.mongodb.member.add__session_log</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ */
+var destroy__session = <require>global.mongodb.member.destroy__session</require>;
+
+/**
+ * @function
+ * @param {Collection} _col$member_date
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} date
+ * @return {Object} d_l_si date_list_signin
+ */
+//var update__date__lastSignIn = < require>global.mongodb.member.update__date__lastSignIn</require >;
+
+/**
+ * @function
+ * @param {Collection} _col$member_session
+ * @param {Object} oFind { _id : 0 }
+ * @param {Date} d_ex date_expired
+ * @param {String} sid session id
+ */
+//var update__session__signin = < require>global.mongodb.member.update__session__signin</require >;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DEFINE;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DATABASE;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$member = db.getSiblingDB( "member" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	COLLECTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+//var _col$member_basic = _db$member.member_basic;//회원 정보;
+//var _col$member_date = _db$member.member_date;//회원 날짜 정보;
+var _col$member_session = _db$member.member_session;//세션;
+var _col$member_session_log = _db$member.member_session_log;//세션 로그;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DOCUMENT;
+
+//----------------------------------------------------------------------------------------------------;
+
+//var _doc$member_basic;
+var _doc$member_session;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	PARAMETER;
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------;
+//Parameter Object - find or findOne에서 사용;
+var p0 = { _id : -1 };
+//var p1 = { mid : null };
+var p2 = { sid : null };
+//----------;
+
+
+//--------------------------------------------------[ S ] - 치환 문자열;
+//var d = <!=data=!>;
+//	TtwLog.logjson( d );
+
+var sid = "<!=sid=!>";
+	TtwLog.log( sid );
+//--------------------------------------------------[ E ] - 치환 문자열;
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - VALIDATION;
+TtwLog.log( sid );
+//수정 - 20171010_1549 - 송선우;
+//if( "" == sid || null == sid || undefined == sid || 200 != sid.length )
+if( "" == sid || null == sid || undefined == sid )
+{
+	TtwLog.log( new Error( "[ Validation ] - Check.-100 - 클라이언트에서 보낸 sid가 문제 있는 값임" ) );
+	//return { r : 0, m : "sid가 문제 있는 값임" };
+	TtwLog.log( "-- [ E ] - member.session.destroy_session():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - VALIDATION;
+
+
+TtwLog.log( "클라이언트에서 보낸 sid로 member_session 검색" );
+p2.sid = sid;
+_doc$member_session = _col$member_session.findOne( p2 );
+
+
+//----------------------------------------------------------------------------------------------------[ S ] - Check.300 - member_basic.member session id;
+if( _doc$member_session )
+{
+	TtwLog.log( "Check.300 - sid 검색 - Session Document가 있음" );
+	TtwLog.log( "session 의 expire date 확인" );
+	var date_now = new Date();
+	var date_expired = new Date( _doc$member_session.d_ex );
+		TtwLog.log( "date_now : " + date_now + " - Date Now" );
+		TtwLog.log( "date_expired : " + date_expired + " - Date - Expired" );
+
+	//----------세션 파괴;
+	p0._id = _doc$member_session._id;
+	destroy__session( _col$member_session, p0 );
+
+	/*/
+	add__session_log( _col$member_session_log, d.mid, d.sid, _doc$member_session.d_ex, {
+		y : NumberInt( date_now.getFullYear() )
+		, m : NumberInt( date_now.getMonth() + 1 )
+		, d : NumberInt( date_now.getDate() )
+		, ho : NumberInt( date_now.getHours() )
+		, mi : NumberInt( date_now.getMinutes() )
+		, se : NumberInt( date_now.getSeconds() )
+		//, mil : NumberLong( d.getMilliseconds() )
+	});//var _id = _col$member_session_log.find({}).sort({ $natural : -1 })._id + 1;_col$member_session_log.insert({ _id : NumberInt( _id ), mid : d.mid, sid : d.sid, d_ex : d.d_ex, date : d_l_si });
+	//*/
+
+	//return { r : 0, m : "Session 인증 시간 지남" };
+	TtwLog.log( "-- [ E ] - member.session.destroy_session():{uint}----------return 0;" );
+	return 0;
+}
+//----------------------------------------------------------------------------------------------------[ E ] - Check.300 - member_basic.member session id;
+else
+{
+	TtwLog.log( "-- [ E ] - member.session.destroy_session():{uint}----------return 0;" );
+	return 0;
+}
+
+
+TtwLog.log( "-- [ E ] - member.session.destroy_session():{uint}----------return 0;" );
+return 0;

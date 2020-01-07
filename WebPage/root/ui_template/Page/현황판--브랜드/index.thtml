@@ -1,0 +1,14 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+<div id="ui/Page/현황판--브랜드/index">
+현황판--브랜드
+</div>
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/현황판--브랜드/index.js" );
+	};
+</SCRIPT>
+<include-html>./ui_include/SYS0310/Page/000-----index-----Last.html</include-html>

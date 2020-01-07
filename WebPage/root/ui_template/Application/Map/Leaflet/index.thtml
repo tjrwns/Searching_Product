@@ -1,0 +1,3 @@
+<div id="ui/Application/Map/Leaflet/index" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+	<div class="ui-Application-Map-Leaflet-index--map" style="width:100% !important; height: 100% !important;"></div>
+</div>

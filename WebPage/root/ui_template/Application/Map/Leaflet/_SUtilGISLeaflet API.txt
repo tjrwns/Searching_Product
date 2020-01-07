@@ -1,0 +1,923 @@
+https://leafletjs.com/reference-1.5.0.html
+
+//----------------------------------------------------------------------------------------------------;
+
+//	EXAMPLE;
+
+//----------------------------------------------------------------------------------------------------;
+
+
+window.STtwUtilGISLeaflet.addLayer_Vector__Circle({
+	c : [ 37, 127 ]
+	, radius : 500
+	, fillColor : "#ff0000"
+	, map : window.GIS.MAP_BASIC.map
+	, k : SUtilMath.getUnique()
+});
+
+//----------------------------------------------------------------------------------------------------;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	ADD;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_c0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *	, "r" : 100//radius;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Circle}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__Circle
+window.STtwUtilGISLeaflet.addLayer_Vector__Circle_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_c0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *	, "r" : 100//radius;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.CircleDash}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__CircleDash
+window.STtwUtilGISLeaflet.addLayer_Vector__CircleDash_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_cm0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circlemarker
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.CircleMarker}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__CircleMarker
+window.STtwUtilGISLeaflet.addLayer_Vector__CircleMarker_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_cm0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circlemarker
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.CircleMarkerDash}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__CircleMarkerDash
+window.STtwUtilGISLeaflet.addLayer_Vector__CircleMarkerDash_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_po0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polygon
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Polygon}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__Polygon
+window.STtwUtilGISLeaflet.addLayer_Vector__Polygon_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_po0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : "10,10,10,2,2,10"//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polygon
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.PolygonDash}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__PolygonDash
+window.STtwUtilGISLeaflet.addLayer_Vector__PolygonDash_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_pl0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polyline
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Polyline}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__Polyline
+window.STtwUtilGISLeaflet.addLayer_Vector__Polyline_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_pl0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : "10,10,10,2,2,10"//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polyline
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.PolylineDash}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__PolylineDash
+window.STtwUtilGISLeaflet.addLayer_Vector__PolylineDash_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_mpo0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#multipolygon
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.multiPolygon}
+ */
+//window.STtwUtilGISLeaflet.addLayer_Vector__MultiPolygon
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_r0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 39, 128.7 ] ]//{LatLngBounds};
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#rectangle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Rectangle}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__Rectangle
+window.STtwUtilGISLeaflet.addLayer_Vector__Rectangle_XY
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_r0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 39, 128.7 ] ]//{LatLngBounds};
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#rectangle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.RectangleDash}
+ */
+window.STtwUtilGISLeaflet.addLayer_Vector__RectangleDash
+window.STtwUtilGISLeaflet.addLayer_Vector__RectangleDash_XY
+
+//------------------------------;
+
+/**
+ * @function
+ * @param {Object} d
+ */
+window.STtwUtilGISLeaflet.addLayerGroup
+
+//--------------------------------------------------;
+
+/**
+ * @function
+ * @param {Object} d
+ * <code>
+ * {
+ *	"k" : "marker_icon0"
+ *	, "map" : {ttw.gisPack.Map}
+ *
+ *	, "c" : [ 38, 127 ]
+ *
+ *	, "kIcon" : ""
+ * }
+ * </code>
+ * @return {ttw.gisPack.Marker}
+ */
+window.STtwUtilGISLeaflet.addMarker_Icon
+window.STtwUtilGISLeaflet.addMarker_Icon_XY
+
+//----------------------------------------------------------------------------------------------------;
+
+//	CREATE;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {Object} d
+ * <code>
+ * {
+ *	"k" : "icon0"
+ *	, "map" : {ttw.gisPack.Map}
+ *
+ *	, "iconUrl" : {String}//(required) The URL to the icon image (absolute or relative to your script path).;
+ *	, "iconRetinaUrl" : {String}//The URL to a retina sized version of the icon image (absolute or relative to your script path). Used for Retina screen devices.;
+ *	, "iconSize" : {Point}//Sizeof the icon image in pixels.;
+ *	, "iconAnchor" : {Point}//The coordinates of the "tip" of the icon (relative to its top left corner). The icon will be aligned so that this point is at the marker's geographical location. Centered by default if size is specified, also can be set in CSS with negative margins.;
+ *	, "shadowUrl" : {String}//The URL to the icon shadow image. If not specified, no shadow image will be created.;
+ *	, "shadowRetinaUrl" : {String}//The URL to the retina sized version of the icon shadow image. If not specified, no shadow image will be created. Used for Retina screen devices.;
+ *	, "shadowSize" : {Point}//Size of the shadow image in pixels.;
+ *	, "shadowAnchor" : {Point}//The coordinates of the "tip" of the shadow (relative to its top left corner) (the same as iconAnchor if not specified).;
+ *	, "popupAnchor" : {Point}//The coordinates of the point from which popups will "open", relative to the icon anchor.;
+ *	, "className" : {String}//A custom class name to assign to both icon and shadow images. Empty by default.;
+ * }
+ * </code>
+ * @return {ttw.gisPack.Icon}
+ */
+window.STtwUtilGISLeaflet.createIcon = function( d ){ return _createIcon( d ); };
+
+//--------------------------------------------------;
+
+/**
+ * @function
+ * @param {Object} d
+ * <code>
+ * {
+ *	"k" : "imageOverlay0"
+ *	, "map" : {ttw.gisPack.Map}
+ *
+ *	, "g" : [ [ 38, 128 ], [ 39, 129 ], ... ]
+ *
+ *	, "url" : "http://localhost/image.png"
+ *	, "opacity" : 1.0//{Number} The opacity of the image overlay.;
+ *	, "attribution" : ""//{String} The attribution text of the image overlay.
+ * }
+ * </code>
+ * @return {ttw.gisPack.ImageOverlay}
+ */
+window.STtwUtilGISLeaflet.createImageOverlay = function( d ){ return _createImageOverlay( d ); };
+
+//--------------------------------------------------;
+
+/**
+ * @function
+ * @param {Object} d
+ * <code>
+ * {
+ *	"k" : "marker_icon0"
+ *	, "map" : {ttw.gisPack.Map}
+ *
+ *	, "c" : [ 38, 127 ]
+ *
+ *	, "kIcon" : ""
+ * }
+ * </code>
+ * @return {ttw.gisPack.Marker}
+ */
+window.STtwUtilGISLeaflet.createMarker_Icon = function( d ){ return _createMarker_Icon( d ); };
+
+//--------------------------------------------------;
+
+/**
+ * @function
+ * @param {ttw.gisPack.Map} map
+ * @param {ttw.gisPack.layer.*} layer
+ * @param {Object} layersDictionary
+ * @param {String} kLayer layer key
+ * @return {Object} layersDictionary
+ */
+window.STtwUtilGISLeaflet.createLayer_Dictionary = function(  layer, layersDictionary, kLayer ){ return _createLayer_Dictionary( layer, layersDictionary, kLayer ); };
+
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_c0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *	, "r" : 100//radius;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Circle}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__Circle = function( d ){ return _createLayer_Vector__Circle( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__Circle_XY = function( d ){ _change__LonLatToLatLon_Point( d.c ); return _createLayer_Vector__Circle( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_c0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *	, "r" : 100//radius;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.CircleDash}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__CircleDash = function( d ){ return _createLayer_Vector__CircleDash( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__CircleDash_XY = function( d ){ _change__LonLatToLatLon_Point( d.c ); return _createLayer_Vector__CircleDash( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_cm0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circlemarker
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.CircleMarker}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__CircleMarker = function( d ){ return _createLayer_Vector__CircleMarker( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__CircleMarker_XY = function( d ){ _change__LonLatToLatLon_Point( d.c ); return _createLayer_Vector__CircleMarker( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_cm0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "c" : [ 38, 128 ]//center coordinates
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#circlemarker
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.CircleMarkerDash}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__CircleMarkerDash = function( d ){ return _createLayer_Vector__CircleMarkerDash( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__CircleMarkerDash_XY = function( d ){ _change__LonLatToLatLon_Point( d.c ); return _createLayer_Vector__CircleMarkerDash( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_po0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polygon
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Polygon}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__Polygon = function( d ){ return _createLayer_Vector__Polygon( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__Polygon_XY = function( d ){ _change__LonLatToLatLon_Points( d.g ); return _createLayer_Vector__Polygon( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_po0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : "10,10,10,2,2,10"//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polygon
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Polygon}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__PolygonDash = function( d ){ return _createLayer_Vector__PolygonDash( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__PolygonDash_XY = function( d ){ _change__LonLatToLatLon_Points( d.g ); return _createLayer_Vector__PolygonDash( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_pl0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polyline
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Polyline}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__Polyline = function( d ){ return _createLayer_Vector__Polyline( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__Polyline_XY = function( d ){ _change__LonLatToLatLon_Points( d.g ); return _createLayer_Vector__Polyline( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_pl0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : "10,10,10,2,2,10"//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#polyline
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.PolylineDash}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__PolylineDash = function( d ){ return _createLayer_Vector__PolylineDash( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__PolylineDash_XY = function( d ){ _change__LonLatToLatLon_Points( d.g ); return _createLayer_Vector__PolylineDash( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_mpo0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 38.2, 128.3 ], [ 38.7, 128.9 ] ]//geometries;
+ *	, "smoothFactor" : 1.0//How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.;
+ *	, "noClip" : false//Disabled polyline clipping.;
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#multipolygon
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.multiPolygon}
+ */
+//window.STtwUtilGISLeaflet.createLayer_Vector__MultiPolygon = function( d ){ return _createLayer_Vector__MultiPolygon( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_r0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 39, 128.7 ] ]//{LatLngBounds};
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#rectangle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.Rectangle}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__Rectangle = function( d ){ return _createLayer_Vector__Rectangle( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__Rectangle_XY = function( d ){ _change__LonLatToLatLon_Points( d.g ); return _createLayer_Vector__Rectangle( d ); };
+
+/**
+ * @function
+ * <code>
+ * {
+ *	"k" : "vl_r0"
+ *	, "map" : {ttw.gisPack.Map}
+ *	, "g" : [ [ 38.5, 128.5 ], [ 39, 128.7 ] ]//{LatLngBounds};
+ *
+ *	, "stroke" : true//Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.;
+ *	, "color" : "#03f"//Stroke color.;
+ *	, "weight" : 5//Stroke width in pixels.;
+ *	, "opacity" : 0.5//Stroke opacity.;
+ *	, "fill" : true//depends Whether to fill the path with color. Set it to false to disable filling on polygons or circles.;
+ *	, "fillColor" : "#00ff00"//same as color	Fill color.;
+ *	, "fillOpacity" : 0.2//Fill opacity.;
+ *	, "fillRule" : "evenodd"//A string that defines how the inside of a shape is determined.;
+ *	, "dashArray" : [ 10, 10, 10, 2, 2, 10 ]//A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).;
+ *	, "lineCap" : null//A string that defines shape to be used at the end of the stroke.;
+ *	, "lineJoin" : null//A string that defines shape to be used at the corners of the stroke.;
+ *	, "clickable" : true//If false, the vector will not emit mouse events and will act as a part of the underlying map.;
+ *	, "pointerEvents" : null//Sets the pointer-events attribute on the path if SVG backend is used.;
+ *	, "className" : ''//Custom class name set on an element.;
+ * }
+ * </code>
+ * @see http://leafletjs.com/reference.html#rectangle
+ * @see http://leafletjs.com/reference.html#path-options
+ * @see https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/fill-rule
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin
+ * @return {ttw.gisPack.RectangleDash}
+ */
+window.STtwUtilGISLeaflet.createLayer_Vector__RectangleDash = function( d ){ return _createLayer_Vector__RectangleDash( d ); };
+window.STtwUtilGISLeaflet.createLayer_Vector__RectangleDash_XY = function( d ){ _change__LonLatToLatLon_Points( d.g ); return _createLayer_Vector__RectangleDash( d ); };

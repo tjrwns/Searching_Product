@@ -1,0 +1,161 @@
+//----------------------------------------------------------------------------------------------------;
+
+//	FUNCTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * 'nm' Property 용도 검색 배열 생성하기
+ * @function
+ * @param {String} s nm(Name)이 들어온다.
+ */
+var makeQuery__Array__OR__RegExpPattern__nm = <require>global.mongodb.make_query.makeQuery__Array__OR__RegExpPattern__nm</require>;
+
+/**
+ * 'nm.a' Property 용도 검색 배열 생성하기
+ * @function
+ * @param {String} s nm.a(Name All)이 들어온다.
+ */
+var makeQuery__Array__OR__RegExpPattern__nm_a = <require>global.mongodb.make_query.makeQuery__Array__OR__RegExpPattern__nm_a</require>;
+
+/**
+ * (, [ 이런 류의 정규식 사용시 패턴에 위배되는 정규식 검색 패턴을 만들기 위한 함수
+ * @function
+ * @param {String} s
+ * @return {RegExp}
+ */
+var makeQuery__RegExpPattern__SymbolString = <require>global.mongodb.make_query.makeQuery__RegExpPattern__SymbolString</require>;
+
+/**
+ * 빈 Object 타입의 Date를 반환한다.
+ * @function
+ * @return {Object} { y : "", m : "", d : "", ho : "", mi : "", se : "" }
+ */
+var getDate__Object__Empty = <require>global.mongodb.date.getDate__Object__Empty</require>;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	DATABASE;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _db$list_static = db.getSiblingDB( "list_static" );
+var _db$member = db.getSiblingDB( "member" );
+
+//----------------------------------------------------------------------------------------------------;
+
+//	COLLECTION;
+
+//----------------------------------------------------------------------------------------------------;
+
+var _col$member_public = _db$member.member_public;
+var _col$messenger = _db$list_static.messenger;
+
+//----------------------------------------------------------------------------------------------------;
+
+//	PARAMETER;
+
+//----------------------------------------------------------------------------------------------------;
+
+var locale = "<!=locale=!>";
+	locale = locale ? "nm_" + locale : "nm";
+
+var db_nm = "<!=db_nm=!>";
+var col_nm = "<!=col_nm=!>";
+var skip = NumberInt( <!=skip=!> );
+var limit = NumberInt( <!=limit=!> );
+
+//*/
+var oFind = <!=find=!>;
+	//oFind._d = NumberInt( <!=del=!> );//삭제여부 있음 : 없다면 주석처리;
+
+var oSort = <!=sort=!>;
+/*/
+var find = "<!=find=!>";
+	find = find.replace( /&quot;/ig, '"' );
+
+var sort = "<!=sort=!>";
+	sort = sort.replace( /&quot;/ig, '"' );
+
+var oFind = JSON.parse( find );
+	//oFind._d = NumberInt( <!=del=!> );//삭제여부 있음 : 없다면 주석처리;
+
+var oSort = JSON.parse( sort );
+//*/
+
+//--------------------------------------------------;
+
+var _p0 = { _id : 0 };
+var _p1 = { cd : 0 };
+var _nm = { _id : false, nm : true, nm_kr : true, nm_us : true, nm_cn : true };
+
+//----------------------------------------------------------------------------------------------------;
+
+//SortCondition;
+
+if( Object.keys( oSort ).length === 0 )
+{
+	if( Object.keys( oFind ).length === 0 ) oSort._id = -1;//최근 입력순 정렬;
+	else
+	{
+		if( oFind.cd ) oSort.email = 1;//이메일 정렬;
+		if( oFind.cd ) oSort[ locale ] = 1;//이름 정렬;
+		oSort._id = -1;//최근 입력순 정렬;
+	}
+}
+
+//FindCondition;
+
+//검색 쿼리 조건 - 이메일;
+if( oFind.email ) oFind.email = eval( "/" + oFind.email + "/i" );
+
+//검색 쿼리 조건 - 이름;
+if( oFind._nm )
+{
+	if( typeof oFind.$or !== "object" ) oFind.$or = makeQuery__Array__OR__RegExpPattern__nm_a( oFind._nm );
+	delete oFind._nm;
+}
+
+//검색 조건이 없다면 추가 : 카운트가 안나오는 경우가 있음;
+if( Object.keys( oFind ).length === 0 ) oFind._id = { $gt : -1 };
+
+//----------------------------------------------------------------------------------------------------;
+
+//	RESULT;
+
+//----------------------------------------------------------------------------------------------------;
+
+var r = {};
+var list = [];
+
+//try
+{
+	TtwLog.log( 'db.getSiblingDB( "member" ).getCollection( "member_public" ).find( ' + JSON.stringify( oFind ) + ' )' + '.sort( ' + JSON.stringify( oSort ) + ' )' + '.skip( NumberInt( ' + skip + ' ) )' + '.limit( NumberInt( ' + limit + ' ) )' );
+
+	_col$member_public.find( oFind ).sort( oSort ).skip( NumberInt( skip ) ).limit( NumberInt( limit ) )
+		.forEach( function( doc ){
+
+			/*///수정 - 20170822 - 송선우 - 세션서버 소스를 기준으로 주석 처리함;
+			//----------messenger._id$messenger : 메신저 다국어 조인;
+			_p0._id = NumberInt( doc.messenger._id$messenger );
+			TtwLog.log( "doc._id$messenger : " + _p0._id );
+			var doc$messenger = _col$messenger.findOne( _p0, { _id : false, nm : true } );
+			if( doc$messenger ) doc._nm$messenger = doc$messenger[ locale ];
+			else doc._nm$messenger = "ERROR";
+			//----------messenger._id$messenger : 메신저 다국어 조인;
+			//*/
+
+			//순차 번호 추가;
+			doc.seq = NumberInt( ++skip );
+
+			list.push( doc );
+		});
+
+	//count query;
+	r.totalCount = NumberInt( db.getSiblingDB( db_nm ).getCollection( col_nm ).find( oFind ).count() );
+}
+//catch( e ){ return { error : db.runCommand( { getLastError : 1, w : 2, wtimeout : 5000 } ) }; };
+
+r.list = list;
+
+return r;

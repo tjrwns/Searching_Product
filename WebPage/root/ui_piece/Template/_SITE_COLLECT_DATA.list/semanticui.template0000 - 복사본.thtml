@@ -1,0 +1,17 @@
+<div class="card">
+	<div class="image">
+		<img src="{{img}}" style="max-height: 250px;">
+	</div>
+	<div class="content">
+		<div class="header">{{nm_p}}</div>
+		<div class="meta">
+			<i class="{{cd$COUNTRY_low}} flag">
+				{{url}}
+			</i>
+		</div>
+		<div class="description">{{p}}</div>
+	</div>
+	 <div class="extra content">
+		<a href="{{url_p}}" target="_balnk">상세페이지</a>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+var _db$_CATEGORY = db.getSiblingDB( "_CATEGORY" );
+var _col$SITE = _db$_CATEGORY.getCollection( "SITE" );
+
+var _db$_SITE_COLLECT_DATA = db.getSiblingDB( "_SITE_COLLECT_DATA" );
+var _col$list = _db$_SITE_COLLECT_DATA.getCollection( "list" );
+
+var DATA = <!=DATA=!>;
+
+
+var doc = _col$list.find({ cd_p : DATA.cd_p, url : DATA.url });
+
+if( doc )
+{
+	//600000 : 10분;
+	//1800000 : 30분;
+	//3600000 : 60분;
+	if( 1800000 < DATA.T - doc.t )
+		return { r : 0, m : "OK", data : null };
+		//return { r : 84, m : "DuplicateKeyValue", data : null };
+}
+
+DATA.t = NumberLong( DATA.t );
+//DATA.t_k = NumberLong( DATA.t_k );
+DATA.t_p = NumberLong( DATA.t_p );
+
+//DATA.np_c = NumberLong( DATA.np_c );
+DATA.np_m = NumberLong( DATA.np_m );
+
+var doc = _col$SITE.findOne({ url : DATA.url });
+DATA.cd$COUNTRY = doc.cd$COUNTRY;
+
+DATA.t = Date.now();
+
+_db$_SITE_COLLECT_DATA.getCollection( DATA.url ).insertOne( DATA );
+var result = _col$list.insertOne( DATA );
+
+return { r : 0, m : "OK", data : null };

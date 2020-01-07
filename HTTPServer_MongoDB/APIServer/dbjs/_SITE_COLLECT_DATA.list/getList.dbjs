@@ -1,0 +1,43 @@
+var _db$_CATEGORY = db.getSiblingDB( "_CATEGORY" );
+var _db$_SITE_COLLECT_DATA = db.getSiblingDB( "_SITE_COLLECT_DATA" );
+
+var _col$SITE = _db$_CATEGORY.getCollection( "SITE" );
+var _col$list = _db$_SITE_COLLECT_DATA.getCollection( "list" );
+
+var _doc$SITE;
+
+var data = <!=DATA=!>;
+
+var R = {};
+
+var result = [];
+
+var _p_find__list = { k : "" };
+var _p_limit = 20;
+var _p_sort = { t : 1 };
+
+//if( !data ) return { r : 2, m: "BadValue - data is not found", data : null };
+
+//keyword;
+//if( !data.k ) return { r : 2, m: "BadValue - data.k is not found", data : null };
+
+//_p_find__list.k = new RegExp( data.k, "gi" );
+_p_find__list.k = data.k;
+
+//timestamp - keyword;
+//if( data.t_k ) _p_find__list.t_k = data.t_k;
+
+//timestamp;
+//if( data.t ) _p_find__list.t = { $gt : data.t };
+if( data.t ) _p_find__list.t = { $lt : data.t };
+if( data.limit ) _p_limit = data.limit;
+if( data.sort ) _p_sort = data.sort;
+
+result = _col$list.find( _p_find__list ).limit( _p_limit ).sort( _p_sort ).toArray();
+
+R.r = 0;
+R.m = "OK";
+R.data = result;
+R.totalCount = result.length;
+
+return R;

@@ -1,0 +1,21 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+
+<div id="ui/Page/_Component/DHTMLX/5.1.0/Windows/index"></div>
+
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/_Component/DHTMLX/5.1.0/Windows/index.js" );
+	};
+</SCRIPT>
+<STYLE type="text/css">
+.dhxwins_vp_dhx_skyblue { position: absolute; }
+.dhxwins_vp_dhx_terrace { position: absolute; }
+.dhxwins_vp_dhx_web { position: absolute; }
+.dhxwins_vp_material { position: absolute; }
+</STYLE>
+
+<include-html>./ui_include/SYS0310/Page/000-----index-----Last.html</include-html>

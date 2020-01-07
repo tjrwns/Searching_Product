@@ -1,0 +1,18 @@
+<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+
+<div id="ui/Page/_Component/DHTMLX/6.2.2/Windows/index"></div>
+
+<SCRIPT type="text/javascript">
+	window.initialized = function(){
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/_Component/DHTMLX/6.2.2/Windows/index.js" );
+	};
+</SCRIPT>
+<STYLE type="text/css">
+	.jqstooltip { z-index: 9999999999; }
+</STYLE>
+
+<include-html>./ui_include/SYS0310/Page/000-----index-----Last.html</include-html>
